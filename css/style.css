@@ -1,11 +1,16 @@
 body {
   background-color: #F1EAE1;
   font-family: "Noto Serif";
-  font-size: 16px; }
+  font-size: 16px;
+  color: #322821; }
   body .title {
     font-family: "Valisca";
     font-size: 34px;
     margin-bottom: 40px; }
+  body .title-small {
+    font-family: "Valisca";
+    font-size: 20px;
+    margin-bottom: 20px; }
   body button {
     border: none;
     background-color: transparent; }
@@ -26,7 +31,7 @@ body {
     border-radius: 50px; }
     body .about-card .icon {
       margin-right: 20px; }
-  body .rounded {
+  body .block-rounded {
     border-radius: 50px;
     border: 1px solid #322821;
     width: 100%; }
@@ -59,5 +64,12 @@ body {
       justify-content: space-between; }
       body .card .text-icon-icon {
         margin-left: 10px; }
+  body footer {
+    background-color: white; }
+  body .icons-list {
+    display: flex;
+    flex-direction: row; }
+    body .icons-list > {
+      margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */

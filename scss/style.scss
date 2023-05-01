@@ -4,11 +4,17 @@ body{
   background-color: $clr_0;
   font-family: $ff_1;
   font-size: $fs-m;
+  color:$clr_3;
 
   .title{
     font-family: $ff_2;
     font-size:$fs-xl;
     margin-bottom: 40px;
+  }
+  .title-small{
+    font-family: $ff_2;
+    font-size:$fs-l;
+    margin-bottom: 20px;
   }
 
   button{
@@ -40,7 +46,7 @@ body{
 
     }
 
-  .rounded{
+  .block-rounded{
     border-radius: $b-r;
     border: 1px solid $clr_3;
     width:100%;
@@ -85,6 +91,19 @@ body{
       &-icon{
         margin-left:10px;
       }
+    }
+  }
+
+  footer{
+    background-color: white;
+  }
+
+  .icons-list{
+    display:flex;
+    flex-direction: row;
+
+    & >{
+      margin-right: 10px;
     }
   }
 }
