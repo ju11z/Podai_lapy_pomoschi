@@ -30,22 +30,6 @@ body{
     font-size: $fs-l;
   }
 
-  .about-card{
-    padding: 15px;
-    width: 100%;
-    min-height: 140px;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: $b-r;
-
-    .icon{
-      margin-right:20px;
-    }
-
-    }
-
   .block-rounded{
     border-radius: $b-r;
     border: 1px solid $clr_3;

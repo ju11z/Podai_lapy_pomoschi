@@ -11,7 +11,7 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col-5">
-          <div class="title">Готовы познакомиться с новым лучшим другом?</div>
+          <div class="title roll-right">Готовы познакомиться с новым лучшим другом?</div>
           <div class="mb-5">Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития. </div>
           <div class="row">
               <div class="col-8">
@@ -66,6 +66,19 @@
               <div>Мы убеждены, что все котики одинаково хорошие. Но! Покупая животных, вы чаще всего косвенно поддерживаете деятельность разведенцев, т.е. тех, кто разводит породистых кошек исключительно ради прибыли.</div>
           </div>
       </div>
+      <div class="row mt-5">
+          <div class="col-5">
+              <div class="title roll-right">Отношение к животным в Беларуси</div>
+              <div>В Беларуси не существует государственных программ гуманного сокращения численности бездомных животных. Только отлов.Большинство животных, которые попадут в отлов, умрут — их либо усыпят, либо они заразятся и умрут от болезней. В 99% случаев это будут молодые и (относительно) здоровые животные. Мы стараемся дать им шанс жить. Котики-инвалиды или травмированные коты требуют специального ухода, за который люди зачастую боятся браться.</div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-6">
+              <div class="row">
+                  <div class="col-6"></div>
+                  <div class="col-6"></div>
+              </div>
+          </div>
+      </div>
   </div>
 <footer>
     <div class="container">
@@ -102,6 +115,9 @@
 
        */
       //let shadowAnimation=gsap.to(".my-shadow",{opacity: 1, duration: 1});
+      gsap.from('.border-img-container.offset-bottom', {opacity:0,y:200, duration:2});
+      gsap.from('.border-img-container.offset-top', {opacity:0,y:-200, duration:2});
+
       let buttons = gsap.utils.toArray(".shadow-btn-container");
       buttons.forEach((button) => {
           let shadow=button.querySelector(".my-shadow");
@@ -109,6 +125,25 @@
           let shadowAnimation=gsap.to(shadow,{opacity: 1, duration: 1});
           button.addEventListener("mouseenter", () => shadowAnimation.play());
           button.addEventListener("mouseleave",()=>shadowAnimation.reverse());
+      });
+
+      let cards=gsap.utils.toArray(".about-card");
+      cards.forEach((card) => {
+          let cardAnimation=gsap.to(card,{y:30, ease:"bounce.out", duration: 1});
+          card.addEventListener("mouseenter", () => cardAnimation.play());
+          card.addEventListener("mouseleave",()=>cardAnimation.reverse());
+      });
+
+
+      gsap.utils.toArray(".roll-right").forEach(function(rr) {
+          gsap.timeline({
+              scrollTrigger: {
+                  trigger: rr,
+                  start: 'top bottom'
+              }
+          })
+              .from(rr, { duration: 1, x:-200, opacity:0})
+
       });
 
 

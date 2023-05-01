@@ -22,17 +22,6 @@ body {
     border-radius: 999px;
     border: 1px solid #322821;
     font-size: 20px; }
-  body .about-card {
-    padding: 15px;
-    width: 100%;
-    min-height: 140px;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 50px; }
-    body .about-card .icon {
-      margin-right: 20px; }
   body .block-rounded {
     border-radius: 50px;
     border: 1px solid #322821;
