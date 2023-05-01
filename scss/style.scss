@@ -25,7 +25,7 @@ body{
   }
 
   .about-card{
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     min-height: 140px;
     background-color: white;
@@ -37,9 +37,18 @@ body{
     .icon{
       margin-right:20px;
     }
-    .text{
-      font-size: $fs-s;
+
     }
+
+  .rounded{
+    border-radius: $b-r;
+    border: 1px solid $clr_3;
+    width:100%;
+  }
+
+  .cat-card{
+    width: 100%;
+
   }
 }
 
