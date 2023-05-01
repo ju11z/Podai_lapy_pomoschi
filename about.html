@@ -19,6 +19,14 @@
                       <button class="my-btn">Взять друга сейчас!</button>
                       <div class="my-shadow"></div>
                   </div>
+                  <div class="shadow-btn-container ">
+                      <button class="my-btn">Взять друга сейчас!</button>
+                      <div class="my-shadow"></div>
+                  </div>
+                  <div class="shadow-btn-container ">
+                      <button class="my-btn">Взять друга сейчас!</button>
+                      <div class="my-shadow"></div>
+                  </div>
               </div>
               <div class="col-4"></div>
           </div>
@@ -83,6 +91,7 @@
 </footer>
   <script src="js/gsap/gsap.min.js"></script>
   <script>
+      /*
       gsap.from('.border-img-container.offset-bottom', {opacity:0,y:200, duration:2});
 
       let button=document.querySelector(".my-btn");
@@ -90,6 +99,17 @@
 
       button.addEventListener("mouseenter",()=>shadowAnimation.play());
       button.addEventListener("mouseleave",()=>shadowAnimation.reverse());
+
+       */
+      //let shadowAnimation=gsap.to(".my-shadow",{opacity: 1, duration: 1});
+      let buttons = gsap.utils.toArray(".shadow-btn-container");
+      buttons.forEach((button) => {
+          let shadow=button.querySelector(".my-shadow");
+          console.log(shadow);
+          let shadowAnimation=gsap.to(shadow,{opacity: 1, duration: 1});
+          button.addEventListener("mouseenter", () => shadowAnimation.play());
+          button.addEventListener("mouseleave",()=>shadowAnimation.reverse());
+      });
 
 
   </script>
