@@ -21,5 +21,38 @@
   .icon{
     margin-right:20px;
   }
+}
 
+.accordion {
+  width: 100%;
+}
+
+.accordion-group{
+  padding: 30px;
+  border-radius: 50px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.accordion-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &-text{
+    font-weight: bold;
+    font-size:$fs-m;
+  }
+  &-icon{
+    margin-right: 20px;
+  }
+}
+
+.accordion-content {
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion-content.expanded {
+  height: 0;
+  overflow: hidden;
 }
