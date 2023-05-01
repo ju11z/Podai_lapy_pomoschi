@@ -94,6 +94,61 @@ body{
     }
   }
 
+  /*borders and shadows*/
+
+  .shadow-btn-container{
+    display: flex;
+    position: relative;
+  }
+  .my-shadow{
+    opacity: 0;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+    border-radius: 999px;
+    display: inline-block;
+    background-color: $clr_1_t;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .bordered-img{
+    top:0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: $b-r;
+
+  }
+
+  .border-img-container{
+    border-radius: $b-r;
+    height:400px;
+    width: 100%;
+    position: relative;
+
+    &-sqr{
+      @extend .border-img-container;
+      height: 0px;
+      padding-top: 100%;
+    }
+    }
+
+
+  .my-border{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid $clr_3;
+    top: -10px;
+    left: 10px;
+    z-index: 10;
+    border-radius: $b-r;
+  }
+
+  /**/
+
   footer{
     background-color: white;
   }

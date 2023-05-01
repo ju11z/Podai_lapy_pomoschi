@@ -5,24 +5,43 @@
     <title>Title</title>
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <div class="row">
+    <div class="row mt-5">
       <div class="col-5">
           <div class="title">Готовы познакомиться с новым лучшим другом?</div>
           <div class="mb-5">Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития. </div>
           <div class="row">
               <div class="col-8">
-                  <button class="my-btn">Взять друга сейчас!</button>
+                  <div class="shadow-btn-container ">
+                      <button class="my-btn">Взять друга сейчас!</button>
+                      <div class="my-shadow"></div>
+                  </div>
               </div>
               <div class="col-4"></div>
           </div>
       </div>
         <div class="col-1"></div>
-        <div class="col-6"></div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-6">
+                    <div class="border-img-container offset-bottom">
+                        <img src="img/image.jfif" class="bordered-img" alt="">
+                        <div class="my-border"></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="border-img-container offset-top">
+                        <img src="img/image.jfif" class="bordered-img" alt="">
+                        <div class="my-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-      <div class="row">
+      <div class="row mt-5">
           <div class="col-8">
               <div class="row">
                       <div class="col-6">
@@ -63,5 +82,16 @@
     </div>
 </footer>
   <script src="js/gsap/gsap.min.js"></script>
+  <script>
+      gsap.from('.border-img-container.offset-bottom', {opacity:0,y:200, duration:2});
+
+      let button=document.querySelector(".my-btn");
+      let shadowAnimation=gsap.to(".my-shadow",{opacity: 1, duration: 1});
+
+      button.addEventListener("mouseenter",()=>shadowAnimation.play());
+      button.addEventListener("mouseleave",()=>shadowAnimation.reverse());
+
+
+  </script>
 </body>
 </html>

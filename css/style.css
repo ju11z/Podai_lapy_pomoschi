@@ -2,7 +2,9 @@ body {
   background-color: #F1EAE1;
   font-family: "Noto Serif";
   font-size: 16px;
-  color: #322821; }
+  color: #322821;
+  /*borders and shadows*/
+  /**/ }
   body .title {
     font-family: "Valisca";
     font-size: 34px;
@@ -64,6 +66,44 @@ body {
       justify-content: space-between; }
       body .card .text-icon-icon {
         margin-left: 10px; }
+  body .shadow-btn-container {
+    display: flex;
+    position: relative; }
+  body .my-shadow {
+    opacity: 0;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+    border-radius: 999px;
+    display: inline-block;
+    background-color: rgba(234, 139, 27, 0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute; }
+  body .bordered-img {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50px; }
+  body .border-img-container, body .border-img-container-sqr {
+    border-radius: 50px;
+    height: 400px;
+    width: 100%;
+    position: relative; }
+    body .border-img-container-sqr {
+      height: 0px;
+      padding-top: 100%; }
+  body .my-border {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #322821;
+    top: -10px;
+    left: 10px;
+    z-index: 10;
+    border-radius: 50px; }
   body footer {
     background-color: white; }
   body .icons-list {
