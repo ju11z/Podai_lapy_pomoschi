@@ -53,30 +53,22 @@
 
 
 
-        * {
-            box-sizing: border-box;
-        }
 
         .accordion {
-            width: 250px;
-            margin: 15px;
-            box-shadow: 0 8px 17px rgba(0,0,0,.2);
+            width: 100%;
         }
 
+        .accordion-group{
+            border-radius: 50px;
+            background-color: white;
+        }
         .accordion-menu {
-            font-size: 15px;
-            background: #0277BD;
-            color: white;
-            padding: 10px;
             cursor: pointer;
-            user-select: none;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
         }
 
         .accordion-content {
             height: 0;
             overflow: hidden;
-            font-size: 14px;
         }
 
         .accordion-content.expanded {
@@ -84,9 +76,6 @@
             overflow: hidden;
         }
 
-        p {
-            margin: 10px;
-        }
 
     </style>
 </head>
