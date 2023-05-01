@@ -3,8 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style type="text/css">
+
+        .shadow-btn-container{
+            display: flex;
+            position: relative;
+        }
+        .shadow{
+            z-index: -1;
+            top: 10px;
+            left: 10px;
+            border-radius: 999px;
+            display: inline-block;
+            background-color: rgba(140,122,230,1);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .cover-img{
+            top:0;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            border-radius: 50px;
+        }
+        .image-holder img {
+            position: relative;
+            z-index: -1;
+            left: 40px;
+            top: 40px;
+        }
+
+        .border-img-container{
+            border-radius: 50px;
+            padding-top:100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .my-border{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border: 1px solid black;
+            top: -10px;
+            left: 10px;
+            z-index: 10;
+            border-radius: 50px;
+        }
+    </style>
 </head>
 <body>
+<div class="container">
+    <div class="row">
+        <div class="col-2">
+            <div class="shadow-btn-container">
+                <button class="my-btn">взять друга сейчас</button>
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="border-img-container">
+                <img src="img/image.jfif" class="cover-img" alt="">
+                <div class="my-border"></div>
+            </div>
+        </div>
+    </div>
 
+</div>
+</div>
 </body>
 </html>
