@@ -1,5 +1,9 @@
 @import "constants";
 
+body{
+  background-image: url("../img/about_bg.png");
+}
+
 .offset-top{
   margin-top:100px;
 }
@@ -33,6 +37,7 @@
   background-color: white;
   margin-bottom: 10px;
 }
+
 .accordion-menu {
   cursor: pointer;
   display: flex;
@@ -57,3 +62,4 @@
   height: 0;
   overflow: hidden;
 }
+

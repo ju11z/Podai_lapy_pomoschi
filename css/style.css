@@ -18,7 +18,7 @@ body {
     background-color: transparent; }
   body .my-btn {
     width: 100%;
-    min-height: 40px;
+    min-height: 50px;
     border-radius: 999px;
     border: 1px solid #322821;
     font-size: 20px; }
@@ -93,12 +93,60 @@ body {
     left: 10px;
     z-index: 10;
     border-radius: 50px; }
+  body .icon-text {
+    display: flex;
+    flex-direction: row; }
+    body .icon-text-icon {
+      margin-right: 20px; }
   body footer {
     background-color: white; }
   body .icons-list {
+    margin-top: 10px;
     display: flex;
     flex-direction: row; }
-    body .icons-list > {
+    body .icons-list img {
       margin-right: 10px; }
+  body .text-l {
+    font-size: 20px; }
+  body .rounded-card {
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px; }
+  body .tags-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  body .tag-clr-1 {
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgba(234, 139, 27, 0.4); }
+  body .tag-clr-2 {
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgba(76, 50, 183, 0.4); }
+  body .announcement-card {
+    border-radius: 50px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; }
+  body .my-form {
+    border-radius: 50px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 30px; }
+    body .my-form .icon-text {
+      margin-left: 20px;
+      margin-bottom: 5px; }
+  body input {
+    width: 100%;
+    border-radius: 999px;
+    min-height: 50px;
+    border: 1px solid black;
+    background-color: transparent; }
+  body .i-t-list .icon-text {
+    margin-top: 5px; }
 
 /*# sourceMappingURL=style.css.map */

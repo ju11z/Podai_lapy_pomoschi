@@ -24,7 +24,7 @@ body{
 
   .my-btn{
     width:100%;
-    min-height: 40px;
+    min-height: 50px;
     border-radius: 999px;
     border: 1px solid $clr_3;
     font-size: $fs-l;
@@ -131,6 +131,18 @@ body{
     border-radius: $b-r;
   }
 
+  .icon-text{
+    display: flex;
+    flex-direction: row;
+
+    &-icon{
+      margin-right: 20px;
+    }
+    &-text{
+
+    }
+  }
+
   /**/
 
   footer{
@@ -138,12 +150,83 @@ body{
   }
 
   .icons-list{
+    margin-top:10px;
     display:flex;
     flex-direction: row;
 
-    & >{
+    img{
       margin-right: 10px;
     }
   }
+
+  .text-l{
+    font-size: $fs-l;
+  }
+
+  .rounded-card{
+    width:100%;
+    background-color: white;
+    border-radius: $b-r;
+    padding:30px;
+  }
+
+  .tags-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @mixin tag($clr){
+    padding: 15px;
+    border-radius: $b-r;
+    background-color: $clr;
+  }
+
+  .tag-clr-1 {
+    @include tag($clr_1_t);
+  }
+
+  .tag-clr-2 {
+    @include tag($clr_2_t);
+  }
+
+  .announcement-card{
+    border-radius: $b-r;
+    width: 100%;
+    background-color: white;
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .my-form{
+    border-radius: $b-r;
+    width: 100%;
+    border: 1px solid black;
+    padding: 30px;
+
+    .icon-text{
+      margin-left: 20px;
+      margin-bottom:5px;
+    }
+  }
+
+  input{
+    width: 100%;
+    border-radius: 999px;
+    min-height: 50px;
+    border: 1px solid black;
+    background-color: transparent;
+  }
+
+  .i-t-list{
+    .icon-text{
+      margin-top:5px;
+    }
+  }
+
+
+
+
 }
 
