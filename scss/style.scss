@@ -194,9 +194,15 @@ body{
     border-radius: $b-r;
     width: 100%;
     background-color: white;
-    padding:20px;
+    padding:30px;
     display: flex;
     flex-direction: row;
+  }
+
+  .my-form-wrapper{
+    overflow: hidden;
+    border-radius: $b-r;
+
   }
 
   .my-form{
@@ -204,6 +210,7 @@ body{
     width: 100%;
     border: 1px solid black;
     padding: 30px;
+    background-color: $clr-0;
 
     .icon-text{
       margin-left: 20px;
@@ -225,7 +232,23 @@ body{
     }
   }
 
+  .my-filter{
+    padding:30px;
+  }
+  .text-titled{
+    font-size: $fs-l;
+    font-family: $ff-1;
+    text-transform: uppercase;
+  }
 
+  .input-solid{
+    background-color: white;
+    border: none;
+  }
+
+  .form-image{
+
+  }
 
 
 }

@@ -5,10 +5,55 @@
   <title>Title</title>
   <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <link href="css/about.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div id="requestModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-title">Заявка на опекунство</div>
+            <div>
+              <span class="close">&times;</span>
+              <div>
+                <div class="row">
+                  <div class="col-4">
+                    <div class="border-img-container-sqr">
+                      <img src="img/about_1.jpg" class="bordered-img" alt="">
+                    </div>
+                    <div class="text-icon">
+                      <span class="text-icon-text title-small">Ксандр</span>
+                      <span class="text-icon-icon"><img src="img/icon/male.svg"></span>
+                    </div>
+                    <div>поступил в приют 06.03.2023</div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet dignissimos doloribus exercitationem fuga nobis odit officiis quae recusandae repellat similique!</div>
+                  </div>
+                  <div class="col-8">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="icon-text">
+                          <img class="icon-text-icon" src="img/icon/med.svg">
+                          <div class="icon-text-text text-l">Характер</div>
+                        </div>
+                        <input type="text">
+                      </div>
+                      <div class="col-6"></div>
+                      <div class="col-6"></div>
+                      <div class="col-6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
     <div class="row">
       <div class="col-6"></div>
       <div class="col-1"></div>
@@ -16,9 +61,20 @@
         <div class="">
           <div class="title">Ксандр</div>
           <img src="img/icon/male.svg">
-        </div>
+        </div>А
         <div class="mb-4 text-l">поступил в приют 06.03.2023</div>
         <div>Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития. </div>
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-6">
+            <div class="shadow-btn-container ">
+              <button class="my-btn" id="showRequestModal">Взять друга сейчас!</button>
+              <div class="my-shadow"></div>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </div>
+
       </div>
     </div>
     <div class="row">
@@ -56,10 +112,10 @@
       </div></div>
     </div>
   </div>
-<script src="js/gsap/gsap.min.js"></script>
-<script>
+  <script src="js/gsap/gsap.min.js"></script>
+  <script src="js/modal_popup.js"></script>
+  <script src="js/common_animations.js"></script>
 
 
-</script>
 </body>
 </html>
