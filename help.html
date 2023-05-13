@@ -7,10 +7,37 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <div class="container-fluid submenu">
+        <div class="container">
+            <div class="row">
+                <div class="submenu-item active">
+                    <div class="icon"><img src="img/icon/med_big.svg"></div>
+                    <div class="text">Медикаменты</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-4"></div>
             <div class="col-8">
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <div class="shadow-btn-container ">
+                            <button class="my-btn toggle-form" onclick="toggleForm()">Добавить обьявление</button>
+                            <div class="my-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="form-to-toggle">
+                    <form>
+                        <div>
+                            <label class="input-label">Название услуги</label>
+                            <input><input>
+                        </div>
+                    </form>
+                </div>
                 <div class="announcement-card row">
                     <div class="col-4">
                         <div class="border-img-container-sqr">
@@ -46,5 +73,10 @@
             </div>
         </div>
     </div>
+    <script>
+        function toggleForm(){
+            alert("toggle");
+        }
+    </script>
 </body>
 </html>
