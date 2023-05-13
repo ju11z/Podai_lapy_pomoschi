@@ -13,15 +13,13 @@
   .dropdown__filter {
     position: relative;
     display: flex;
-    padding: 20px;
-    color: #595959;
+    padding: 15px;
     border: 1px solid #d6d6d6;
     border-radius: 30px;
-    font-size: 14px;
-    text-transform: uppercase;
+    background-color: white;
     transition: 0.3s; }
     .dropdown__filter:focus {
-      border: 1px solid #918ff4;
+      border: 1px solid #322821;
       outline: none; }
     .dropdown__filter::after {
       position: absolute;
@@ -30,29 +28,28 @@
       content: "";
       width: 10px;
       height: 10px;
-      border-right: 2px solid #595959;
-      border-bottom: 2px solid #595959;
+      border-right: 1px solid #322821;
+      border-bottom: 1px solid #322821;
       transform: rotate(45deg) translateX(-45%);
       transition: 0.2s ease-in-out; }
+  .dropdown ul .dropdown__select {
+    padding-left: 0; }
   .dropdown__select {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    margin-top: 5px;
     overflow: hidden;
     transform: scaleY(0);
     transform-origin: top;
     font-weight: 300;
     transition: 0.2s ease-in-out; }
   .dropdown__select-option {
-    padding: 20px;
+    padding: 15px;
     background-color: #fff;
-    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 1px solid #322821;
     transition: 0.3s; }
     .dropdown__select-option:last-of-type {
       border-bottom: 0; }
-    .dropdown__select-option:hover {
-      background-color: #f9f9f9; }
 
 /*# sourceMappingURL=select.css.map */
