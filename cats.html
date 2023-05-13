@@ -7,6 +7,12 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="checkmark" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-miterlimit="10" fill="none"  d="M22.9 3.7l-15.2 16.6-6.6-7.1">
+    </path>
+  </symbol>
+</svg>
 <div class="container-fluid">
   <div class="container">
     <div class="row"></div>
@@ -52,6 +58,13 @@
                     </ul>
                   </li>
                 </ul>
+              </label>
+            </div>
+            <div class="promoted-checkbox">
+              <input id="tmp" type="checkbox" class="promoted-input-checkbox"/>
+              <label for="tmp">
+                <svg><use xlink:href="#checkmark" /></svg>
+                Save recipient
               </label>
             </div>
           </div>
