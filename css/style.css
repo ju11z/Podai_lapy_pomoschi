@@ -55,7 +55,8 @@
 
 .check-container {
   margin: 0;
-  max-height: 30px; }
+  margin-left: 40px;
+  max-height: 34px; }
 
 .label-text {
   top: 0;
@@ -73,9 +74,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.9rem;
-  height: 1.9rem;
-  border: 1px solid white;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 1px solid #322821;
   border-radius: .5rem;
   transition: background .3s; }
   input:checked ~ .checkmark {
@@ -93,8 +94,8 @@
     transform: rotate(45deg);
     display: none;
     position: absolute;
-    top: .5rem;
-    left: .8rem; }
+    top: .4rem;
+    left: .6rem; }
 
 /* hide default checkbox */
 input[type="checkbox"] {
@@ -163,7 +164,7 @@ body {
     display: flex;
     position: relative; }
   body .my-shadow {
-    opacity: 0;
+    opacity: 1;
     z-index: -1;
     top: 10px;
     left: 10px;
@@ -199,9 +200,13 @@ body {
     border-radius: 50px; }
   body .icon-text {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    margin-bottom: 10px; }
     body .icon-text-icon {
       margin-right: 20px; }
+    body .icon-text-text {
+      font-size: 20px;
+      text-transform: uppercase; }
   body footer {
     background-color: white; }
   body .icons-list {
@@ -252,7 +257,7 @@ body {
     width: 100%;
     border-radius: 999px;
     min-height: 50px;
-    border: 1px solid black;
+    border: 1px solid #322821;
     background-color: transparent; }
   body .i-t-list .icon-text {
     margin-top: 5px; }
@@ -264,7 +269,8 @@ body {
     text-transform: uppercase; }
   body .input-solid {
     background-color: white;
-    border: none; }
+    border: none;
+    margin-bottom: 15px; }
   body form {
     width: 100%;
     background-color: white;

@@ -87,7 +87,7 @@ body{
     position: relative;
   }
   .my-shadow{
-    opacity: 0;
+    opacity: 1;
     z-index: -1;
     top: 10px;
     left: 10px;
@@ -136,12 +136,14 @@ body{
   .icon-text{
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
 
     &-icon{
       margin-right: 20px;
     }
     &-text{
-
+      font-size: $fs-l;
+      text-transform: uppercase;
     }
   }
 
@@ -224,7 +226,7 @@ body{
     width: 100%;
     border-radius: 999px;
     min-height: 50px;
-    border: 1px solid black;
+    border: 1px solid $clr_3;
     background-color: transparent;
   }
 
@@ -246,6 +248,7 @@ body{
   .input-solid{
     background-color: white;
     border: none;
+    margin-bottom: 15px;
   }
 
   .form-image{

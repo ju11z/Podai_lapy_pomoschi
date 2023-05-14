@@ -2,7 +2,8 @@
 
 .check-container{
   margin:0;
-  max-height: 30px;
+  margin-left:40px;
+  max-height: 34px;
 }
 
 .label-text{
@@ -22,9 +23,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 1.9rem;
-  height: 1.9rem;
-  border: 1px solid white;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 1px solid $clr_3;
   border-radius: .5rem;
   transition: background .3s;
 
@@ -48,8 +49,8 @@
     display: none;
 
     position: absolute;
-    top: .5rem;
-    left: .8rem;
+    top: .4rem;
+    left: .6rem;
   }
 }
 
