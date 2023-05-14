@@ -55,7 +55,6 @@
 
 .check-container {
   margin: 0;
-  margin-left: 40px;
   max-height: 34px; }
 
 .label-text {
@@ -121,6 +120,11 @@ body {
   body button {
     border: none;
     background-color: transparent; }
+  body a:active,
+  body a:hover,
+  body a {
+    text-decoration: none;
+    color: #322821; }
   body .my-btn {
     width: 100%;
     min-height: 50px;
@@ -261,8 +265,6 @@ body {
     background-color: transparent; }
   body .i-t-list .icon-text {
     margin-top: 5px; }
-  body .my-filter {
-    padding: 30px; }
   body .text-titled {
     font-size: 20px;
     font-family: "Noto Serif";
