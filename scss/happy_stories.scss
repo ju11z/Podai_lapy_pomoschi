@@ -10,4 +10,9 @@
   left: 0%;
   border-radius: $b-r;
   padding: 30px;
+
+  .bordered-img{
+    object-fit: cover;
+  }
 }
+

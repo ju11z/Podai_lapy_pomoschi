@@ -1,18 +1,16 @@
 var expandsRight = document.getElementsByClassName("expand-right");
 console.log(expandsRight);
 Array.from(expandsRight).forEach(function(elem){
+    expandRow=elem.closest('.expand-row');
+    expandCenter=expandRow.querySelector('.expand-center');
+    expandLeft=expandRow.querySelector('.expand-left');
+    imgDescr=elem.querySelector('.img-descr');
     elem.addEventListener("mouseover",
         ()=>{
-            console.log(elem);
-            expandRow=elem.closest('.expand-row');
-            expandCenter=expandRow.querySelector('.expand-center');
-            expandLeft=expandRow.querySelector('.expand-left');
-            imgDescr=elem.querySelector('.imgDescr');
-            console.log(expandLeft);
-
-            gsap.to(expandLeft, {scaleX:0.5, transformOrigin:"0% 50%",duration:1});
-            gsap.to(expandCenter, {scaleX:0.5,xPercent:25,transformOrigin:"50% 50%", duration:1});
-            gsap.to(imgDescr, {left:"100%"});
+            //var animLinear=TweenMax.to
+            gsap.to(expandLeft, {scaleX:0.5, transformOrigin:"100% 50%",duration:1});
+            gsap.to(expandCenter, {scaleX:0.5,xPercent:25,transformOrigin:"150% 50%", duration:1});
+            gsap.to(imgDescr, {left:"90%", borderRadius:"0 30px 30px 0", width:"110%"});
         }
     )
 });

@@ -1,0 +1,56 @@
+@import "constants";
+
+.label-text{
+  top:0;
+  position: absolute;
+}
+.check-container {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  padding-top: 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 1px solid #9297C7;
+  border-radius: .5rem;
+  transition: background .3s;
+
+  input:checked ~ & {
+    background: linear-gradient(180deg, #FFDD2D 0%, #FFAB2D 100%);
+    border: 0;
+  }
+
+  input:checked ~ &::after {
+    display: block;
+  }
+
+  &::after {
+    content: '';
+    width: .4rem;
+    height: .8rem;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    border-radius: .3rem;
+    transform: rotate(45deg);
+    display: none;
+
+    position: absolute;
+    top: .2rem;
+    left: .5rem;
+  }
+}
+
+/* hide default checkbox */
+input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  margin: -1px;
+}

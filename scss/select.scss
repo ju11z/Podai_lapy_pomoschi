@@ -65,6 +65,7 @@
     transform-origin: top;
     font-weight: 300;
     transition: 0.2s ease-in-out;
+    z-index: 10;
   }
 
   &__select-option {
@@ -72,6 +73,7 @@
     background-color: #fff;
     border-bottom: 1px solid $clr_3;
     transition: 0.3s;
+
 
     &:last-of-type {
       border-bottom: 0;
