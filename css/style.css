@@ -290,5 +290,12 @@ body {
       padding: 10px; }
       body .submenu-item .active {
         border: 1px solid black; }
+  body .announce-card {
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    padding: 33.3333333333px; }
+    body .announce-card .icon-text {
+      margin-bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -292,6 +292,17 @@ body{
     }
   }
 
+  .announce-card{
+    width: 100%;
+    background-color: white;
+    border-radius: $b-r;
+    padding: $b-r*2/3;
+
+    .icon-text{
+      margin-bottom: 0;
+    }
+  }
+
 
 }
 
