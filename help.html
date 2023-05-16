@@ -99,7 +99,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="announce-form">
+                    <div class="announce-form" id="announce-form">
                         <div class="row">
                             <div class="col-4">
                                 <div class="border-img-container-sqr bordered-empty">
@@ -143,8 +143,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-4">
-                                <div class="icon-text position-absolute bottom-0">
+                            <div class="col-4 ">
+                                <div class="icon-text ">
                                     <img class="icon-text-icon" src="img/icon/med.svg">
                                     <div >Характер</div>
                                 </div>
@@ -204,8 +204,19 @@
     </div>
 
     <script>
+        let form=document.getElementById("announce-form");
+        form.style.display="none";
+        let formShown=false;
+
         function toggleForm(){
-            alert("toggle");
+            if(!formShown){
+                formShown=true;
+                form.style.display="block";
+            }
+            else{
+                formShown=false;
+                form.style.display="none";
+            }
         }
     </script>
 </body>
