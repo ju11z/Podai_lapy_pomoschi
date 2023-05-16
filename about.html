@@ -8,17 +8,41 @@
     <link href="css/about.css" rel="stylesheet">
 </head>
 <body>
+<header>
+    <div class="container d-block d-lg-none">
+        <div class="row p-3">
+            <div class="toggle-menu-btn" id="toggle-menu-btn"><img src="img/logo.svg"></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="toggle-menu" id="toggle-menu">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+    <div class="container d-none d-lg-block">
+        <div class="row pt-4">
+            <div class="col-3"><img src="img/logo.svg"></div>
+            <div class="col-2"></div>
+            <div class="col-7">
+                <div class="border-menu-container">
+                    <div class="menu-wrapper">
+                        <div class="menu-items">
+                            <a href="" class="menu-item active">Ищут дом</a>
+                            <a href="" class="menu-item">Помощь</a>
+                            <a href="" class="menu-item">Счастливые истории</a>
+                            <a href="" class="menu-item">Донат</a>
+                        </div>
+                    </div>
+                    <div class="menu-shadow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
   <div class="container">
-      <div class="row">
-          <div class="col-3"><img src="img/logo.svg"></div>
-          <div class="col-1"></div>
-          <div class="col-8">
-              <div class="border-menu-container">
-                  <button class="menu-wrapper">Взять друга сейчас!</button>
-                  <div class="menu-shadow"></div>
-              </div>
-          </div>
-      </div>
+
     <div class="row mt-5">
       <div class="col-5">
           <div class="title roll-right">Готовы познакомиться с новым лучшим другом?</div>
@@ -182,6 +206,7 @@
     </div>
 </footer>
   <script src="js/gsap/gsap.min.js"></script>
+    <script src="js/toggle_menu.js"></script>
   <script src="js/common_animations.js"></script>
   <script src="js/accordion_animation.js"></script>
   <script>

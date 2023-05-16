@@ -52,11 +52,13 @@ body{
   }
   .menu-wrapper{
     width:100%;
-    min-height: 50px;
+    padding:20px;
     border-radius: 999px;
     border: 1px solid $clr_3;
-    font-size: $fs-l;
+  }
 
+  .toggle-menu-btn{
+    cursor: pointer;
   }
 
   .menu-shadow{
@@ -66,11 +68,27 @@ body{
     left: 10px;
     border-radius: 999px;
     display: inline-block;
-    background-color: $clr_1_t;
+    background-color: white;
     height: 100%;
     width: 100%;
     position: absolute;
 
+  }
+
+  .menu-items{
+    display: flex;
+    justify-content: space-between;
+    .menu-item{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      border-radius: $b-r;
+
+      .active{
+        background-color: $clr_1_t;
+      }
+    }
   }
 
   .card{
