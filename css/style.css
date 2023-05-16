@@ -145,6 +145,10 @@ body {
     border: 1px solid #322821; }
   body .toggle-menu-btn {
     cursor: pointer; }
+  body .mobile-menu-item {
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold; }
   body .menu-shadow {
     opacity: 1;
     z-index: -1;
@@ -165,8 +169,8 @@ body {
       padding-left: 30px;
       padding-right: 30px;
       border-radius: 50px; }
-      body .menu-items .menu-item .active {
-        background-color: rgba(234, 139, 27, 0.4); }
+    body .menu-items .active {
+      background-color: rgba(76, 50, 183, 0.4); }
   body .card {
     width: 100%;
     border-radius: 50px;

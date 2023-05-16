@@ -61,6 +61,12 @@ body{
     cursor: pointer;
   }
 
+  .mobile-menu-item{
+    font-size: $fs-l;
+    width: 100%;
+    font-weight: bold;
+  }
+
   .menu-shadow{
     opacity: 1;
     z-index: -1;
@@ -85,9 +91,10 @@ body{
       padding-right: 30px;
       border-radius: $b-r;
 
-      .active{
-        background-color: $clr_1_t;
-      }
+    }
+
+    .active{
+      background-color: $clr_2_t;
     }
   }
 
