@@ -11,7 +11,7 @@
 
 /* Required CSS Rules */
 .slider .carousel-item {
-    width: auto;
+    width: 180px;
 }
 .slider .carousel-item.active {
     display: inline-block;
@@ -49,13 +49,14 @@
     opacity: .5;
     background-image: none !important;
     color: black;
-    top: 36%;
+    top: 45%;
     transform: translateY(-50%);
     cursor: pointer;
 }
 .slider .carousel-indicators {
     bottom: -30px;
     z-index: 3 !important;
+    display: none;
 }
 .slider .carousel-indicators li {
     background-color: grey;
