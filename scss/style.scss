@@ -62,9 +62,12 @@ body{
   }
 
   .mobile-menu-item{
+    padding: 10px;
     font-size: $fs-l;
     width: 100%;
     font-weight: bold;
+    border-radius: $b-r;
+    text-align: center;
   }
 
   .menu-shadow{
@@ -95,6 +98,17 @@ body{
 
     .active{
       background-color: $clr_2_t;
+    }
+  }
+
+  .toggle-menu{
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: $b-r;
+
+    .active{
+      border: 1px solid $clr_3;
     }
   }
 

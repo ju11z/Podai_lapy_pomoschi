@@ -146,9 +146,12 @@ body {
   body .toggle-menu-btn {
     cursor: pointer; }
   body .mobile-menu-item {
+    padding: 10px;
     font-size: 20px;
     width: 100%;
-    font-weight: bold; }
+    font-weight: bold;
+    border-radius: 50px;
+    text-align: center; }
   body .menu-shadow {
     opacity: 1;
     z-index: -1;
@@ -171,6 +174,13 @@ body {
       border-radius: 50px; }
     body .menu-items .active {
       background-color: rgba(76, 50, 183, 0.4); }
+  body .toggle-menu {
+    width: 100%;
+    padding: 40px;
+    background-color: white;
+    border-radius: 50px; }
+    body .toggle-menu .active {
+      border: 1px solid #322821; }
   body .card {
     width: 100%;
     border-radius: 50px;
