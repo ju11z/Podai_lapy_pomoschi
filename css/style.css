@@ -279,6 +279,7 @@ body {
   body .text-l {
     font-size: 20px; }
   body .rounded-card {
+    height: 100%;
     width: 100%;
     background-color: white;
     border-radius: 50px;
