@@ -162,6 +162,7 @@ body{
     position: relative;
   }
   .my-shadow{
+    cursor: pointer;
     opacity: 1;
     z-index: -1;
     top: 10px;
@@ -230,6 +231,10 @@ body{
     &-text{
       font-size: $fs-l;
       text-transform: uppercase;
+    }
+
+    label{
+      margin-left: 0 !important;
     }
   }
   .titled{
@@ -301,6 +306,8 @@ body{
   }
 
   .my-form-wrapper{
+    display: flex;
+    align-items: stretch;
     overflow: hidden;
     border-radius: $b-r;
 
@@ -365,7 +372,9 @@ body{
   }
 
   .form-image{
-
+    height: 100%;
+    width: auto;
+    border-radius: $b-r 0 0 $b-r;
   }
 
   form{

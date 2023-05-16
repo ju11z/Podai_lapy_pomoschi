@@ -24,57 +24,75 @@
     <div class="col-1"></div>
     <div class="col-10">
       <div class="row my-form-wrapper">
-        <div class="col-6">
-          <div><img class="form-image" src="img/donation_1.png"></div>
+        <div class="d-none d-lg-block col-6">
+          <img class="form-image" src="img/donation_1.png">
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <div class="my-form">
             <div class="title">Форма доната</div>
             <div>
-              <div class="icon-text">
-                <img class="icon-text-icon" src="img/icon/med.svg">
-                <div class="icon-text-text text-l">Характер</div>
+              <div class="label-input">
+                <div class="icon-text">
+                  <img class="icon-text-icon" src="img/icon/med.svg">
+                  <label class="">Имя держателя карты</label>
+                </div>
+                <input type="text">
               </div>
-              <input type="text">
             </div>
             <div>
-              <div class="icon-text">
-                <img class="icon-text-icon" src="img/icon/med.svg">
-                <div class="icon-text-text text-l">Характер</div>
-              </div>
-              <input type="text">
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <div class="icon-text">
-                  <img class="icon-text-icon" src="img/icon/med.svg">
-                  <div class="icon-text-text text-l">Характер</div>
+              <div>
+                <div class="label-input">
+                  <div class="icon-text">
+                    <img class="icon-text-icon" src="img/icon/med.svg">
+                    <label class="">Номер карты</label>
+                  </div>
+                  <input type="text">
                 </div>
-                <input type="text">
-              </div>
-              <div class="col-6">
-                <div class="icon-text">
-                  <img class="icon-text-icon" src="img/icon/med.svg">
-                  <div class="icon-text-text text-l">Характер</div>
-                </div>
-                <input type="text">
               </div>
             </div>
             <div class="row">
-              <div class="col-6">
-                <div class="icon-text">
-                  <img class="icon-text-icon" src="img/icon/med.svg">
-                  <div class="icon-text-text text-l">Характер</div>
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                <div>
+                  <div class="label-input">
+                    <div class="icon-text">
+                      <img class="icon-text-icon" src="img/icon/med.svg">
+                      <label class="">Дата истчения</label>
+                    </div>
+                    <input type="text">
+                  </div>
                 </div>
-                <input type="text">
+              </div>
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                <div>
+                  <div class="label-input">
+                    <div class="icon-text">
+                      <img class="icon-text-icon" src="img/icon/med.svg">
+                      <label class="">CVV</label>
+                    </div>
+                    <input type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+                <div>
+                  <div class="label-input">
+                    <div class="icon-text">
+                      <img class="icon-text-icon" src="img/icon/med.svg">
+                      <label class="">Сумма</label>
+                    </div>
+                    <input type="text">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-2"></div>
               <div class="col-8">
-                <div class="shadow-btn-container ">
-                  <button class="my-btn">Взять друга сейчас!</button>
-                  <div class="my-shadow"></div>
+                <div class="shadow-btn-container mt-3">
+                  <button class="my-btn" id="modal-popup-btn">Взять друга сейчас!</button>
+                  <div class="my-shadow" style="z-index: 0;"></div>
                 </div>
               </div>
               <div class="col-2"></div>
