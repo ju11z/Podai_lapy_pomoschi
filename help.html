@@ -10,7 +10,15 @@
     <div class="container-fluid submenu">
         <div class="container">
             <div class="row">
-                <div class="submenu-item active">
+                <div class="submenu-item">
+                    <div class="icon"><img src="img/icon/med_big.svg"></div>
+                    <div class="text">Медикаменты</div>
+                </div>
+                <div class="submenu-item">
+                    <div class="icon"><img src="img/icon/med_big.svg"></div>
+                    <div class="text">Медикаменты</div>
+                </div>
+                <div class="submenu-item">
                     <div class="icon"><img src="img/icon/med_big.svg"></div>
                     <div class="text">Медикаменты</div>
                 </div>
@@ -202,19 +210,16 @@
             </div>
         </div>
     </div>
-
+    <script src="js/toggle_submenu.js"></script>
     <script>
         let form=document.getElementById("announce-form");
         form.style.display="none";
-        let formShown=false;
 
         function toggleForm(){
-            if(!formShown){
-                formShown=true;
+            if(form.style.display="none"){
                 form.style.display="block";
             }
             else{
-                formShown=false;
                 form.style.display="none";
             }
         }

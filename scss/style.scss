@@ -364,7 +364,9 @@ body{
       border-radius: $b-r;
       justify-content: center;
       align-items: center;
-      padding: 10px;
+      padding:20px 30px;
+      cursor: pointer;
+      margin-right: 20px;
 
       .icon{
 
@@ -372,10 +374,10 @@ body{
       .text{
 
       }
+    }
+    .active{
+      border: 1px solid black;
 
-      .active{
-        border: 1px solid black;
-      }
     }
   }
 

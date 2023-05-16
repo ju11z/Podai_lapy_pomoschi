@@ -341,9 +341,11 @@ body {
       border-radius: 50px;
       justify-content: center;
       align-items: center;
-      padding: 10px; }
-      body .submenu-item .active {
-        border: 1px solid black; }
+      padding: 20px 30px;
+      cursor: pointer;
+      margin-right: 20px; }
+    body .submenu .active {
+      border: 1px solid black; }
   body .announce-card {
     width: 100%;
     background-color: white;
