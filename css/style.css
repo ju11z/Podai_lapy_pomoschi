@@ -135,6 +135,26 @@ body {
     border-radius: 50px;
     border: 1px solid #322821;
     width: 100%; }
+  body .border-menu-container {
+    display: flex;
+    position: relative; }
+  body .menu-wrapper {
+    width: 100%;
+    min-height: 50px;
+    border-radius: 999px;
+    border: 1px solid #322821;
+    font-size: 20px; }
+  body .menu-shadow {
+    opacity: 1;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+    border-radius: 999px;
+    display: inline-block;
+    background-color: rgba(234, 139, 27, 0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute; }
   body .card {
     width: 100%;
     border-radius: 50px;
