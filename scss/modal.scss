@@ -17,11 +17,19 @@
 .modal-popup{
   border-radius: $b-r;
   background-color: white;
-  width: 40%;
+  width: 50%;
   margin:auto;
 }
 
+.modal-close{
+  position: absolute;
+  top:30px;
+  right: 30px;
+  cursor: pointer;
+}
+
 .modal-header{
+  position: relative;
   z-index: 1;
   border-radius:  $b-r $b-r 0 0;
   background-color: $clr_3;
@@ -35,15 +43,19 @@
 }
 
 .modal-content{
+  border: none;
   width: 100%;
   top:-$b-r;
   z-index: 2;
   background-color: white;
   border-radius: $b-r;
-  padding: 20px;
+  padding: 30px;
+
+  .row{
+    margin-top: 0;
+  }
 
 }
-
 
 .modal-title{
   font-family: $ff-2;
@@ -52,17 +64,15 @@
   background-color: $clr-3;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+
+@media (max-width: 768px) {
+  .modal-popup{
+    width: 90%;
+  }
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+@media (max-width: 1200px) {
+  .modal-popup{
+    width: 80%;
+  }
 }

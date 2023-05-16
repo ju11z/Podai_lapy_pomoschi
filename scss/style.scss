@@ -221,6 +221,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
+    align-items: center;
 
     &-icon{
       margin-right: 20px;
@@ -229,6 +230,10 @@ body{
       font-size: $fs-l;
       text-transform: uppercase;
     }
+  }
+  .titled{
+    font-size: $fs-xl;
+    font-family: $ff-2;
   }
 
   /**/

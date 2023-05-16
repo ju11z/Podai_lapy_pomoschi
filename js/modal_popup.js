@@ -1,13 +1,13 @@
 var modal = document.getElementById("modal-window");
 var btn = document.getElementById("modal-popup-btn");
-var span = document.getElementById("modal-popup-btn-close");
+var close = document.getElementById("modal-popup-btn-close");
 
 
 btn.onclick = function() {
     modal.style.display = "block";
 }
 
-span.onclick = function() {
+close.onclick = function() {
     modal.style.display = "none";
 }
 

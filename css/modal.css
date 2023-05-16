@@ -23,10 +23,17 @@
 .modal-popup {
   border-radius: 50px;
   background-color: white;
-  width: 40%;
+  width: 50%;
   margin: auto; }
 
+.modal-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer; }
+
 .modal-header {
+  position: relative;
   z-index: 1;
   border-radius: 50px 50px 0 0;
   background-color: #322821;
@@ -39,12 +46,15 @@
   text-align: center; }
 
 .modal-content {
+  border: none;
   width: 100%;
   top: -50px;
   z-index: 2;
   background-color: white;
   border-radius: 50px;
-  padding: 20px; }
+  padding: 30px; }
+  .modal-content .row {
+    margin-top: 0; }
 
 .modal-title {
   font-family: "Valisca";
@@ -52,17 +62,11 @@
   color: white;
   background-color: #322821; }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold; }
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer; }
+@media (max-width: 768px) {
+  .modal-popup {
+    width: 90%; } }
+@media (max-width: 1200px) {
+  .modal-popup {
+    width: 80%; } }
 
 /*# sourceMappingURL=modal.css.map */

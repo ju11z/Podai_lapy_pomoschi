@@ -254,12 +254,16 @@ body {
   body .icon-text {
     display: flex;
     flex-direction: row;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    align-items: center; }
     body .icon-text-icon {
       margin-right: 20px; }
     body .icon-text-text {
       font-size: 20px;
       text-transform: uppercase; }
+  body .titled {
+    font-size: 34px;
+    font-family: "Valisca"; }
   body footer {
     background-color: white; }
   body .icons-list {
