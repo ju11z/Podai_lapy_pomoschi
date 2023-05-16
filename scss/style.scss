@@ -125,8 +125,18 @@ body{
       @extend .border-img-container;
       height: 0px;
       padding-top: 100%;
+
+
     }
+
+
+
     }
+
+  .bordered-empty{
+    background: transparent;
+    border:1px solid black;
+  }
 
 
   .my-border{
@@ -201,6 +211,13 @@ body{
     @include tag($clr_2_t);
   }
 
+  .announce-form{
+    width: 100%;
+    background-color: white;
+    border-radius: $b-r;
+    padding: $b-r*2/3;
+  }
+
   .announcement-card{
     border-radius: $b-r;
     width: 100%;
@@ -215,6 +232,16 @@ body{
     border-radius: $b-r;
 
   }
+  .label-input{
+    margin-bottom: 10px;
+
+    label{
+      margin-left: 20px;
+      margin-bottom: 0 ;
+    }
+  }
+
+
 
   .my-form{
     border-radius: $b-r;
@@ -235,12 +262,19 @@ body{
     min-height: 50px;
     border: 1px solid $clr_3;
     background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .i-t-list{
     .icon-text{
       margin-top:5px;
     }
+  }
+
+  .input-high{
+    display: flex;
+    height: 100%;
   }
 
   .my-filter{

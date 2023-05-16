@@ -193,6 +193,9 @@ body {
     body .border-img-container-sqr {
       height: 0px;
       padding-top: 100%; }
+  body .bordered-empty {
+    background: transparent;
+    border: 1px solid black; }
   body .my-border {
     width: 100%;
     height: 100%;
@@ -238,6 +241,11 @@ body {
     padding: 15px;
     border-radius: 50px;
     background-color: rgba(76, 50, 183, 0.4); }
+  body .announce-form {
+    width: 100%;
+    background-color: white;
+    border-radius: 50px;
+    padding: 33.3333333333px; }
   body .announcement-card {
     border-radius: 50px;
     width: 100%;
@@ -248,6 +256,11 @@ body {
   body .my-form-wrapper {
     overflow: hidden;
     border-radius: 50px; }
+  body .label-input {
+    margin-bottom: 10px; }
+    body .label-input label {
+      margin-left: 20px;
+      margin-bottom: 0; }
   body .my-form {
     border-radius: 50px;
     width: 100%;
@@ -262,9 +275,14 @@ body {
     border-radius: 999px;
     min-height: 50px;
     border: 1px solid #322821;
-    background-color: transparent; }
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px; }
   body .i-t-list .icon-text {
     margin-top: 5px; }
+  body .input-high {
+    display: flex;
+    height: 100%; }
   body .text-titled {
     font-size: 20px;
     font-family: "Noto Serif";
