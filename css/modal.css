@@ -1,4 +1,4 @@
-.modal {
+.modal-window {
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -20,14 +20,31 @@
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
 
-/* Modal Content */
-.modal-content {
+.modal-popup {
   border-radius: 50px;
   background-color: white;
-  margin: auto;
-  padding: 30px;
-  border: 1px solid #888;
-  width: 40%; }
+  width: 40%;
+  margin: auto; }
+
+.modal-header {
+  z-index: 1;
+  border-radius: 50px 50px 0 0;
+  background-color: #322821;
+  width: 100%;
+  min-height: 125px; }
+
+.modal-title {
+  width: 100%;
+  padding: 10px;
+  text-align: center; }
+
+.modal-content {
+  width: 100%;
+  top: -50px;
+  z-index: 2;
+  background-color: white;
+  border-radius: 50px;
+  padding: 20px; }
 
 .modal-title {
   font-family: "Valisca";

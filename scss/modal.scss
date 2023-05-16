@@ -1,6 +1,6 @@
 @import "constants";
 
-.modal {
+.modal-window {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -14,15 +14,36 @@
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
-.modal-content {
+.modal-popup{
   border-radius: $b-r;
   background-color: white;
-  margin: auto;
-  padding: 30px;
-  border: 1px solid #888;
   width: 40%;
+  margin:auto;
 }
+
+.modal-header{
+  z-index: 1;
+  border-radius:  $b-r $b-r 0 0;
+  background-color: $clr_3;
+  width: 100%;
+  min-height: $b-r*2.5;
+}
+.modal-title{
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.modal-content{
+  width: 100%;
+  top:-$b-r;
+  z-index: 2;
+  background-color: white;
+  border-radius: $b-r;
+  padding: 20px;
+
+}
+
 
 .modal-title{
   font-family: $ff-2;
