@@ -289,10 +289,14 @@ body {
     flex-direction: row;
     flex-wrap: wrap; }
   body .tag-clr-1 {
+    margin-right: 10px;
+    margin-bottom: 10px;
     padding: 15px;
     border-radius: 50px;
     background-color: rgba(234, 139, 27, 0.4); }
   body .tag-clr-2 {
+    margin-right: 10px;
+    margin-bottom: 10px;
     padding: 15px;
     border-radius: 50px;
     background-color: rgba(76, 50, 183, 0.4); }

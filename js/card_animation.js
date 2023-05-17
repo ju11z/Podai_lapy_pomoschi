@@ -5,14 +5,33 @@ Array.from(expandsRight).forEach(function(elem){
     expandCenter=expandRow.querySelector('.expand-center');
     expandLeft=expandRow.querySelector('.expand-left');
     imgDescr=elem.querySelector('.img-descr');
+
+
+    var tl = new TimelineMax({paused: true});
+
+    tl.to(expandLeft, {scaleX:0.5, transformOrigin:"100% 50%",duration:1})
+        .add(expandCenter, {scaleX:0.5,xPercent:25,transformOrigin:"150% 50%", duration:1})
+        .add(imgDescr, {left:"90%", borderRadius:"0 30px 30px 0", width:"110%"});
+
     elem.addEventListener("mouseover",
         ()=>{
+
+            tl.timeScale(1).play();
             //var animLinear=TweenMax.to
+            /*
             gsap.to(expandLeft, {scaleX:0.5, transformOrigin:"100% 50%",duration:1});
             gsap.to(expandCenter, {scaleX:0.5,xPercent:25,transformOrigin:"150% 50%", duration:1});
             gsap.to(imgDescr, {left:"90%", borderRadius:"0 30px 30px 0", width:"110%"});
+
+             */
         }
     )
+    elem.addEventListener("mouseleave",
+        ()=>{
+            tl.timeScale(tl.duration()).reverse();
+        }
+        )
+
 });
 
 
