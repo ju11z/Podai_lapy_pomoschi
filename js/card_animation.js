@@ -54,3 +54,33 @@ Array.from(expandsLeft).forEach(function(elem){
     )
 });
 
+var expandsCenter = document.getElementsByClassName("expand-center");
+console.log(expandsCenter);
+
+Array.from(expandsCenter).forEach(function(elem){
+    expandRow=elem.closest('.expand-row');
+    expandLeft=expandRow.querySelector('.expand-left');
+    expandRight=expandRow.querySelector('.expand-right');
+    imgDescr=elem.querySelector('.img-descr');
+    img=elem.querySelector('.bordered-img');
+
+    var tl_c = new TimelineMax({paused: true});
+
+    tl_c.add('start')
+        .to(expandRight, {width: "-=50%", transformOrigin:"100% 50%",duration:1},'start')
+        .to(expandLeft, {width: "-=50%",xPercent:100,transformOrigin:"100% 50%", duration:1},'start')
+        .to(imgDescr, {left:"+=100%", borderRadius:"30px 0 0 30px", width:"110%", duration:1},'start')
+        .to(img,{borderRadius:"30px 0 0 30px", width:"110%", duration:1},'start');
+
+    elem.addEventListener("mouseover",
+        ()=>{
+            tl_c.timeScale(1).play();
+        }
+    )
+    elem.addEventListener("mouseleave",
+        ()=>{
+            tl_c.timeScale(tl_c.duration()).reverse();
+        }
+    )
+});
+
