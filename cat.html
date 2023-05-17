@@ -13,6 +13,21 @@
     <div class=" row">
       <div class="col-3"></div>
       <div class="col-6">
+        <div class="modal-window" id="modal-window-post">
+          <div class="modal-popup modal-small">
+            <div class="modal-header">
+              <div class="modal-close" id="modal-post-close"><img src="img/icon/close.svg" ></div>
+              <div class="modal-title">Заявка отправлена</div>
+            </div>
+            <div class="modal-content">
+              <div class="row">
+                <div class="col-12">
+                  <div>Спасибо за отклик! Мы свяжемся с вами по почте или телефону в течение нескольких дней.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="modal-window" id="modal-window">
           <div class="modal-popup" id="modal-popup">
             <div class="modal-header">
@@ -35,32 +50,37 @@
                   <div class="row">
                     <div class="col-12 col-sm-6">
                       <div class="label-input">
-                        <label for="">Название услуги</label>
-                        <input type="text">
+                        <label for="">Ваше имя</label>
+                        <input type="text" id="name">
+                        <div id="nameMsg" class="input-msg"></div>
                       </div>
                     </div>
                     <div class="col-12 col-sm-6">
                       <div class="label-input">
-                        <label for="">Название услуги</label>
-                        <input type="text">
+                        <label for="">Ваш город</label>
+                        <input type="text" id="city">
+                        <div id="cityMsg" class="input-msg"></div>
                       </div>
                     </div>
                     <div class="col-12 col-sm-6">
                       <div class="label-input">
-                        <label for="">Название услуги</label>
-                        <input type="text">
+                        <label for="">Ваша почта</label>
+                        <input type="text" id="mail">
+                        <div id="mailMsg" class="input-msg"></div>
                       </div>
                     </div>
                     <div class="col-12 col-sm-6">
                       <div class="label-input">
-                        <label for="">Название услуги</label>
-                        <input type="text">
+                        <label for="">Ваш телефон</label>
+                        <input type="text" id="phone">
+                        <div id="phoneMsg" class="input-msg"></div>
                       </div>
                     </div>
                     <div class="col-12">
                         <div class="label-input">
-                          <label for="">Название услуги</label>
-                          <input type="text">
+                          <label for="">Напишите, почему именно вы должны стать хозяином котика</label>
+                          <input type="text" id="about">
+                          <div id="aboutMsg" class="input-msg"></div>
                         </div>
                     </div>
                     <div class="d-none d-md-block col-6"></div>
