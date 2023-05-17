@@ -1,0 +1,229 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
+    link(href='css/bootstrap/bootstrap-grid.css' rel='stylesheet')
+    link(href='css/style.css' rel='stylesheet')
+  body
+    include header
+    .container-fluid
+      .container
+        .row
+    .container
+      .row
+        .col-12.col-md-4
+          .block-rounded.my-filter.p-5.p-md-3.p-xl-5.mb-4.mb-md-0
+            .title.text-center.mt-4
+              | Фильтр
+            .div
+              .mb-4
+                .icon-text
+                  img.icon-text-icon(src='img/icon/search.svg')
+                  .icon-text-text Поиск
+                input.input-solid(type='text')
+                label.check-container
+                  input(type='checkbox' checked='')
+                  span.checkmark
+                  span.label-text по кличке
+                label.check-container
+                  input(type='checkbox' checked='')
+                  span.checkmark
+                  span.label-text по кличке
+              div
+                .icon-text
+                  img.icon-text-icon(src='img/icon/search.svg')
+                  .icon-text-text Поиск
+                .dropdown
+                  input#filter-switch_1.dropdown__switch(type='checkbox' hidden='')
+                  label.dropdown__options-filter(for='filter-switch_1')
+                    ul.dropdown__filter(role='listbox' tabindex='-1')
+                      li.dropdown__filter-selected(aria-selected='true')
+                        | Default option
+                      li
+                        ul.dropdown__select
+                          li.dropdown__select-option(role='option')
+                            | Option 1
+                          li.dropdown__select-option(role='option')
+                            | Option 2
+                          li.dropdown__select-option(role='option')
+                            | Option 3
+                          li.dropdown__select-option(role='option')
+                            | Option 4
+                          li.dropdown__select-option(role='option')
+                            | Option 5
+              div
+                .icon-text
+                  img.icon-text-icon(src='img/icon/search.svg')
+                  .icon-text-text Поиск
+                .dropdown
+                  input#filter-switch_2.dropdown__switch(type='checkbox' hidden='')
+                  label.dropdown__options-filter(for='filter-switch_2')
+                    ul.dropdown__filter(role='listbox' tabindex='-1')
+                      li.dropdown__filter-selected(aria-selected='true')
+                        | Default option
+                      li
+                        ul.dropdown__select
+                          li.dropdown__select-option(role='option')
+                            | Option 1
+                          li.dropdown__select-option(role='option')
+                            | Option 2
+                          li.dropdown__select-option(role='option')
+                            | Option 3
+                          li.dropdown__select-option(role='option')
+                            | Option 4
+                          li.dropdown__select-option(role='option')
+                            | Option 5
+              div
+                .icon-text
+                  img.icon-text-icon(src='img/icon/search.svg')
+                  .icon-text-text Поиск
+                .dropdown
+                  input#filter-switch_3.dropdown__switch(type='checkbox' hidden='')
+                  label.dropdown__options-filter(for='filter-switch_3')
+                    ul.dropdown__filter(role='listbox' tabindex='-1')
+                      li.dropdown__filter-selected(aria-selected='true')
+                        | Default option
+                      li
+                        ul.dropdown__select
+                          li.dropdown__select-option(role='option')
+                            | Option 1
+                          li.dropdown__select-option(role='option')
+                            | Option 2
+                          li.dropdown__select-option(role='option')
+                            | Option 3
+                          li.dropdown__select-option(role='option')
+                            | Option 4
+                          li.dropdown__select-option(role='option')
+                            | Option 5
+              div
+                .icon-text
+                  img.icon-text-icon(src='img/icon/search.svg')
+                  .icon-text-text Поиск
+                label.check-container
+                  input(type='checkbox' checked='')
+                  span.checkmark
+                  span.label-text по кличке
+                label.check-container
+                  input(type='checkbox' checked='')
+                  span.checkmark
+                  span.label-text по кличке
+                label.check-container
+                  input(type='checkbox' checked='')
+                  span.checkmark
+                  span.label-text по кличке
+              .shadow-btn-container.mt-4
+                button.my-btn Взять друга сейчас!
+                .my-shadow
+        .col-12.col-md-8
+          .block-rounded.pt-5.pt-md-3.pt-xl-5
+            .title.text-center.mt-4
+              | Наши котики
+            .row
+              .col-2.col-sm-1
+              .col-8.col-sm-10
+                .row
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+                  .col-12.col-sm-6.col-lg-4.mb-4
+                    a.card.hover-bounce(href='cat.html')
+                      .card-img-container
+                        img.card-img(src='img/cats_1.png')
+                      .card-info
+                        .text-icon
+                          .text-icon-text.card-title Ксандр
+                          .text-icon-icon
+                            img(src='img/icon/male.svg')
+                        .card-info-item 5 лет
+                        .card-info-item кастрирован
+              .col-2.col-sm-1
+    include footer
+    script(src='js/toggle_menu.js')
+    script(src='js/select.js')
