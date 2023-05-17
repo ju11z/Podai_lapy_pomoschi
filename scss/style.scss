@@ -22,6 +22,10 @@ body{
   button{
     border:none;
     background-color:transparent;
+
+    &:focus{
+      outline: none;
+    }
   }
 
   a:active, /* активная/посещенная ссылка */
@@ -347,6 +351,11 @@ body{
     background-color: transparent;
     padding-left: 10px;
     padding-right: 10px;
+
+    &:focus{
+      outline: none;
+      border: 1px solid $clr_3;
+    }
   }
 
   .i-t-list{

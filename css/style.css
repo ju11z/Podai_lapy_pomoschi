@@ -120,6 +120,8 @@ body {
   body button {
     border: none;
     background-color: transparent; }
+    body button:focus {
+      outline: none; }
   body a:active,
   body a:hover,
   body a {
@@ -339,6 +341,9 @@ body {
     background-color: transparent;
     padding-left: 10px;
     padding-right: 10px; }
+    body input:focus {
+      outline: none;
+      border: 1px solid #322821; }
   body .i-t-list .icon-text {
     margin-top: 5px; }
   body .input-high {
