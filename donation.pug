@@ -1,0 +1,93 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
+    link(href='css/style.css' rel='stylesheet')
+    link(href='css/modal.css' rel='stylesheet')
+  body
+    include header
+    #modal-window.modal-window
+      #modal-popup.modal-popup.modal-small
+        .modal-header
+          #modal-popup-btn-close.modal-close
+            img(src='img/icon/close.svg')
+          .modal-title Спасибо!
+        .modal-content
+          .row
+            .col-12
+              div Ваши средства пойдут на помощь приюту и его обитателям. Мы вам очень благодарны!
+    .container-fluid(style='background-color: white;')
+      .container
+        .row.pt-4.pb-4
+          .col-8
+            .title Спасибо за помощь!
+            div
+              | Благодаря вашим пожертвованиям наш приют продолжат существовать, котики находить свои дома, а люди своих друзей.
+          .col-1
+          .col-2
+            img(src='img/paws.svg')
+    .container
+      .row
+        .col-1
+        .col-10
+          .row.my-form-wrapper.mt-5
+            .d-none.d-lg-block.col-6
+              img.form-image(src='img/donation_1.png')
+            .col-12.col-lg-6
+              .my-form
+                .title Форма доната
+                div
+                  .label-input
+                    .icon-text
+                      img.icon-text-icon(src='img/icon/med.svg')
+                      label Имя держателя карты
+                    input#fio(type='text')
+                    #fioMsg.input-msg
+                div
+                  div
+                    .label-input
+                      .icon-text
+                        img.icon-text-icon(src='img/icon/med.svg')
+                        label Номер карты
+                      input#card(type='text')
+                      #cardMsg.input-msg
+                .row
+                  .col-12.col-md-6.col-lg-12.col-xl-6
+                    div
+                      .label-input
+                        .icon-text
+                          img.icon-text-icon(src='img/icon/med.svg')
+                          label Дата истчения
+                        input#duedate(type='text')
+                        #duedateMsg.input-msg
+                  .col-12.col-md-6.col-lg-12.col-xl-6
+                    div
+                      .label-input
+                        .icon-text
+                          img.icon-text-icon(src='img/icon/med.svg')
+                          label CVV
+                        input#cvv(type='text')
+                        #cvvMsg.input-msg
+                .row
+                  .col-12
+                    div
+                      .label-input
+                        .icon-text
+                          img.icon-text-icon(src='img/icon/med.svg')
+                          label Сумма в рублях
+                        input#sum(type='text')
+                        #sumMsg.input-msg
+                .row
+                  .col-2
+                  .col-8
+                    .shadow-btn-container.mt-3
+                      button#donut-submit.my-btn(onclick='validateDonutForm()' style='z-index: 1;') Пожертвовать
+                      .my-shadow(style='z-index: 0;')
+                  .col-2
+        .col-1
+    include footer
+    script(src='js/donation.js')
+    script(src='js/gsap/gsap.min.js')
+    script(src='js/common_animations.js')
