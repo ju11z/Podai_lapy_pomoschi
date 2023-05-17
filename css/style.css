@@ -382,5 +382,9 @@ body {
     padding: 33.3333333333px; }
     body .announce-card .icon-text {
       margin-bottom: 0; }
+  body .img-descr {
+    overflow: hidden; }
+  body .descr-wrapper {
+    overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */
