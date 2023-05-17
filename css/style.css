@@ -391,5 +391,8 @@ body {
     overflow: hidden; }
   body .descr-wrapper {
     overflow: hidden; }
+  body .input-msg {
+    color: #EA8B1B;
+    margin-left: 20px; }
 
 /*# sourceMappingURL=style.css.map */

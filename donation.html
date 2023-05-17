@@ -5,8 +5,72 @@
   <title>Title</title>
   <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
 </head>
 <body>
+<div class="modal-window" id="modal-window">
+  <div class="modal-popup" id="modal-popup">
+    <div class="modal-header">
+      <div class="modal-close" id="modal-popup-btn-close"><img src="img/icon/close.svg" ></div>
+      <div class="modal-title">Заявка на опекунство</div>
+    </div>
+    <div class="modal-content">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="border-img-container-sqr">
+            <img src="img/about_1.jpg" class="bordered-img" alt="">
+          </div>
+          <div class="icon-text mt-3">
+            <img class="icon-text-icon" src="img/icon/male.svg">
+            <div class="title-small">Ксандр</div>
+          </div>
+          <div>поступил в приют </div>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="row">
+            <div class="col-12 col-sm-6">
+              <div class="label-input">
+                <label for="">Название услуги</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="label-input">
+                <label for="">Название услуги</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="label-input">
+                <label for="">Название услуги</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="col-12 col-sm-6">
+              <div class="label-input">
+                <label for="">Название услуги</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="label-input">
+                <label for="">Название услуги</label>
+                <input type="text">
+              </div>
+            </div>
+            <div class="d-none d-md-block col-6"></div>
+            <div class="col-12 col-md-6">
+              <div class="shadow-btn-container mt-3">
+                <button class="my-btn" id="send-request">Отправить заявку</button>
+                <div class="my-shadow"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="container-fluid" style="background-color: white;">
   <div class="container">
     <div class="row pt-4 pb-4">
@@ -28,7 +92,7 @@
           <img class="form-image" src="img/donation_1.png">
         </div>
         <div class="col-12 col-lg-6">
-          <form class="my-form" onsubmit="return validateDonutForm()" >
+          <div class="my-form"  >
             <div class="title">Форма доната</div>
             <div>
               <div class="label-input">
@@ -36,7 +100,8 @@
                   <img class="icon-text-icon" src="img/icon/med.svg">
                   <label class="">Имя держателя карты</label>
                 </div>
-                <input type="text">
+                <input type="text" id="fio">
+                <div id="fioMsg" class="input-msg"></div>
               </div>
             </div>
             <div>
@@ -46,7 +111,8 @@
                     <img class="icon-text-icon" src="img/icon/med.svg">
                     <label class="">Номер карты</label>
                   </div>
-                  <input type="text">
+                  <input type="text" id="card">
+                  <div id="cardMsg" class="input-msg"></div>
                 </div>
               </div>
             </div>
@@ -58,7 +124,8 @@
                       <img class="icon-text-icon" src="img/icon/med.svg">
                       <label class="">Дата истчения</label>
                     </div>
-                    <input type="text">
+                    <input type="text" id="duedate">
+                    <div id="duedateMsg" class="input-msg"></div>
                   </div>
                 </div>
               </div>
@@ -69,20 +136,22 @@
                       <img class="icon-text-icon" src="img/icon/med.svg">
                       <label class="">CVV</label>
                     </div>
-                    <input type="text">
+                    <input type="text" id="cvv">
+                    <div id="cvvMsg" class="input-msg"></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-12 col-md-6 col-lg-12 col-xl-6">
+              <div class="col-12 ">
                 <div>
                   <div class="label-input">
                     <div class="icon-text">
                       <img class="icon-text-icon" src="img/icon/med.svg">
-                      <label class="">Сумма</label>
+                      <label class="">Сумма в рублях</label>
                     </div>
-                    <input type="text">
+                    <input type="text" id="sum">
+                    <div id="sumMsg" class="input-msg"></div>
                   </div>
                 </div>
               </div>
@@ -91,25 +160,21 @@
               <div class="col-2"></div>
               <div class="col-8">
                 <div class="shadow-btn-container mt-3">
-                  <input type="submit" value="Пожертвовать" class="my-btn" id="donut-submit" style="z-index: 1;">
+                  <button onclick="validateDonutForm()" class="my-btn" id="donut-submit" style="z-index: 1;">Пожертвовать</button>
                   <div class="my-shadow" style="z-index: 0;"></div>
                 </div>
               </div>
               <div class="col-2"></div>
             </div>
 
-          </form>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-1"></div>
   </div>
 </div>
-<script>
-  function validateDonutForm() {
-    alert("validate!");
-  }
-</script>
+<script src="js/donation.js"></script>
 <script src="js/gsap/gsap.min.js"></script>
 <script src="js/common_animations.js"></script>
 </body>
