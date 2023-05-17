@@ -1,3 +1,50 @@
+-
+  const cards = [
+    {
+      name:"Ксандр",
+      age:"5 лет",
+      health:"кастрирован",
+      icon_path:"male.svg",
+      img_path:"cats_1.png"
+    },
+    {
+          name:"Ксандр",
+          age:"5 лет",
+          health:"кастрирован",
+          icon_path:"male.svg",
+          img_path:"cats_1.png"
+        },
+    {
+          name:"Ксандр",
+          age:"5 лет",
+          health:"кастрирован",
+          icon_path:"male.svg",
+          img_path:"cats_1.png"
+        },
+    {
+          name:"Ксандр",
+          age:"5 лет",
+          health:"кастрирован",
+          icon_path:"male.svg",
+          img_path:"cats_1.png"
+        },
+
+    {
+          name:"Ксандр",
+          age:"5 лет",
+          health:"кастрирован",
+          icon_path:"male.svg",
+          img_path:"cats_1.png"
+        },
+    {
+          name:"Ксандр",
+          age:"5 лет",
+          health:"кастрирован",
+          icon_path:"male.svg",
+          img_path:"cats_1.png"
+        },
+  ];
+
 doctype html
 html(lang='en')
   head
@@ -124,105 +171,19 @@ html(lang='en')
               .col-2.col-sm-1
               .col-8.col-sm-10
                 .row
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
-                  .col-12.col-sm-6.col-lg-4.mb-4
-                    a.card.hover-bounce(href='cat.html')
-                      .card-img-container
-                        img.card-img(src='img/cats_1.png')
-                      .card-info
-                        .text-icon
-                          .text-icon-text.card-title Ксандр
-                          .text-icon-icon
-                            img(src='img/icon/male.svg')
-                        .card-info-item 5 лет
-                        .card-info-item кастрирован
+                   each card in cards
+                      .col-12.col-sm-6.col-lg-4.mb-4
+                        a.card.hover-bounce(href='cat.html')
+                          .card-img-container
+                            img.card-img(src='img/' + card.img_path)
+                          .card-info
+                            .text-icon
+                              .text-icon-text.card-title #{card.name}
+                              .text-icon-icon
+                                img(src='img/icon/' + card.icon_path)
+                            .card-info-item #{card.age}
+                            .card-info-item #{card.health}
+
               .col-2.col-sm-1
     include footer
     script(src='js/toggle_menu.js')
