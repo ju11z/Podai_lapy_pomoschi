@@ -69,8 +69,8 @@ Array.from(expandsCenter).forEach(function(elem){
     tl_c.add('start')
         .to(expandRight, {width: "-=50%", transformOrigin:"100% 50%",duration:1},'start')
         .to(expandLeft, {width: "-=50%",xPercent:100,transformOrigin:"100% 50%", duration:1},'start')
-        .to(imgDescr, {left:"+=100%", borderRadius:"30px 0 0 30px", width:"110%", duration:1},'start')
-        .to(img,{borderRadius:"30px 0 0 30px", width:"110%", duration:1},'start');
+        .to(imgDescr, {left:"+=50%", borderRadius:"0 30px 30px 0", duration:1},'start')
+        .to(img,{left:"-=50%",borderRadius:"30px 0 0 30px", duration:1},'start');
 
     elem.addEventListener("mouseover",
         ()=>{
