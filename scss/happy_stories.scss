@@ -9,7 +9,7 @@
   z-index: -1;
   left: 0%;
   border-radius: $b-r;
-  padding: 30px;
+  padding: $b-r+10;
 
   .bordered-img{
     object-fit: cover;
