@@ -1,3 +1,43 @@
+-
+  const cards = [
+    {
+      icon_path:"cat.svg",
+      text:"Вы спасаете сразу 2 жизни - освободившееся место тут же займет новый бездомыш."
+    },
+    {
+       icon_path:"heart.svg",
+       text:"Мы поможем подобрать питомца, с которым вам будет комфортно."
+    },
+    {
+       icon_path:"people.svg",
+       text:"Вы получаете верного и благодарного друга."
+    },
+    {
+       icon_path:"present.svg",
+       text:"Это абсолютно бесплатно, даже если кот породистый."
+    }
+  ];
+
+  const questions = [
+      {
+        question:"Я хочу отдать вам кота. Что для этого нужно?",
+        answer:"К сожалению, мы не можем помочь всем. В первую очередь мы принимаем животных из отлова, животных-инвалидов и травмированных животных. Даже для них не всегда хватает свободных мест."
+      },
+      {
+        question:"Я хочу отдать вам корм, лекарства и т.д. Как это можно сделать?",
+        answer:"Можно привезти лично или передать, например, с помощью Яндекс.Доставки, обычно по будням после 18.00 и в течение всего дня в выходные. Наша волонтер Катя подскажет, что может нам пригодиться и как к нам добраться, договорится с вами на конкретное время. Спасибо, что помогаете нам!"
+      },
+      {
+        question:"Я хочу стать волонтером. Что для этого нужно?",
+        answer:"Волонтером приюта можно стать только если вам уже исполнилось 18 лет. Дежурство в приюте занимает в среднем 3-4 часа. За это время вам предстоит убрать в одной из комнат, в которых живут котики (подмести и помыть пол), почистить клетки, почистить лотки, вымыть лотки и мисочки, покормить котов, поменять воду в мисочках. Сначала вы будете помогать кому-то из наших волонтеров. Как только почувствуете уверенность в своих силах, можно будет дежурить самостоятельно. С собой нужно взять сменную одежду, сменную обувь (по желанию) и резиновые перчатки."
+      },
+      {
+       question:"Я хочу взять у вас кота. Что для этого нужно?",
+       answer:"Связаться с нами и пообщаться. Если всех все устроит – договориться на конкретные дату и время."
+      },
+
+    ];
+
 doctype html
 html(lang='en')
   head
@@ -35,11 +75,12 @@ html(lang='en')
       .flex-column-reverse.flex-md-row.row.mt-5
         .col-12.col-md-6.col-lg-8
           .row
-            .col-12.col-lg-6
-              .about-card
-                .icon
-                  img(src='img/icon/cake.svg')
-                .text Вы спасаете сразу 2 жизни - освободившееся место тут же займет новый бездомыш.
+            each card in cards
+                .col-12.col-lg-6
+                  .about-card.mb-4
+                    .icon
+                      img(src='img/icon/' + card.icon_path)
+                    .text #{card.text}
         .d-none.d-md-block.col-1
         .col-12.col-md-5.col-lg-3
           .title Почему лучше взять котика из приюта?
@@ -70,27 +111,15 @@ html(lang='en')
         .d-none.d-md-block.col-2
         .col-12.col-md-8
           .accordion
-            .accordion-group
-              .accordion-menu
-                .accordion-menu-text У вас в приюте живут только котики?
-                img.accordion-menu-icon(src='img/icon/paw.svg' alt='')
-              .accordion-content
-                p
-                  | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-            .accordion-group
-              .accordion-menu
-                .accordion-menu-text У вас в приюте живут только котики?
-                img.accordion-menu-icon(src='img/icon/dropdown.svg' alt='')
-              .accordion-content
-                p
-                  | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-            .accordion-group
-              .accordion-menu
-                .accordion-menu-text У вас в приюте живут только котики?
-                img.accordion-menu-icon(src='img/icon/dropdown.svg' alt='')
-              .accordion-content
-                p
-                  | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            each question in questions
+                .accordion-group
+                  .accordion-menu
+                    .accordion-menu-text #{question.question}
+                    img.accordion-menu-icon(src='img/icon/paw.svg' alt='')
+                  .accordion-content
+                    p #{question.answer}
+
+
         .d-none.d-md-block.col-2
     include footer
 
