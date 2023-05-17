@@ -31,7 +31,7 @@ window.onclick = function(event) {
 
 
 function validateRequestForm() {
-    if(true){
+    if(validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()){
         alert("validate form");
         //validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()
         modal.style.display = "none";
@@ -42,73 +42,59 @@ function validateRequestForm() {
 function validateName(){
     name=document.getElementById("name").value;
     nameMsg=document.getElementById("nameMsg");
-    nameRegExp = /^[A-Z]+\s[A-Z]+$/;
 
-    if (nameRegExp.test(name)){
+    if (name!=""){
         nameMsg.innerHTML="";
         nameMsg.style.display="none";
         return true;
     }
 
-    nameMsg.innerHTML="Длина имени должна быть не менее 3х символов.";
+    nameMsg.innerHTML="Пожалуйста, заполните это поле.";
     nameMsg.style.display="block";
     return false;
 }
 
 function validateCity(){
-    city=document.getElementById("city").value;
-    cityMsg=document.getElementById("cityMsg");
-    cityRegExp=/^(\d{4}([-]|)\d{4}([-]|)\d{4}([-]|)\d{4})$/;
-
-    if (cityRegExp.test(city)){
-        cityMsg.innerHTML="";
-        cityMsg.style.display="none";
-        return true;
-    }
-
-    cityMsg.innerHTML="Пожалуйста, введите номер карты в формате XXXX-XXXX-XXXX-XXXX";
-    cityMsg.style.display="block";
-    return false;
+    return true;
 
 }
 function validatePhone(){
-    cvv=document.getElementById("cvv").value;
-    cvvMsg=document.getElementById("cvvMsg");
-    cvvRegExp=/^(\d{3})$/;
+    phone=document.getElementById("phone").value;
+    phoneMsg=document.getElementById("phoneMsg");
+    phoneRegExp=/^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
 
-    if (cvvRegExp.test(cvv)){
-        cvvMsg.innerHTML="";
-        cvvMsg.style.display="none";
+    if (phoneRegExp.test(phone)){
+        phoneMsg.innerHTML="";
+        phoneMsg.style.display="none";
         return true;
     }
 
-    cvvMsg.innerHTML="Пожалуйста, введите номер CVV в формате XXX";
-    cvvMsg.style.display="block";
+    phoneMsg.innerHTML="Пожалуйста, введите номер телефона в формате XXX-XXX-XXXX";
+    phoneMsg.style.display="block";
     return false;
 
 }
 function validateMail(){
-    duedate=document.getElementById("duedate").value;
-    duedateMsg=document.getElementById("duedateMsg");
-    duedateRegExp=/^(\d{2}([-]|)\d{2})$/;
+    mail=document.getElementById("mail").value;
+    mailMsg=document.getElementById("mailMsg");
+    mailRegExp=/^([a-z0-9]+@[a-z]+\.[a-z]{2,3})$/;
 
-    if (duedateRegExp.test(duedate)){
-        duedateMsg.innerHTML="";
-        duedateMsg.style.display="none";
+    if (mailRegExp.test(mail)){
+        mailMsg.innerHTML="";
+        mailMsg.style.display="none";
         return true;
     }
 
-    duedateMsg.innerHTML="Пожалуйста, введите срок действия карты в формате XX-XX";
-    duedateMsg.style.display="block";
+    mailMsg.innerHTML="Пожалуйста, введите почту верно";
+    mailMsg.style.display="block";
     return false;
 
 }
 function validateAbout(){
     about=document.getElementById("about").value;
     aboutMsg=document.getElementById("aboutMsg");
-    aboutRegExp=/^(\d{1,})$/;
 
-    if (aboutRegExp.test(about)){
+    if (about!=""){
         aboutMsg.innerHTML="";
         aboutMsg.style.display="none";
         return true;
