@@ -1,0 +1,101 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
+    link(href='css/style.css' rel='stylesheet')
+    link(href='css/about.css' rel='stylesheet')
+  body
+    include header
+
+    .container
+      .flex-column-reverse.flex-md-row.row.mt-5
+        .col-12.col-md-5
+          .title.roll-right Готовы познакомиться с новым лучшим другом?
+          .mb-5
+            | Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.
+          .row
+            .col-8
+              .shadow-btn-container
+                button.my-btn Взять друга сейчас!
+                .my-shadow
+            .col-4
+        .d-none.d-md-block.col-1
+        .col-12.col-md-6
+          .row
+            .col-12.col-sm-6.col-md-12.col-lg-6
+              .border-img-container.offset-bottom
+                img.bordered-img(src='img/about_1.jpg' alt='')
+                .my-border
+            .d-none.d-sm-block.d-md-none.d-lg-block.col-6
+              .border-img-container.offset-top
+                img.bordered-img(src='img/about_2.jpg' alt='')
+                .my-border
+      .flex-column-reverse.flex-md-row.row.mt-5
+        .col-12.col-md-6.col-lg-8
+          .row
+            .col-12.col-lg-6
+              .about-card
+                .icon
+                  img(src='img/icon/cake.svg')
+                .text Вы спасаете сразу 2 жизни - освободившееся место тут же займет новый бездомыш.
+        .d-none.d-md-block.col-1
+        .col-12.col-md-5.col-lg-3
+          .title Почему лучше взять котика из приюта?
+          div
+            | Мы убеждены, что все котики одинаково хорошие. Но! Покупая животных, вы чаще всего косвенно поддерживаете деятельность разведенцев, т.е. тех, кто разводит породистых кошек исключительно ради прибыли.
+      .row.mt-5
+        .col-12.col-md-5
+          .title.roll-right Отношение к животным в Беларуси
+          div
+            | В Беларуси не существует государственных программ гуманного сокращения численности бездомных животных. Только отлов.Большинство животных, которые попадут в отлов, умрут — их либо усыпят, либо они заразятся и умрут от болезней. В 99% случаев это будут молодые и (относительно) здоровые животные. Мы стараемся дать им шанс жить. Котики-инвалиды или травмированные коты требуют специального ухода, за который люди зачастую боятся браться.
+        .d-none.d-md-block.col-1
+        .col-12.col-md-6
+          .row.d-flex.align-items-center
+            .col-12.col-sm-6.col-md-12.col-lg-6
+              .border-img-container-sqr
+                img.bordered-img(src='img/about_3.jpg' alt='')
+                .my-border
+            .d-none.d-sm-block.d-md-none.d-lg-block.col-6
+              .border-img-container-sqr.mb-4
+                img.bordered-img(src='img/about_4.jpg' alt='')
+                .my-border
+              .border-img-container-sqr
+                img.bordered-img(src='img/about_5.jpg' alt='')
+                .my-border
+      .row
+        .col-12
+          .title.text-center Часто задаваемые вопросы
+        .d-none.d-md-block.col-2
+        .col-12.col-md-8
+          .accordion
+            .accordion-group
+              .accordion-menu
+                .accordion-menu-text У вас в приюте живут только котики?
+                img.accordion-menu-icon(src='img/icon/paw.svg' alt='')
+              .accordion-content
+                p
+                  | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            .accordion-group
+              .accordion-menu
+                .accordion-menu-text У вас в приюте живут только котики?
+                img.accordion-menu-icon(src='img/icon/dropdown.svg' alt='')
+              .accordion-content
+                p
+                  | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            .accordion-group
+              .accordion-menu
+                .accordion-menu-text У вас в приюте живут только котики?
+                img.accordion-menu-icon(src='img/icon/dropdown.svg' alt='')
+              .accordion-content
+                p
+                  | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+        .d-none.d-md-block.col-2
+    include footer
+
+    script(src='js/gsap/gsap.min.js')
+    script(src='js/toggle_menu.js')
+    script(src='js/common_animations.js')
+    script(src='js/accordion_animation.js')
+    script(src='js/about_animation.js')

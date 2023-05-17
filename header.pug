@@ -1,0 +1,33 @@
+header
+  .container.d-block.d-lg-none
+    .row.p-3
+      #toggle-menu-btn.toggle-menu-btn
+        img(src='img/logo.svg')
+  .container
+    #toggle-menu.toggle-menu
+      .row
+        .col-12.mobile-menu-item.active
+          a(href='') О нас
+        .col-12.mobile-menu-item
+          a(href='') Ищут дом
+        .col-12.mobile-menu-item
+          a(href='') Помощь
+        .col-12.mobile-menu-item
+          a(href='') Счастливые истории
+        .col-12.mobile-menu-item
+          a(href='') Донат
+  .container.d-none.d-lg-block.mb-4
+    .row.pt-4
+      .col-3
+        img(src='img/logo.svg')
+      .d-block.d-md-none.d-lg-block.col-1
+      .col-9.col-lg-8
+        .border-menu-container
+          .menu-wrapper
+            .menu-items
+              a.menu-item.active(href='about.html') О нас
+              a.menu-item(href='cats.html') Ищут дом
+              a.menu-item(href='help.html') Помощь
+              a.menu-item(href='happy_stories.html') Счастливые истории
+              a.menu-item(href='donation.html') Донат
+          .menu-shadow
