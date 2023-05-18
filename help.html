@@ -5,8 +5,24 @@
     <title>Title</title>
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
 </head>
 <body>
+<div class="modal-window" id="modal-window">
+    <div class="modal-popup" id="modal-popup">
+        <div class="modal-header">
+            <div class="modal-close" id="modal-popup-btn-close"><img src="img/icon/close.svg" ></div>
+            <div class="modal-title">Обьявление</div>
+        </div>
+        <div class="modal-content">
+            <div class="row">
+                <div class="col-12">
+                    Ваше обьявление успешно добавлено.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="container-fluid submenu mb-4">
         <div class="container">
             <div class="row">
@@ -134,12 +150,12 @@
                                     <div class="label-input">
                                         <label for="">Название услуги</label>
                                         <input type="text" id="title">
-                                        <div id=titleMsg" class="input-msg"></div>
+                                        <div id="titleMsg" class="input-msg"></div>
                                     </div>
                                     <div class="label-input">
                                         <label for="">Описание услуги</label>
                                         <input type="text" id="descr" class="input-high">
-                                        <div id=descrMsg" class="input-msg"></div>
+                                        <div id="descrMsg" class="input-msg"></div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 col-md-6">
@@ -150,20 +166,47 @@
                                             </div>
                                             <div class="label-input">
                                                 <label for="">Ваша почта</label>
-                                                <input type="text" id="email" class="input-high">
-                                                <div id=emailMsg" class="input-msg"></div>
+                                                <input type="text" id="mail" class="input-high">
+                                                <div id="mailMsg" class="input-msg"></div>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="label-input">
                                                 <label for="">Ваш город</label>
-                                                <input type="text" class="input-high">
-                                                <div id=cityMsg" class="input-msg"></div>
+                                                <div class="dropdown" >
+                                                    <input type="checkbox" class="dropdown__switch" id="filter-switch_1" hidden />
+                                                    <label for="filter-switch_1" class="dropdown__options-filter" style="margin-bottom: 0; margin-left: 0;">
+                                                        <ul class="dropdown__filter" role="listbox" tabindex="-1" style="margin-bottom: 0;">
+                                                            <li class="dropdown__filter-selected" aria-selected="true">
+                                                                Default option
+                                                            </li>
+                                                            <li>
+                                                                <ul class="dropdown__select">
+                                                                    <li class="dropdown__select-option" role="option">
+                                                                        Option 1
+                                                                    </li>
+                                                                    <li class="dropdown__select-option" role="option">
+                                                                        Option 2
+                                                                    </li>
+                                                                    <li class="dropdown__select-option" role="option">
+                                                                        Option 3
+                                                                    </li>
+                                                                    <li class="dropdown__select-option" role="option">
+                                                                        Option 4
+                                                                    </li>
+                                                                    <li class="dropdown__select-option" role="option">
+                                                                        Option 5
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </label>
+                                                </div>
                                             </div>
                                             <div class="label-input">
                                                 <label for="">Ваш телефон</label>
                                                 <input type="text" id="phone" class="input-high">
-                                                <div id=phoneMsg" class="input-msg"></div>
+                                                <div id="phoneMsg" class="input-msg"></div>
                                             </div>
                                         </div>
                                     </div>

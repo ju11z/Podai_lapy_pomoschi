@@ -1,6 +1,20 @@
 let form=document.getElementById("announce-form");
 form.style.display="none";
 
+var modal = document.getElementById("modal-window");
+var close = document.getElementById("modal-popup-btn-close");
+
+
+close.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 function toggleForm(){
 
     if(form.style.display=="none"){
@@ -17,8 +31,9 @@ function onFileSelected(event){
 }
 
 function validateAnnounceForm(){
-    if(validateName() & validateCity() & validatePhone() & validateMail() & validateTitle() & validateDescr()){
-        alert("validate form");
+    alert("validate form");
+    if(validateName() & validateCity() & validatePhone() & validateMail() & validateTitle() & validateDescr ()){
+        alert('success');
         //validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()
         modal.style.display = "none";
         modalPost.style.display="block";
@@ -30,29 +45,21 @@ function validateName(){
     nameMsg=document.getElementById("nameMsg");
 
     if (name!=""){
+        console.log('name success');
         nameMsg.innerHTML="";
         nameMsg.style.display="none";
         return true;
     }
 
+    console.log('name fail');
     nameMsg.innerHTML="Пожалуйста, заполните это поле.";
     nameMsg.style.display="block";
+    console.log(nameMsg.innerHTML);
     return false;
 }
 
 function validateCity(){
-    city=document.getElementById("name").value;
-    cityMsg=document.getElementById("nameMsg");
-
-    if (city!=""){
-        cityMsg.innerHTML="";
-        cityMsg.style.display="none";
-        return true;
-    }
-
-    cityMsg.innerHTML="Пожалуйста, заполните это поле.";
-    cityMsg.style.display="block";
-    return false;
+    return true;
 
 }
 function validatePhone(){
