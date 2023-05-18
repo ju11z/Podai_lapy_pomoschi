@@ -165,19 +165,7 @@ body{
     display: flex;
     position: relative;
   }
-  .my-shadow{
-    cursor: pointer;
-    opacity: 1;
-    z-index: -1;
-    top: 10px;
-    left: 10px;
-    border-radius: 999px;
-    display: inline-block;
-    background-color: $clr_1_t;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
+
   .bordered-img{
     top:0;
     position: absolute;
@@ -288,12 +276,35 @@ body{
     background-color: $clr;
   }
 
+  @mixin my-shadow($clr){
+    cursor: pointer;
+    opacity: 1;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+    border-radius: 999px;
+    display: inline-block;
+    background-color: $clr;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+  }
+
   .tag-clr-1 {
     @include tag($clr_1_t);
   }
 
   .tag-clr-2 {
     @include tag($clr_2_t);
+  }
+
+  .my-shadow-clr-1{
+    @include my-shadow($clr_1_t);
+  }
+
+  .my-shadow-clr-2{
+    @include my-shadow($clr_2_t);
   }
 
   .announce-form{
