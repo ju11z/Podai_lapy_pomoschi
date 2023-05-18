@@ -17,11 +17,7 @@ function onFileSelected(event){
 }
 
 function validateAnnounceForm(){
-
-}
-
-function validateRequestForm() {
-    if(validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()){
+    if(validateName() & validateCity() & validatePhone() & validateMail() & validateTitle() & validateDescr()){
         alert("validate form");
         //validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()
         modal.style.display = "none";
@@ -45,7 +41,18 @@ function validateName(){
 }
 
 function validateCity(){
-    return true;
+    city=document.getElementById("name").value;
+    cityMsg=document.getElementById("nameMsg");
+
+    if (city!=""){
+        cityMsg.innerHTML="";
+        cityMsg.style.display="none";
+        return true;
+    }
+
+    cityMsg.innerHTML="Пожалуйста, заполните это поле.";
+    cityMsg.style.display="block";
+    return false;
 
 }
 function validatePhone(){
@@ -64,6 +71,7 @@ function validatePhone(){
     return false;
 
 }
+
 function validateMail(){
     mail=document.getElementById("mail").value;
     mailMsg=document.getElementById("mailMsg");
@@ -80,17 +88,33 @@ function validateMail(){
     return false;
 
 }
-function validateAbout(){
-    about=document.getElementById("about").value;
-    aboutMsg=document.getElementById("aboutMsg");
 
-    if (about!=""){
-        aboutMsg.innerHTML="";
-        aboutMsg.style.display="none";
+function validateTitle(){
+    title=document.getElementById("title").value;
+    titleMsg=document.getElementById("titleMsg");
+
+    if (title!="" && title.length>5){
+        titleMsg.innerHTML="";
+        titleMsg.style.display="none";
         return true;
     }
 
-    aboutMsg.innerHTML="Пожалуйста, заполните это поле";
-    aboutMsg.style.display="block";
+    titleMsg.innerHTML="Длина названия должна быть более 5 символов.";
+    titleMsg.style.display="block";
+    return false;
+}
+
+function validateDescr(){
+    descr=document.getElementById("descr").value;
+    descrMsg=document.getElementById("descrMsg");
+
+    if (descr!="" && title.length>20){
+        descrMsg.innerHTML="";
+        descrMsg.style.display="none";
+        return true;
+    }
+
+    descrMsg.innerHTML="Длина описания должна быть более 20 символов.";
+    descrMsg.style.display="block";
     return false;
 }
