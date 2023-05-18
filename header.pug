@@ -1,3 +1,32 @@
+-
+    const links = [
+          {
+              path:'about.html',
+              title:'О нас',
+              eng_title: 'About'
+          },
+          {
+              path:'cats.html',
+              title:'Ищут дом',
+              eng_title: 'Cats'
+          },
+          {
+               path:'help.html',
+               title:'Помощь',
+               eng_title: 'Help'
+          },
+          {
+               path:'happy_stories.html',
+               title:'Счастливые истории',
+               eng_title: 'Happy stories'
+          },
+          {
+               path:'donation.html',
+               title:'Донат',
+               eng_title: 'Donation'
+          }
+    ]
+
 header
   .container.d-block.d-lg-none
     .row.p-3
@@ -6,16 +35,9 @@ header
   .container
     #toggle-menu.toggle-menu
       .row
-        .col-12.mobile-menu-item.active
-          a(href='') О нас
-        .col-12.mobile-menu-item.active
-          a(href='') Ищут дом
-        .col-12.mobile-menu-item.active
-          a(href='') Помощь
-        .col-12.mobile-menu-item.active
-          a(href='') Счастливые истории
-        .col-12.mobile-menu-item.active
-          a(href='') Донат
+        each link in links
+            .col-12.mobile-menu-item.active
+              a(href='')(class = link.eng_title==pageTitle ? "active" : "") #{link.title}
   .container.d-none.d-lg-block
     .row.pt-4.mb-5.mb-4
       .col-3
@@ -25,9 +47,6 @@ header
         .border-menu-container
           .menu-wrapper
             .menu-items
-              a.menu-item О нас
-              a.menu-item Ищут дом
-              a.menu-item Помощь
-              a.menu-item Счастливые истории
-              a.menu-item Донат
+              each link in links
+                a(href='').menu-item(class = link.eng_title==pageTitle ? "active" : "") #{link.title}
           .menu-shadow
