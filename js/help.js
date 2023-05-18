@@ -31,12 +31,9 @@ function onFileSelected(event){
 }
 
 function validateAnnounceForm(){
-    alert("validate form");
-    if(validateName() & validateCity() & validatePhone() & validateMail() & validateTitle() & validateDescr ()){
-        alert('success');
-        //validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()
-        modal.style.display = "none";
-        modalPost.style.display="block";
+    if(true){
+        //validateName() & validateCity() & validatePhone() & validateMail() & validateTitle() & validateDescr ()
+        modal.style.display = "block";
     }
 }
 

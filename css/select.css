@@ -13,9 +13,10 @@
   .dropdown__filter {
     position: relative;
     display: flex;
-    padding: 15px;
+    padding: 10px;
+    min-height: 50px;
     border: 1px solid #d6d6d6;
-    border-radius: 30px;
+    border-radius: 999px;
     background-color: white;
     transition: 0.3s; }
     .dropdown__filter:focus {
@@ -42,7 +43,6 @@
     overflow: hidden;
     transform: scaleY(0);
     transform-origin: top;
-    font-weight: 300;
     transition: 0.2s ease-in-out;
     z-index: 10; }
   .dropdown__select-option {

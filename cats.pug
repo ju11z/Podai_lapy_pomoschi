@@ -114,16 +114,16 @@ html(lang='en')
                   .icon-text-text Поиск
                 input.input-solid(type='text')
                 label.check-container
-                  input(type='checkbox' checked='')
+                  input(type='checkbox' )
                   span.checkmark
                   span.label-text по кличке
                 label.check-container
-                  input(type='checkbox' checked='')
+                  input(type='checkbox')
                   span.checkmark
                   span.label-text по описанию
               div
                 .icon-text
-                  img.icon-text-icon(src='img/icon/search.svg')
+                  img.icon-text-icon(src='img/icon/cake.svg')
                   .icon-text-text Возраст
                 .dropdown
                   input#filter-switch_1.dropdown__switch(type='checkbox' hidden='')
@@ -138,8 +138,8 @@ html(lang='en')
                                 | #{age.value}
               div
                 .icon-text
-                  img.icon-text-icon(src='img/icon/search.svg')
-                  .icon-text-text Пол
+                  img.icon-text-icon(src='img/icon/paw.svg')
+                  .icon-text-text Порода
                 .dropdown
                   input#filter-switch_2.dropdown__switch(type='checkbox' hidden='')
                   label.dropdown__options-filter(for='filter-switch_2')
@@ -154,7 +154,7 @@ html(lang='en')
 
               div
                 .icon-text
-                  img.icon-text-icon(src='img/icon/search.svg')
+                  img.icon-text-icon(src='img/icon/gender.svg')
                   .icon-text-text Пол
                 .dropdown
                   input#filter-switch_3.dropdown__switch(type='checkbox' hidden='')
@@ -171,11 +171,11 @@ html(lang='en')
 
               div
                 .icon-text
-                  img.icon-text-icon(src='img/icon/search.svg')
-                  .icon-text-text Здоровье
+                  img.icon-text-icon(src='img/icon/med.svg')
+                  .icon-text-text Вет-особенности
                 each health in healths
                     label.check-container
-                      input(type='checkbox' checked='')
+                      input(type='checkbox' )
                       span.checkmark
                       span.label-text по кличке
 
