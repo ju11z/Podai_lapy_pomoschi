@@ -1,0 +1,255 @@
+-
+  const vets = [
+    {
+      value:"кастрирован"
+    },
+    {
+      value:"кастрирован"
+    },
+    {
+      value:"кастрирован"
+    }
+  ];
+
+  const patterns = [
+    {
+      value:"ласковый"
+    },
+    {
+      value:"активный"
+    },
+    {
+      value:"любит детей"
+    }
+  ];
+
+  const healths=[
+    {
+      value:"обработан от клещей и паразитов"
+    },
+    {
+      value:"обработан от клещей и паразитов"
+    },
+    {
+      value:"обработан от клещей и паразитов"
+    },
+  ]
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
+    link(href='css/style.css' rel='stylesheet')
+    link(href='css/modal.css' rel='stylesheet')
+    link(rel='stylesheet' href='css/slider.css')
+  body
+    include header
+    .container
+      .row
+        .col-3
+        .col-6
+          #modal-window-post.modal-window
+            .modal-popup.modal-small
+              .modal-header
+                #modal-post-close.modal-close
+                  img(src='img/icon/close.svg')
+                .modal-title Заявка отправлена
+              .modal-content
+                .row
+                  .col-12
+                    div
+                      | Спасибо за отклик! Мы свяжемся с вами по почте или телефону в течение нескольких дней.
+          #modal-window.modal-window
+            #modal-popup.modal-popup
+              .modal-header
+                #modal-popup-btn-close.modal-close
+                  img(src='img/icon/close.svg')
+                .modal-title Заявка на опекунство
+              .modal-content
+                .row
+                  .col-12.col-md-4
+                    .border-img-container-sqr
+                      img.bordered-img(src='img/about_1.jpg' alt='')
+                    .icon-text.mt-3
+                      img.icon-text-icon(src='img/icon/male.svg')
+                      .title-small Ксандр
+                    div поступил в приют
+                  .col-12.col-md-8
+                    .row
+                      .col-12.col-sm-6
+                        .label-input
+                          label(for='') Ваше имя
+                          input#name(type='text')
+                          #nameMsg.input-msg
+                      .col-12.col-sm-6
+                        .label-input
+                          label(for='') Ваш город
+                          .dropdown
+                            input#filter-switch_1.dropdown__switch(type='checkbox' hidden='')
+                            label.dropdown__options-filter(for='filter-switch_1' style='margin-bottom: 0; margin-left: 0;')
+                              ul.dropdown__filter(role='listbox' tabindex='-1' style='margin-bottom: 0;')
+                                li.dropdown__filter-selected(aria-selected='true')
+                                  | Default option
+                                li
+                                  ul.dropdown__select
+                                    li.dropdown__select-option(role='option')
+                                      | Option 1
+                                    li.dropdown__select-option(role='option')
+                                      | Option 2
+                                    li.dropdown__select-option(role='option')
+                                      | Option 3
+                                    li.dropdown__select-option(role='option')
+                                      | Option 4
+                                    li.dropdown__select-option(role='option')
+                                      | Option 5
+                      .col-12.col-sm-6
+                        .label-input
+                          label(for='') Ваша почта
+                          input#mail(type='text')
+                          #mailMsg.input-msg
+                      .col-12.col-sm-6
+                        .label-input
+                          label(for='') Ваш телефон
+                          input#phone(type='text')
+                          #phoneMsg.input-msg
+                      .col-12
+                        .label-input
+                          label(for='') Напишите, почему именно вы должны стать хозяином котика
+                          input#about(type='text')
+                          #aboutMsg.input-msg
+                      .d-none.d-md-block.col-6
+                      .col-12.col-md-6
+                        .shadow-btn-container.mt-3
+                          button#send-request.my-btn Отправить заявку
+                          .my-shadow
+        .col-3
+      .row.flex-column-reverse.flex-lg-row
+        .col-12.col-lg-6
+          .row.mt-5.mt-lg-0
+            .d-none.d-sm-flex.col-4.flex-column.justify-content-between
+              .border-img-container-sqr
+                img.bordered-img(src='img/about_3.jpg' alt='')
+              .border-img-container-sqr
+                img.bordered-img(src='img/about_3.jpg' alt='')
+            .col-12.col-sm-8.pl-5.pr-5.pl-sm-0.pr-sm-0
+              .border-img-container-sqr
+                img.bordered-img(src='img/about_3.jpg' alt='')
+                .my-border
+        .d-none.d-lg-block.col-1
+        .col-12.col-lg-5
+          .icon-text.mt-3
+            img.icon-text-icon(src='img/icon/male.svg')
+            .titled Ксандр
+          .mb-4.text-l поступил в приют 06.03.2023
+          div
+            | Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.
+          .row
+            .d-none.d-md-block.col-4.col-xl-6
+            .col-12.col-md-8.col-xl-6
+              .shadow-btn-container.mt-3
+                button#modal-popup-btn.my-btn Взять друга сейчас!
+                .my-shadow-clr-1
+      .row.mt-5.d-flex.flex-row
+        .col-12.col-lg-4
+          .rounded-card
+            .icon-text.mb-3
+              img.icon-text-icon(src='img/icon/med.svg')
+              .icon-text-text.text-l Вет-особенности
+            .tags-wrapper
+               each vet in vets
+                .tag-clr-2 #{vet.value}
+        .col-12.col-lg-8.mt-3.mt-lg-0
+          .rounded-card
+            .icon-text.mb-3
+              img.icon-text-icon(src='img/icon/med.svg')
+              .icon-text-text.text-l Характер
+            .tags-wrapper
+                each pattern in patterns
+                  .tag-clr-1 #{pattern.value}
+            .icon-text.mb-3
+              img.icon-text-icon(src='img/icon/med.svg')
+              .icon-text-text.text-l Здоровье
+            .tags-wrapper
+              each health in healths
+                .tag-clr-1 #{health.value}
+      .row
+        .col
+          #test-slider.slider.carousel.d-none.d-lg-block.mt-5(data-ride='carousel')
+            // Indicators
+            ol.carousel-indicators
+              li(data-target='test-slider' data-slide-to='0')
+              li(data-target='test-slider' data-slide-to='1')
+              li(data-target='test-slider' data-slide-to='2')
+              li(data-target='test-slider' data-slide-to='3')
+              li(data-target='test-slider' data-slide-to='4')
+            // Wrapper for slides
+            .carousel-inner
+              .carousel-item
+                a.card.hover-bounce(href='cat.html')
+                  .card-img-container
+                    img.card-img(src='img/cats_1.png')
+                  .card-info
+                    .text-icon
+                      .text-icon-text.card-title Ксандр
+                      .text-icon-icon
+                        img(src='img/icon/male.svg')
+                    .card-info-item 5 лет
+                    .card-info-item кастрирован
+              .carousel-item
+                a.card.hover-bounce(href='cat.html')
+                  .card-img-container
+                    img.card-img(src='img/cats_1.png')
+                  .card-info
+                    .text-icon
+                      .text-icon-text.card-title Ксандр
+                      .text-icon-icon
+                        img(src='img/icon/male.svg')
+                    .card-info-item 5 лет
+                    .card-info-item кастрирован
+              .carousel-item
+                a.card.hover-bounce(href='cat.html')
+                  .card-img-container
+                    img.card-img(src='img/cats_1.png')
+                  .card-info
+                    .text-icon
+                      .text-icon-text.card-title Ксандр
+                      .text-icon-icon
+                        img(src='img/icon/male.svg')
+                    .card-info-item 5 лет
+                    .card-info-item кастрирован
+              .carousel-item
+                a.card.hover-bounce(href='cat.html')
+                  .card-img-container
+                    img.card-img(src='img/cats_1.png')
+                  .card-info
+                    .text-icon
+                      .text-icon-text.card-title Ксандр
+                      .text-icon-icon
+                        img(src='img/icon/male.svg')
+                    .card-info-item 5 лет
+                    .card-info-item кастрирован
+              .carousel-item
+                a.card.hover-bounce(href='cat.html')
+                  .card-img-container
+                    img.card-img(src='img/cats_1.png')
+                  .card-info
+                    .text-icon
+                      .text-icon-text.card-title Ксандр
+                      .text-icon-icon
+                        img(src='img/icon/male.svg')
+                    .card-info-item 5 лет
+                    .card-info-item кастрирован
+            // Controls
+            a.carousel-control-prev(href='#test-slider' role='button' data-slide='prev')
+              img(src='img/icon/prev.svg')
+            a.carousel-control-next(href='#test-slider' role='button' data-slide='next')
+              img(src='img/icon/next.svg')
+    include footer
+    script(src='js/gsap/gsap.min.js')
+    script(src='js/toggle_menu.js')
+    script(src='js/cat.js')
+    script(src='js/common_animations.js')
+    script(src='js/jquery.js')
+    script(type='text/javascript' src='js/slider.js' data-iteminfocus='2' data-activeitems='3')
