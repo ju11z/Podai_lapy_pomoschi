@@ -47,18 +47,18 @@
                             <label class="check-container">
                                 <input type="checkbox" checked />
                                 <span class="checkmark"></span>
-                                <span class="label-text">по кличке</span>
+                                <span class="label-text">по названию</span>
                             </label>
                             <label class="check-container">
                                 <input type="checkbox" checked />
                                 <span class="checkmark"></span>
-                                <span class="label-text">по кличке</span>
+                                <span class="label-text">по описанию</span>
                             </label>
                         </div>
                         <div >
                             <div class="icon-text">
                                 <img class="icon-text-icon" src="img/icon/search.svg">
-                                <div class="icon-text-text">Поиск</div>
+                                <div class="icon-text-text">Город</div>
                             </div>
                             <div class="dropdown">
                                 <input type="checkbox" class="dropdown__switch" id="filter-switch" hidden />
@@ -121,39 +121,8 @@
                                     <div class="my-shadow"></div>
                                 </div>
                                 <div class="mt-5">
-                                    <div class="icon-text">
-                                        <img class="icon-text-icon" src="img/icon/search.svg">
-                                        <div class="icon-text-text">Поиск</div>
-                                    </div>
-                                    <div class="dropdown">
-                                        <input type="checkbox" class="dropdown__switch" id="filter-switch_3" hidden />
-                                        <label for="filter-switch_3" class="dropdown__options-filter">
-                                            <ul class="dropdown__filter" role="listbox" tabindex="-1">
-                                                <li class="dropdown__filter-selected" aria-selected="true">
-                                                    Default option
-                                                </li>
-                                                <li>
-                                                    <ul class="dropdown__select">
-                                                        <li class="dropdown__select-option" role="option">
-                                                            Option 1
-                                                        </li>
-                                                        <li class="dropdown__select-option" role="option">
-                                                            Option 2
-                                                        </li>
-                                                        <li class="dropdown__select-option" role="option">
-                                                            Option 3
-                                                        </li>
-                                                        <li class="dropdown__select-option" role="option">
-                                                            Option 4
-                                                        </li>
-                                                        <li class="dropdown__select-option" role="option">
-                                                            Option 5
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </label>
-                                    </div>
+
+
                                 </div>
                             </div>
                             <div class="col-12 col-lg-8">
@@ -190,8 +159,39 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-4">
-
+                            <div class="col-4 d-flex flex-column justify-content-end">
+                                <div class="label-input">
+                                    <label for="">Категория</label>
+                                    <div class="dropdown" >
+                                        <input type="checkbox" class="dropdown__switch" id="filter-switch_3" hidden />
+                                        <label for="filter-switch_3" class="dropdown__options-filter" style="margin-bottom: 0; margin-left: 0;">
+                                            <ul class="dropdown__filter" role="listbox" tabindex="-1" style="margin-bottom: 0;">
+                                                <li class="dropdown__filter-selected" aria-selected="true">
+                                                    Default option
+                                                </li>
+                                                <li>
+                                                    <ul class="dropdown__select">
+                                                        <li class="dropdown__select-option" role="option">
+                                                            Option 1
+                                                        </li>
+                                                        <li class="dropdown__select-option" role="option">
+                                                            Option 2
+                                                        </li>
+                                                        <li class="dropdown__select-option" role="option">
+                                                            Option 3
+                                                        </li>
+                                                        <li class="dropdown__select-option" role="option">
+                                                            Option 4
+                                                        </li>
+                                                        <li class="dropdown__select-option" role="option">
+                                                            Option 5
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="d-none d-xl-block col-4"></div>
                             <div class="col-12 col-lg-8 col-xl-4">
