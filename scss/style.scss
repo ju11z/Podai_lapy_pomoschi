@@ -461,6 +461,7 @@ body{
     border-radius: $b-r;
     width: 100%;
     object-fit: cover;
+    overflow: hidden;
   }
 
 }

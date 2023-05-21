@@ -406,5 +406,10 @@ body {
   body .input-msg {
     color: #EA8B1B;
     margin-left: 20px; }
+  body .rounded-img {
+    border-radius: 50px;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */
