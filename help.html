@@ -132,14 +132,14 @@
                             <div class="row">
                                 <div class="col-12 col-lg-4">
                                     <div class="border-img-container-sqr bordered-empty">
-                                        <img id="previewImage" alt="">
+                                        <img id="previewImage" class="bordered-img" alt="">
                                     </div>
                                     <div class="shadow-btn-container mt-3">
-                                        <label for="imageInput" style="cursor: pointer">
-                                            <button class="my-btn">Прикрепить фото</button>
-                                            <input id="imageInput" type="file" style="display: none" onchange="onFileSelected(event)" accept="image/png, image/jpg, image/gif, image/jpeg"/>
+                                        <label for="imageInput" class="my-btn" style="cursor: pointer; z-index: 3;">
+                                            <div style="width: 100%; text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: center;">Прикрепить фото</div>
+                                            <input id="imageInput" type="file" style="display: none;"  onchange="onFileSelected(this)" accept="image/png, image/jpg, image/gif, image/jpeg"/>
                                         </label>
-                                        <div class="my-shadow"></div>
+                                        <div class="my-shadow-clr-1" style="z-index: 2;"></div>
                                     </div>
                                     <div class="mt-5">
 
@@ -301,6 +301,7 @@
             </div>
         </div>
     </div>
+<script src="js/jquery.js"></script>
     <script src="js/toggle_submenu.js"></script>
     <script src="js/help.js"></script>
 

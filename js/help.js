@@ -26,8 +26,21 @@ function toggleForm(){
     }
 }
 
-function onFileSelected(event){
-    alert('on file selected');
+previewImage=document.getElementById("previewImage");
+
+function onFileSelected(input){
+
+
+    var ext = input.files[0]['name'].substring(input.files[0]['name'].lastIndexOf('.') + 1).toLowerCase();
+    if (input.files && input.files[0] && (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")){
+        var reader = new FileReader();
+    reader.onload = function (e) {
+        $('#previewImage').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+}else{
+}
 }
 
 function validateAnnounceForm(){
