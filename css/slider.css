@@ -1,6 +1,9 @@
 /*
  * Slider CSS
 */
+body {
+  color: #322821; }
+
 .slider {
   border: 1px solid #322821;
   border-radius: 50px;
@@ -19,13 +22,14 @@
 .slider .carousel-inner {
   display: flex;
   justify-content: center;
-}
+  text-align: center; }
 
 .slider .carousel-item.active:hover {
   cursor: pointer; }
 
 .slider .carousel-item.active.focused {
- }
+  color: black;
+  font-weight: bold; }
 
 .slider .carousel-item span {
   padding-top: 5px;

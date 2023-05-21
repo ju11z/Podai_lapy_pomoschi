@@ -1,3 +1,9 @@
+body {
+  color: #322821; }
+
+body {
+  color: #322821; }
+
 .dropdown {
   width: 100%;
   font-family: "Lato", sans-serif; }
@@ -52,6 +58,9 @@
     transition: 0.3s; }
     .dropdown__select-option:last-of-type {
       border-bottom: 0; }
+
+body {
+  color: #322821; }
 
 .check-container {
   margin: 0;

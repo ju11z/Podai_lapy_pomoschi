@@ -76,6 +76,26 @@
     },
     ]
 
+    submenu_items=[
+        {
+        title:"Медикаменты",
+        icon_path:"med_big.svg"
+        },
+        {
+                title:"Перевозка",
+                icon_path:"car_big.svg"
+                },
+        {
+                title:"Даром",
+                icon_path:"present_big.svg"
+                },
+        {
+                title:"Передержка",
+                icon_path:"home_big.svg"
+                },
+
+    ]
+
 doctype html
 html(lang='en')
   head
@@ -85,6 +105,10 @@ html(lang='en')
     link(href='css/style.css' rel='stylesheet')
     link(href='css/modal.css' rel='stylesheet')
     link(href='css/pagination.css' rel='stylesheet')
+    style.
+         body{
+             background-image:url(img/help_bg.png);
+         }
   body
     include header
     #modal-window.modal-window
@@ -100,22 +124,12 @@ html(lang='en')
     .container-fluid.submenu.mb-4
       .container
         .row
-          .submenu-item
-            .icon
-              img(src='img/icon/med_big.svg')
-            .text Медикаменты
-          .submenu-item
-            .icon
-              img(src='img/icon/med_big.svg')
-            .text Медикаменты
-          .submenu-item
-            .icon
-              img(src='img/icon/med_big.svg')
-            .text Медикаменты
-          .submenu-item
-            .icon
-              img(src='img/icon/med_big.svg')
-            .text Медикаменты
+          each item in submenu_items
+              .submenu-item
+                .icon
+                  img(src='img/icon/' + item.icon_path)
+                .text #{item.title}
+
     .container
       .row
         .col-12.col-md-4

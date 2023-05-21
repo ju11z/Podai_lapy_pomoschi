@@ -268,12 +268,24 @@ body{
     flex-wrap: wrap;
   }
 
+
+
+
+
   @mixin tag($clr){
     margin-right: 10px;
     margin-bottom: 10px;
     padding: 15px;
     border-radius: $b-r;
     background-color: $clr;
+  }
+
+  .tag-clr-1 {
+    @include tag($clr_1_t);
+  }
+
+  .tag-clr-2 {
+    @include tag($clr_2_t);
   }
 
   @mixin my-shadow($clr){
@@ -288,15 +300,6 @@ body{
     height: 100%;
     width: 100%;
     position: absolute;
-
-  }
-
-  .tag-clr-1 {
-    @include tag($clr_1_t);
-  }
-
-  .tag-clr-2 {
-    @include tag($clr_2_t);
   }
 
   .my-shadow-clr-1{

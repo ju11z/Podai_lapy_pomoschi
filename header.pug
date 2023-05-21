@@ -36,8 +36,9 @@ header
     #toggle-menu.toggle-menu
       .row
         each link in links
-            .col-12.mobile-menu-item.active
-              a(href='')(class = link.eng_title==pageTitle ? "active" : "") #{link.title}
+            .col-12.mobile-menu-item
+             - url = link.path
+              a(href=url)(class = link.eng_title==pageTitle ? "active" : "") #{link.title}
   .container.d-none.d-lg-block
     .row.pt-4.mb-5.mb-4
       .col-3
