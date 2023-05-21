@@ -252,10 +252,10 @@ html(lang='en')
                     .shadow-btn-container.mt-3
                       button.my-btn.toggle-form(style='z-index: 3' onclick='validateAnnounceForm()') Добавить обьявление
                       .my-shadow-clr-1(style='z-index: 2')
-          .row
+          #paginated-list.row
             each card in announce_cards
                 .col-12
-                  .announce-card
+                  .announce-card.mb-3
                     .row
                       .col-12.col-lg-4
                         .border-img-container-sqr
@@ -278,6 +278,11 @@ html(lang='en')
                         .icon-text
                           img.icon-text-icon(src='img/icon/phone.svg')
                           div + 375-11-111-11-11
+      .row
+        .col-4
+        .col-8.d-flex.flex-row.justify-content-center.mt-3
+           nav.pagination-container
+             #pagination-numbers
     include footer
     script(src='js/jquery.js')
     script(src='js/toggle_submenu.js')
