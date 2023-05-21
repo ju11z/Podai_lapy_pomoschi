@@ -140,11 +140,12 @@ html(lang='en')
                         img.bordered-img(src='img/about_5.jpg' alt='')
                         .my-border
         .d-none.d-lg-block.col-1
-        .col-12.col-lg-5
-          .icon-text.mt-3
-            img.icon-text-icon(src='img/icon/male.svg')
-            .titled Ксандр
-          .mb-4.text-l поступил в приют 06.03.2023
+        .col-12.col-lg-5.d-lg-flex.flex-column.justify-content-between.mb-5.mb-lg-0
+          div
+              .icon-text.mt-3
+                img.icon-text-icon(src='img/icon/male.svg')
+                .titled Ксандр
+              .mb-4.text-l поступил в приют 06.03.2023
           div
             | Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.
           .row
@@ -177,8 +178,11 @@ html(lang='en')
               each health in healths
                 .tag-clr-1 #{health.value}
       .row
+        .col-12.mt-5
+            .title-small.text-center Ксандр рекомендует вам познакомиться с его друзьями
+
         .col
-          #test-slider.slider.carousel.d-none.d-lg-block.mt-5(data-ride='carousel')
+          #test-slider.slider.carousel.d-none.d-lg-block.mt-3(data-ride='carousel')
             // Indicators
             ol.carousel-indicators
               li(data-target='test-slider' data-slide-to='0')

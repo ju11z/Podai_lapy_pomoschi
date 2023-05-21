@@ -49,5 +49,5 @@ header
             .menu-items
               each link in links
                 - url = link.path
-                a(href='').menu-item(class = link.eng_title==pageTitle ? "active" : "") #{link.title}
+                a(href=url).menu-item(class = link.eng_title==pageTitle ? "active" : "") #{link.title}
           .menu-shadow
