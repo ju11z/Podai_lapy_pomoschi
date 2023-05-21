@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("paginated-list");
-const listItems = paginatedList.querySelectorAll(".card");
+const listItems = paginatedList.querySelectorAll(".announce-card");
 
 
 const pageCount = Math.ceil(listItems.length / paginationLimit);

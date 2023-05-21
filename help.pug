@@ -1,3 +1,81 @@
+-
+  const pageTitle='Help'
+
+  const announce_cards = [
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    {
+      title:"Ксандр",
+      author:"5 лет",
+      city:"Минск",
+      description:"Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! ",
+      img_path:"cats_1.png",
+      phone:"+375-29-111-11-11",
+      mail:"pechorin@gmail.com"
+    },
+    ]
+
 doctype html
 html(lang='en')
   head
@@ -175,30 +253,31 @@ html(lang='en')
                       button.my-btn.toggle-form(style='z-index: 3' onclick='validateAnnounceForm()') Добавить обьявление
                       .my-shadow-clr-1(style='z-index: 2')
           .row
-            .col-12
-              .announce-card
-                .row
-                  .col-12.col-lg-4
-                    .border-img-container-sqr
-                      img.bordered-img(src='img/about_1.jpg' alt='')
-                  .col-12.col-lg-8
-                    .text-titled.mt-3.mt-lg-0 Корм при заболевании мочевыводящей системы
-                    .mb-3 Игорь Печорин, Минск
-                    div
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum est excepturi harum natus officia provident totam, ut vitae voluptas?
-                .row.mt-3
-                  .col-12.col-lg-4
-                    .icon-text
-                      img.icon-text-icon(src='img/icon/med.svg')
-                      div Характер
-                  .col-12.col-lg-4.mt-2.mt-lg-0
-                    .icon-text
-                      img.icon-text-icon(src='img/icon/email.svg')
-                      div smth@gmail.com
-                  .col-12.col-lg-4.mt-2.mt-lg-0
-                    .icon-text
-                      img.icon-text-icon(src='img/icon/phone.svg')
-                      div + 375-11-111-11-11
+            each card in announce_cards
+                .col-12
+                  .announce-card
+                    .row
+                      .col-12.col-lg-4
+                        .border-img-container-sqr
+                          img.bordered-img(src='img/about_1.jpg' alt='')
+                      .col-12.col-lg-8
+                        .text-titled.mt-3.mt-lg-0 Корм при заболевании мочевыводящей системы
+                        .mb-3 Игорь Печорин, Минск
+                        div
+                          | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum est excepturi harum natus officia provident totam, ut vitae voluptas?
+                    .row.mt-3
+                      .col-12.col-lg-4
+                        .icon-text
+                          img.icon-text-icon(src='img/icon/med.svg')
+                          div Характер
+                      .col-12.col-lg-4.mt-2.mt-lg-0
+                        .icon-text
+                          img.icon-text-icon(src='img/icon/email.svg')
+                          div smth@gmail.com
+                      .col-12.col-lg-4.mt-2.mt-lg-0
+                        .icon-text
+                          img.icon-text-icon(src='img/icon/phone.svg')
+                          div + 375-11-111-11-11
     include footer
     script(src='js/jquery.js')
     script(src='js/toggle_submenu.js')
