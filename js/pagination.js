@@ -2,7 +2,7 @@ const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("paginated-list");
 const listItems = paginatedList.querySelectorAll(".card");
 
-const paginationLimit = 9;
+const paginationLimit = 6;
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage = 1;
 

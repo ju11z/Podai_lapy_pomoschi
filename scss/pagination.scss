@@ -1,14 +1,22 @@
+@import "constants";
+
 .hidden {
   display: none;
 }
 
 .pagination-container {
-  width: calc(100% - 2rem);
+  max-width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-radius: $b-r;
+  border:1px solid $clr_3;
+
   display: flex;
   align-items: center;
   position: absolute;
   bottom: 0;
-  padding: 1rem 0;
   justify-content: center;
 }
 
@@ -21,7 +29,7 @@
   cursor: pointer;
   height: 2.5rem;
   width: 2.5rem;
-  border-radius: .2rem;
+  border-radius: 999px;
 }
 
 .pagination-number:hover,
@@ -31,5 +39,5 @@
 
 .pagination-number.active {
   color: #fff;
-  background: #0085b6;
+  background: $clr_3;
 }
