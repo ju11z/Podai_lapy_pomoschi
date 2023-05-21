@@ -13,7 +13,7 @@ window.onclick = function(event) {
 }
 
 function validateDonutForm() {
-    if(true){
+    if(validateFio() & validateCard() & validateCvv() & validateDuedate() & validateSum()){
         //validateFio() & validateCard() & validateCvv() & validateDuedate() & validateSum()
         modal.style.display = "block";
     }

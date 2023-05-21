@@ -32,7 +32,7 @@ window.onclick = function(event) {
 
 function validateRequestForm() {
     if(validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()){
-        alert("validate form");
+
         //validateName() & validateCity() & validatePhone() & validateMail() & validateAbout()
         modal.style.display = "none";
         modalPost.style.display="block";

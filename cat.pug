@@ -127,16 +127,18 @@ html(lang='en')
         .col-3
       .row.flex-column-reverse.flex-lg-row
         .col-12.col-lg-6
-          .row.mt-5.mt-lg-0
-            .d-none.d-sm-flex.col-4.flex-column.justify-content-between
-              .border-img-container-sqr
-                img.bordered-img(src='img/about_3.jpg' alt='')
-              .border-img-container-sqr
-                img.bordered-img(src='img/about_3.jpg' alt='')
-            .col-12.col-sm-8.pl-5.pr-5.pl-sm-0.pr-sm-0
-              .border-img-container-sqr
-                img.bordered-img(src='img/about_3.jpg' alt='')
-                .my-border
+                  .row.d-flex.align-items-center
+                    .col-12.col-sm-6
+                      .border-img-container-sqr
+                        img.bordered-img(src='img/about_3.jpg' alt='')
+                        .my-border
+                    .d-none.d-sm-block.col-6
+                      .border-img-container-sqr.mb-4
+                        img.bordered-img(src='img/about_4.jpg' alt='')
+                        .my-border
+                      .border-img-container-sqr
+                        img.bordered-img(src='img/about_5.jpg' alt='')
+                        .my-border
         .d-none.d-lg-block.col-1
         .col-12.col-lg-5
           .icon-text.mt-3

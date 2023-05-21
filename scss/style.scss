@@ -457,5 +457,11 @@ body{
     margin-left: 20px;
   }
 
+  .rounded-img{
+    border-radius: $b-r;
+    width: 100%;
+    object-fit: cover;
+  }
+
 }
 

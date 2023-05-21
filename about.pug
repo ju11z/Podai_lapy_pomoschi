@@ -44,7 +44,7 @@ doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
-    title Title
+    title pageTitle
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
     link(href='css/about.css' rel='stylesheet')
@@ -75,7 +75,7 @@ html(lang='en')
                 img.bordered-img(src='img/about_2.jpg' alt='')
                 .my-border
       .flex-column-reverse.flex-md-row.row.mt-5
-        .col-12.col-md-6.col-lg-8
+        .col-12.col-md-6.col-lg-7
           .row
             each card in cards
                 .col-12.col-lg-6
@@ -84,7 +84,7 @@ html(lang='en')
                       img(src='img/icon/' + card.icon_path)
                     .text #{card.text}
         .d-none.d-md-block.col-1
-        .col-12.col-md-5.col-lg-3
+        .col-12.col-md-5.col-lg-4
           .title Почему лучше взять котика из приюта?
           div
             | Мы убеждены, что все котики одинаково хорошие. Но! Покупая животных, вы чаще всего косвенно поддерживаете деятельность разведенцев, т.е. тех, кто разводит породистых кошек исключительно ради прибыли.
