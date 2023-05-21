@@ -45,6 +45,112 @@
           icon_path:"male.svg",
           img_path:"cats_1.png"
         },
+        {
+                  name:"Ксандр",
+                  age:"5 лет",
+                  health:"кастрирован",
+                  icon_path:"male.svg",
+                  img_path:"cats_1.png"
+                },
+                {
+                          name:"Ксандр",
+                          age:"5 лет",
+                          health:"кастрирован",
+                          icon_path:"male.svg",
+                          img_path:"cats_1.png"
+                        },
+                        {
+                                  name:"Ксандр",
+                                  age:"5 лет",
+                                  health:"кастрирован",
+                                  icon_path:"male.svg",
+                                  img_path:"cats_1.png"
+                                },
+                                {
+                                          name:"Ксандр",
+                                          age:"5 лет",
+                                          health:"кастрирован",
+                                          icon_path:"male.svg",
+                                          img_path:"cats_1.png"
+                                        },
+                                        {
+                                                  name:"Ксандр",
+                                                  age:"5 лет",
+                                                  health:"кастрирован",
+                                                  icon_path:"male.svg",
+                                                  img_path:"cats_1.png"
+                                                },
+                                                {
+                                                          name:"Ксандр",
+                                                          age:"5 лет",
+                                                          health:"кастрирован",
+                                                          icon_path:"male.svg",
+                                                          img_path:"cats_1.png"
+                                                        },
+                                                        {
+                                                                  name:"Ксандр",
+                                                                  age:"5 лет",
+                                                                  health:"кастрирован",
+                                                                  icon_path:"male.svg",
+                                                                  img_path:"cats_1.png"
+                                                                },
+                                                                {
+                                                                          name:"Ксандр",
+                                                                          age:"5 лет",
+                                                                          health:"кастрирован",
+                                                                          icon_path:"male.svg",
+                                                                          img_path:"cats_1.png"
+                                                                        },
+                                                                        {
+                                                                                  name:"Ксандр",
+                                                                                  age:"5 лет",
+                                                                                  health:"кастрирован",
+                                                                                  icon_path:"male.svg",
+                                                                                  img_path:"cats_1.png"
+                                                                                },
+                                                                                {
+                                                                                          name:"Ксандр",
+                                                                                          age:"5 лет",
+                                                                                          health:"кастрирован",
+                                                                                          icon_path:"male.svg",
+                                                                                          img_path:"cats_1.png"
+                                                                                        },
+                                                                                        {
+                                                                                                  name:"Ксандр",
+                                                                                                  age:"5 лет",
+                                                                                                  health:"кастрирован",
+                                                                                                  icon_path:"male.svg",
+                                                                                                  img_path:"cats_1.png"
+                                                                                                },
+                                                                                                {
+                                                                                                          name:"Ксандр",
+                                                                                                          age:"5 лет",
+                                                                                                          health:"кастрирован",
+                                                                                                          icon_path:"male.svg",
+                                                                                                          img_path:"cats_1.png"
+                                                                                                        },
+                                                                                                        {
+                                                                                                                  name:"Ксандр",
+                                                                                                                  age:"5 лет",
+                                                                                                                  health:"кастрирован",
+                                                                                                                  icon_path:"male.svg",
+                                                                                                                  img_path:"cats_1.png"
+                                                                                                                },
+                                                                                                                {
+                                                                                                                          name:"Ксандр",
+                                                                                                                          age:"5 лет",
+                                                                                                                          health:"кастрирован",
+                                                                                                                          icon_path:"male.svg",
+                                                                                                                          img_path:"cats_1.png"
+                                                                                                                        },
+                                                                                                                        {
+                                                                                                                                  name:"Ксандр",
+                                                                                                                                  age:"5 лет",
+                                                                                                                                  health:"кастрирован",
+                                                                                                                                  icon_path:"male.svg",
+                                                                                                                                  img_path:"cats_1.png"
+                                                                                                                                },
+
   ];
 
   const ages = [
@@ -98,6 +204,7 @@ html(lang='en')
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/bootstrap/bootstrap-grid.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
+    link(href='css/pagination.css' rel='stylesheet')
   body
     include header
     .container-fluid
@@ -191,7 +298,7 @@ html(lang='en')
             .row
               .col-2.col-sm-1
               .col-8.col-sm-10
-                .row
+                #paginated-list.row
                    each card in cards
                       .col-12.col-sm-6.col-lg-4.mb-4
                         a.card.hover-bounce(href='cat.html')
@@ -206,6 +313,10 @@ html(lang='en')
                             .card-info-item #{card.health}
 
               .col-2.col-sm-1
+            nav.pagination-container
+              #pagination-numbers
+
     include footer
     script(src='js/toggle_menu.js')
+    script(src='js/pagination.js')
     script(src='js/select.js')
