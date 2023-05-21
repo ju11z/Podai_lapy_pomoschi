@@ -1,0 +1,207 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Title
+    link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
+    link(href='css/style.css' rel='stylesheet')
+    link(href='css/modal.css' rel='stylesheet')
+    link(href='css/pagination.css' rel='stylesheet')
+  body
+    include header
+    #modal-window.modal-window
+      #modal-popup.modal-popup.modal-small
+        .modal-header
+          #modal-popup-btn-close.modal-close
+            img(src='img/icon/close.svg')
+          .modal-title Обьявление
+        .modal-content
+          .row
+            .col-12
+              | Ваше обьявление успешно добавлено.
+    .container-fluid.submenu.mb-4
+      .container
+        .row
+          .submenu-item
+            .icon
+              img(src='img/icon/med_big.svg')
+            .text Медикаменты
+          .submenu-item
+            .icon
+              img(src='img/icon/med_big.svg')
+            .text Медикаменты
+          .submenu-item
+            .icon
+              img(src='img/icon/med_big.svg')
+            .text Медикаменты
+          .submenu-item
+            .icon
+              img(src='img/icon/med_big.svg')
+            .text Медикаменты
+    .container
+      .row
+        .col-12.col-md-4
+          .block-rounded.my-filter.p-5.p-md-3.p-xl-5
+            .title.text-center.mt-4
+              | Фильтр
+            .div
+              .mb-4
+                .icon-text
+                  img.icon-text-icon(src='img/icon/search.svg')
+                  .icon-text-text Поиск
+                input.input-solid(type='text')
+                label.check-container
+                  input(type='checkbox' checked='')
+                  span.checkmark
+                  span.label-text по названию
+                label.check-container
+                  input(type='checkbox' checked='')
+                  span.checkmark
+                  span.label-text по описанию
+              div
+                .icon-text
+                  img.icon-text-icon(src='img/icon/home.svg')
+                  .icon-text-text Город
+                .dropdown
+                  input#filter-switch.dropdown__switch(type='checkbox' hidden='')
+                  label.dropdown__options-filter(for='filter-switch')
+                    ul.dropdown__filter(role='listbox' tabindex='-1')
+                      li.dropdown__filter-selected(aria-selected='true')
+                        | Default option
+                      li
+                        ul.dropdown__select
+                          li.dropdown__select-option(role='option')
+                            | Option 1
+                          li.dropdown__select-option(role='option')
+                            | Option 2
+                          li.dropdown__select-option(role='option')
+                            | Option 3
+                          li.dropdown__select-option(role='option')
+                            | Option 4
+                          li.dropdown__select-option(role='option')
+                            | Option 5
+              .shadow-btn-container.mt-4
+                button.my-btn Искать обьявления
+                .my-shadow-clr-2
+        .col-12.col-md-8
+          .row.mt-4.mt-md-0
+            .col-6
+            .col-6
+              .shadow-btn-container.mb-4
+                button.my-btn.toggle-form(onclick='toggleForm()') Форма обьявления
+                .my-shadow-clr-1
+          .row
+            .col-12
+              #announce-form.announce-form.mb-4
+                .row
+                  .col-12.col-lg-4
+                    .border-img-container-sqr.bordered-empty
+                      img#previewImage.bordered-img(alt='')
+                    .shadow-btn-container.mt-3
+                      label.my-btn(for='imageInput' style='cursor: pointer; z-index: 3;')
+                        div(style='width: 100%; text-align: center; height: 100%; display: flex; flex-direction: column; justify-content: center;') Прикрепить фото
+                        input#imageInput(type='file' style='display: none;' onchange='onFileSelected(this)' accept='image/png, image/jpg, image/gif, image/jpeg')
+                      .my-shadow-clr-1(style='z-index: 2;')
+                    .mt-5
+                  .col-12.col-lg-8
+                    .label-input
+                      label(for='') Название услуги
+                      input#title(type='text')
+                      #titleMsg.input-msg
+                    .label-input
+                      label(for='') Описание услуги
+                      input#descr.input-high(type='text')
+                      #descrMsg.input-msg
+                    .row
+                      .col-12.col-md-6
+                        .label-input
+                          label(for='') Ваше имя
+                          input#name.input-high(type='text')
+                          #nameMsg.input-msg
+                        .label-input
+                          label(for='') Ваша почта
+                          input#mail.input-high(type='text')
+                          #mailMsg.input-msg
+                      .col-12.col-md-6
+                        .label-input
+                          label(for='') Ваш город
+                          .dropdown
+                            input#filter-switch_1.dropdown__switch(type='checkbox' hidden='')
+                            label.dropdown__options-filter(for='filter-switch_1' style='margin-bottom: 0; margin-left: 0;')
+                              ul.dropdown__filter(role='listbox' tabindex='-1' style='margin-bottom: 0;')
+                                li.dropdown__filter-selected(aria-selected='true')
+                                  | Default option
+                                li
+                                  ul.dropdown__select
+                                    li.dropdown__select-option(role='option')
+                                      | Option 1
+                                    li.dropdown__select-option(role='option')
+                                      | Option 2
+                                    li.dropdown__select-option(role='option')
+                                      | Option 3
+                                    li.dropdown__select-option(role='option')
+                                      | Option 4
+                                    li.dropdown__select-option(role='option')
+                                      | Option 5
+                        .label-input
+                          label(for='') Ваш телефон
+                          input#phone.input-high(type='text')
+                          #phoneMsg.input-msg
+                .row
+                  .col-12.col-lg-4.d-flex.flex-column.justify-content-end
+                    .label-input
+                      label(for='') Категория
+                      .dropdown
+                        input#filter-switch_3.dropdown__switch(type='checkbox' hidden='')
+                        label.dropdown__options-filter(for='filter-switch_3' style='margin-bottom: 0; margin-left: 0;')
+                          ul.dropdown__filter(role='listbox' tabindex='-1' style='margin-bottom: 0;')
+                            li.dropdown__filter-selected(aria-selected='true')
+                              | Default option
+                            li
+                              ul.dropdown__select
+                                li.dropdown__select-option(role='option')
+                                  | Option 1
+                                li.dropdown__select-option(role='option')
+                                  | Option 2
+                                li.dropdown__select-option(role='option')
+                                  | Option 3
+                                li.dropdown__select-option(role='option')
+                                  | Option 4
+                                li.dropdown__select-option(role='option')
+                                  | Option 5
+                  .d-none.d-xl-block.col-4
+                  .col-12.col-lg-8.col-xl-4
+                    .shadow-btn-container.mt-3
+                      button.my-btn.toggle-form(style='z-index: 3' onclick='validateAnnounceForm()') Добавить обьявление
+                      .my-shadow-clr-1(style='z-index: 2')
+          .row
+            .col-12
+              .announce-card
+                .row
+                  .col-12.col-lg-4
+                    .border-img-container-sqr
+                      img.bordered-img(src='img/about_1.jpg' alt='')
+                  .col-12.col-lg-8
+                    .text-titled.mt-3.mt-lg-0 Корм при заболевании мочевыводящей системы
+                    .mb-3 Игорь Печорин, Минск
+                    div
+                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum est excepturi harum natus officia provident totam, ut vitae voluptas?
+                .row.mt-3
+                  .col-12.col-lg-4
+                    .icon-text
+                      img.icon-text-icon(src='img/icon/med.svg')
+                      div Характер
+                  .col-12.col-lg-4.mt-2.mt-lg-0
+                    .icon-text
+                      img.icon-text-icon(src='img/icon/email.svg')
+                      div smth@gmail.com
+                  .col-12.col-lg-4.mt-2.mt-lg-0
+                    .icon-text
+                      img.icon-text-icon(src='img/icon/phone.svg')
+                      div + 375-11-111-11-11
+    include footer
+    script(src='js/jquery.js')
+    script(src='js/toggle_submenu.js')
+    script(src='js/toggle_menu.js')
+    script(src='js/help.js')
+    script(src='js/pagination_help.js')
