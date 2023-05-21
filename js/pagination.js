@@ -1,8 +1,35 @@
+let paginationLimit = 6;
+
+/*
+function setupPagination(){
+    //alert($(window).width());
+    if($(window).width()<576){
+        paginationLimit = 3;
+    }
+    if($(window).width()>=576 && $(window).width()<960){
+        paginationLimit = 6;
+    }
+    if($(window).width()>=960){
+        paginationLimit = 9;
+    }
+    alert(paginationLimit);
+}
+ */
+
+$(document).ready(function() {
+    setupPagination();
+
+    $(window).resize(function () {
+        setupPagination();
+    });
+});
+
+
 const paginationNumbers = document.getElementById("pagination-numbers");
 const paginatedList = document.getElementById("paginated-list");
 const listItems = paginatedList.querySelectorAll(".card");
 
-const paginationLimit = 6;
+
 const pageCount = Math.ceil(listItems.length / paginationLimit);
 let currentPage = 1;
 

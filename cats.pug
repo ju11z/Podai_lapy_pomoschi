@@ -213,7 +213,7 @@ html(lang='en')
     .container
       .row
         .col-12.col-md-4
-          .block-rounded.my-filter.p-5.p-md-3.p-xl-5.mb-4.mb-md-0
+          .block-rounded.my-filter.p-5.p-md-3.p-xl-5.mb-4.mb-md-0(style='height:100%;')
             .title.text-center.mt-4
               | Фильтр
             .div
@@ -292,7 +292,7 @@ html(lang='en')
                 button.my-btn Взять друга сейчас!
                 .my-shadow-clr-2
         .col-12.col-md-8
-          .block-rounded.pt-5.pt-md-3.pt-xl-5
+          .block-rounded.pt-5.pt-md-3.pt-xl-5(style='height:100%;')
             .title.text-center.mt-4
               | Наши котики
             .row
@@ -300,7 +300,7 @@ html(lang='en')
               .col-8.col-sm-10
                 #paginated-list.row
                    each card in cards
-                      .col-12.col-sm-6.col-lg-4
+                      .col-12.col-lg-4
                         a.card.mb-4.hover-bounce(href='cat.html')
                           .card-img-container
                             img.card-img(src='img/' + card.img_path)
@@ -313,12 +313,14 @@ html(lang='en')
                             .card-info-item #{card.health}
 
               .col-2.col-sm-1
+      .row
         .col-4
-        .col-8.d-flex.flex-row.justify-content-center
+        .col-8.d-flex.flex-row.justify-content-center.mt-3
           nav.pagination-container
             #pagination-numbers
 
     include footer
+    script(src='js/jquery.js')
     script(src='js/toggle_menu.js')
     script(src='js/pagination.js')
     script(src='js/select.js')

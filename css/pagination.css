@@ -11,8 +11,6 @@
   border: 1px solid #322821;
   display: flex;
   align-items: center;
-  position: absolute;
-  bottom: 0;
   justify-content: center; }
 
 .pagination-number,
