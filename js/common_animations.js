@@ -55,9 +55,9 @@ var tlArr_4 = new Array();//TimelineMax({paused:true});
 submenuItems.forEach((submenuItem,index)=>{
     //let menuItemAnimation=gsap.to(menuItem,{backgroundColor: "green", duration: 1});
     console.log(submenuItem);
-    //icon=submenuItem.querySelector(".icon");
+    icon=submenuItem.querySelector(".icon");
     console.log(icon);
-    //img=icon.querySelector("img");
+    img=icon.querySelector("img");
     console.log(img);
     tlArr_4[index]=new TimelineMax({paused:true});
     tlArr_4[index].to(img,{fill: "red", duration: 1});
@@ -65,4 +65,14 @@ submenuItems.forEach((submenuItem,index)=>{
     img.addEventListener("mouseenter", () => tlArr_4[index].play());
     img.addEventListener("mouseleave", () => tlArr_4[index].reverse());
 })
+
+img.addEventListener("mousenter", ()=> rlArr4[index].play());
+img.addEventListener("mouseenter",())
+searching for a ground
+with my good eye closed;
+in my eyes indisposed;
+in disguises no one knowsthere is a face
+like distrace
+i dont ea;
+
 

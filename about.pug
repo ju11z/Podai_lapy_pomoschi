@@ -1,132 +1,133 @@
-  -
-    const pageTitle="About";
+-
 
-    const cards = [
-      {
-        icon_path:"cat.svg",
-        text:"Вы спасаете сразу 2 жизни - освободившееся место тут же займет новый бездомыш."
-      },
-      {
-         icon_path:"heart.svg",
-         text:"Мы поможем подобрать питомца, с которым вам будет комфортно."
-      },
-      {
-         icon_path:"people.svg",
-         text:"Вы получаете верного и благодарного друга."
-      },
-      {
-         icon_path:"present.svg",
-         text:"Это абсолютно бесплатно, даже если кот породистый."
-      }
-    ];
+  const pageTitle="About";
 
-    const questions = [
-        {
-          question:"Я хочу отдать вам кота. Что для этого нужно?",
-          answer:"К сожалению, мы не можем помочь всем. В первую очередь мы принимаем животных из отлова, животных-инвалидов и травмированных животных. Даже для них не всегда хватает свободных мест."
-        },
-        {
-          question:"Я хочу отдать вам корм, лекарства и т.д. Как это можно сделать?",
-          answer:"Можно привезти лично или передать, например, с помощью Яндекс.Доставки, обычно по будням после 18.00 и в течение всего дня в выходные. Наша волонтер Катя подскажет, что может нам пригодиться и как к нам добраться, договорится с вами на конкретное время. Спасибо, что помогаете нам!"
-        },
-        {
-          question:"Я хочу стать волонтером. Что для этого нужно?",
-          answer:"Волонтером приюта можно стать только если вам уже исполнилось 18 лет. Дежурство в приюте занимает в среднем 3-4 часа. За это время вам предстоит убрать в одной из комнат, в которых живут котики (подмести и помыть пол), почистить клетки, почистить лотки, вымыть лотки и мисочки, покормить котов, поменять воду в мисочках. Сначала вы будете помогать кому-то из наших волонтеров. Как только почувствуете уверенность в своих силах, можно будет дежурить самостоятельно. С собой нужно взять сменную одежду, сменную обувь (по желанию) и резиновые перчатки."
-        },
-        {
-         question:"Я хочу взять у вас кота. Что для этого нужно?",
-         answer:"Связаться с нами и пообщаться. Если всех все устроит – договориться на конкретные дату и время."
-        },
+  const cards = [
+  {
+    icon_path:"cat.svg",
+    text:"Вы спасаете сразу 2 жизни - освободившееся место тут же займет новый бездомыш."
+  },
+  {
+     icon_path:"heart.svg",
+     text:"Мы поможем подобрать питомца, с которым вам будет комфортно."
+  },
+  {
+     icon_path:"people.svg",
+     text:"Вы получаете верного и благодарного друга."
+  },
+  {
+     icon_path:"present.svg",
+     text:"Это абсолютно бесплатно, даже если кот породистый."
+  }
+  ];
 
-      ];
+  const questions = [
+    {
+      question:"Я хочу отдать вам кота. Что для этого нужно?",
+      answer:"К сожалению, мы не можем помочь всем. В первую очередь мы принимаем животных из отлова, животных-инвалидов и травмированных животных. Даже для них не всегда хватает свободных мест."
+    },
+    {
+      question:"Я хочу отдать вам корм, лекарства и т.д. Как это можно сделать?",
+      answer:"Можно привезти лично или передать, например, с помощью Яндекс.Доставки, обычно по будням после 18.00 и в течение всего дня в выходные. Наша волонтер Катя подскажет, что может нам пригодиться и как к нам добраться, договорится с вами на конкретное время. Спасибо, что помогаете нам!"
+    },
+    {
+      question:"Я хочу стать волонтером. Что для этого нужно?",
+      answer:"Волонтером приюта можно стать только если вам уже исполнилось 18 лет. Дежурство в приюте занимает в среднем 3-4 часа. За это время вам предстоит убрать в одной из комнат, в которых живут котики (подмести и помыть пол), почистить клетки, почистить лотки, вымыть лотки и мисочки, покормить котов, поменять воду в мисочках. Сначала вы будете помогать кому-то из наших волонтеров. Как только почувствуете уверенность в своих силах, можно будет дежурить самостоятельно. С собой нужно взять сменную одежду, сменную обувь (по желанию) и резиновые перчатки."
+    },
+    {
+     question:"Я хочу взять у вас кота. Что для этого нужно?",
+     answer:"Связаться с нами и пообщаться. Если всех все устроит – договориться на конкретные дату и время."
+    },
 
-  doctype html
-  html(lang='en')
-    head
-      meta(charset='UTF-8')
-      title pageTitle
-      link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
-      link(href='css/style.css' rel='stylesheet')
-      link(href='css/about.css' rel='stylesheet')
-    body
-      include header
+  ];
 
-      .container
-        .flex-column-reverse.flex-md-row.row.mt-5
-          .col-12.col-md-5
-            .title.roll-right Готовы познакомиться с новым лучшим другом?
-            .mb-5
-              | Наш приют предосталвяет вам такую возможность! Тут обитают более 100 котов, которые ищут своих хозяев.
-            .row
-              .col-8
-                .shadow-btn-container
-                  button.my-btn Взять друга сейчас!
-                  .my-shadow-clr-1
-              .col-4
-          .d-none.d-md-block.col-1
-          .col-12.col-md-6
-            .row
-              .col-12.col-sm-6.col-md-12.col-lg-6
-                .border-img-container.offset-bottom
-                  img.bordered-img(src='img/about_1.jpg' alt='')
-                  .my-border
-              .d-none.d-sm-block.d-md-none.d-lg-block.col-6
-                .border-img-container.offset-top
-                  img.bordered-img(src='img/about_2.jpg' alt='')
-                  .my-border
-        .flex-column-reverse.flex-md-row.row.mt-5
-          .col-12.col-md-6.col-lg-7
-            .row
-              each card in cards
-                  .col-12.col-lg-6
-                    .about-card.mb-4
-                      .icon
-                        img(src='img/icon/' + card.icon_path)
-                      .text #{card.text}
-          .d-none.d-md-block.col-1
-          .col-12.col-md-5.col-lg-4
-            .title Почему лучше взять котика из приюта?
-            div
-              | Мы убеждены, что все котики одинаково хорошие. Но! Покупая животных, вы чаще всего косвенно поддерживаете деятельность разведенцев, т.е. тех, кто разводит породистых кошек исключительно ради прибыли.
-        .row.mt-5
-          .col-12.col-md-5
-            .title.roll-right Отношение к животным в Беларуси
-            div
-              | В Беларуси не существует государственных программ гуманного сокращения численности бездомных животных. Только отлов.Большинство животных, которые попадут в отлов, умрут — их либо усыпят, либо они заразятся и умрут от болезней. В 99% случаев это будут молодые и (относительно) здоровые животные. Мы стараемся дать им шанс жить. Котики-инвалиды или травмированные коты требуют специального ухода, за который люди зачастую боятся браться.
-          .d-none.d-md-block.col-1
-          .col-12.col-md-6
-            .row.d-flex.align-items-center
-              .col-12.col-sm-6.col-md-12.col-lg-6
-                .border-img-container-sqr
-                  img.bordered-img(src='img/about_3.jpg' alt='')
-                  .my-border
-              .d-none.d-sm-block.d-md-none.d-lg-block.col-6
-                .border-img-container-sqr.mb-4
-                  img.bordered-img(src='img/about_4.jpg' alt='')
-                  .my-border
-                .border-img-container-sqr
-                  img.bordered-img(src='img/about_5.jpg' alt='')
-                  .my-border
-        .row
-          .col-12
-            .title.text-center Часто задаваемые вопросы
-          .d-none.d-md-block.col-2
-          .col-12.col-md-8
-            .accordion
-              each question in questions
-                  .accordion-group
-                    .accordion-menu
-                      .accordion-menu-text #{question.question}
-                      img.accordion-menu-icon(src='img/icon/paw.svg' alt='')
-                    .accordion-content
-                      p #{question.answer}
+doctype html
+html(lang='en')
+head
+meta(charset='UTF-8')
+title pageTitle
+link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
+link(href='css/style.css' rel='stylesheet')
+link(href='css/about.css' rel='stylesheet')
+body
+include header
+
+.container
+  .flex-column-reverse.flex-md-row.row.mt-5
+    .col-12.col-md-5
+      .title.roll-right Готовы познакомиться с новым лучшим другом?
+      .mb-5
+        | Наш приют предосталвяет вам такую возможность! Тут обитают более 100 котов, которые ищут своих хозяев.
+      .row
+        .col-8
+          .shadow-btn-container
+            button.my-btn Взять друга сейчас!
+            .my-shadow-clr-1
+        .col-4
+    .d-none.d-md-block.col-1
+    .col-12.col-md-6
+      .row
+        .col-12.col-sm-6.col-md-12.col-lg-6
+          .border-img-container.offset-bottom
+            img.bordered-img(src='img/about_1.jpg' alt='')
+            .my-border
+        .d-none.d-sm-block.d-md-none.d-lg-block.col-6
+          .border-img-container.offset-top
+            img.bordered-img(src='img/about_2.jpg' alt='')
+            .my-border
+  .flex-column-reverse.flex-md-row.row.mt-5
+    .col-12.col-md-6.col-lg-7
+      .row
+        each card in cards
+            .col-12.col-lg-6
+              .about-card.mb-4
+                .icon
+                  img(src='img/icon/' + card.icon_path)
+                .text #{card.text}
+    .d-none.d-md-block.col-1
+    .col-12.col-md-5.col-lg-4
+      .title Почему лучше взять котика из приюта?
+      div
+        | Мы убеждены, что все котики одинаково хорошие. Но! Покупая животных, вы чаще всего косвенно поддерживаете деятельность разведенцев, т.е. тех, кто разводит породистых кошек исключительно ради прибыли.
+  .row.mt-5
+    .col-12.col-md-5
+      .title.roll-right Отношение к животным в Беларуси
+      div
+        | В Беларуси не существует государственных программ гуманного сокращения численности бездомных животных. Только отлов.Большинство животных, которые попадут в отлов, умрут — их либо усыпят, либо они заразятся и умрут от болезней. В 99% случаев это будут молодые и (относительно) здоровые животные. Мы стараемся дать им шанс жить. Котики-инвалиды или травмированные коты требуют специального ухода, за который люди зачастую боятся браться.
+    .d-none.d-md-block.col-1
+    .col-12.col-md-6
+      .row.d-flex.align-items-center
+        .col-12.col-sm-6.col-md-12.col-lg-6
+          .border-img-container-sqr
+            img.bordered-img(src='img/about_3.jpg' alt='')
+            .my-border
+        .d-none.d-sm-block.d-md-none.d-lg-block.col-6
+          .border-img-container-sqr.mb-4
+            img.bordered-img(src='img/about_4.jpg' alt='')
+            .my-border
+          .border-img-container-sqr
+            img.bordered-img(src='img/about_5.jpg' alt='')
+            .my-border
+  .row
+    .col-12
+      .title.text-center Часто задаваемые вопросы
+    .d-none.d-md-block.col-2
+    .col-12.col-md-8
+      .accordion
+        each question in questions
+            .accordion-group
+              .accordion-menu
+                .accordion-menu-text #{question.question}
+                img.accordion-menu-icon(src='img/icon/paw.svg' alt='')
+              .accordion-content
+                p #{question.answer}
 
 
-          .d-none.d-md-block.col-2
-      include footer
+    .d-none.d-md-block.col-2
+include footer
 
-      script(src='js/gsap/gsap.min.js')
-      script(src='js/toggle_menu.js')
-      script(src='js/common_animations.js')
-      script(src='js/about_animation.js')
-      script(src='js/accordion_animation.js')
+script(src='js/gsap/gsap.min.js')
+script(src='js/toggle_menu.js')
+script(src='js/common_animations.js')
+script(src='js/about_animation.js')
+script(src='js/accordion_animation.js')
