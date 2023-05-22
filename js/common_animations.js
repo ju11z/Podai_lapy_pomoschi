@@ -1,3 +1,4 @@
+//пункты меню
 const hoverColor="rgba(234,139,27,0.4)";
 
 let menuItems = gsap.utils.toArray(".menu-item");
@@ -13,6 +14,7 @@ menuItems.forEach((menuItem,index)=>{
     menuItem.addEventListener("mouseleave", () => tlArr[index].reverse());
 })
 
+//кнопки
 var tlArr_2 = new Array();//TimelineMax({paused:true});
 
 let buttons = gsap.utils.toArray(".shadow-btn-container");
@@ -21,7 +23,6 @@ buttons.forEach((button,index) => {
     if(!shadow){
         shadow=button.querySelector(".my-shadow-clr-2");
     }
-    console.log(shadow);
 
     tlArr_2[index]=new TimelineMax({paused:true});
 
@@ -29,4 +30,39 @@ buttons.forEach((button,index) => {
     button.addEventListener("mouseenter", () => tlArr_2[index].play());
     button.addEventListener("mouseleave",()=> tlArr_2[index].reverse());
 });
+
+//карточки
+
+var tlArr_3 = new Array();
+
+let bounces = gsap.utils.toArray(".hover-bounce");
+bounces.forEach((bounce,index) => {
+
+    tlArr_3[index]=new TimelineMax({paused:true});
+
+    tlArr_3[index].to(bounce,{y:20, ease:"bounce.out", duration: 1});
+    bounce.addEventListener("mouseenter", () => tlArr_3[index].play());
+    bounce.addEventListener("mouseleave",()=> tlArr_3[index].reverse());
+});
+
+//подменю
+
+let submenuItems = gsap.utils.toArray(".submenu-item");
+console.log(submenuItems.length);
+
+var tlArr_4 = new Array();//TimelineMax({paused:true});
+
+submenuItems.forEach((submenuItem,index)=>{
+    //let menuItemAnimation=gsap.to(menuItem,{backgroundColor: "green", duration: 1});
+    console.log(submenuItem);
+    //icon=submenuItem.querySelector(".icon");
+    console.log(icon);
+    //img=icon.querySelector("img");
+    console.log(img);
+    tlArr_4[index]=new TimelineMax({paused:true});
+    tlArr_4[index].to(img,{fill: "red", duration: 1});
+
+    img.addEventListener("mouseenter", () => tlArr_4[index].play());
+    img.addEventListener("mouseleave", () => tlArr_4[index].reverse());
+})
 

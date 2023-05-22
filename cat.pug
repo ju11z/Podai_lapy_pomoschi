@@ -1,37 +1,70 @@
 -
-  const vets = [
+  const name="Скарлетт";
+
+  const about="Спасена с улицы, прекрасный характер, ненавязчивая и скромная, умная и добрая кошечка, любит смотреть телевизор, ничего не портит в доме. В поиске человека, который полюбит ее всем сердцем. Посмотрите в ее глаза, глубокий взгляд, прямо в душу. Она очень умная, кошечка просто 'золото'. Кушает сухой и влажный корм, ходит в лоток, обработана, привита и кастрирована. Уличная жизнь не прошла бесследно и у Скарлетт гингивит. Удаление зубов нам не показано, поэтому постоянно проводим обработки спецсредствами. Она очень мужественно проходит обработку десен каждый день. Нам очень нужна помощь в покупке качественного корма, наполнителя и антипаразитарных препаратов.";
+
+  const date_arrived='04.05.2023';
+
+  icon_path='female.svg';
+
+  const healths = [
     {
-      value:"кастрирован"
+      value:"болеет гингивитом"
     },
     {
-      value:"кастрирован"
-    },
-    {
-      value:"кастрирован"
+      value:"нуждается в уходе за зубами"
     }
+    
   ];
 
   const patterns = [
     {
-      value:"ласковый"
+      value:"ласковая"
     },
     {
-      value:"активный"
+      value:"активная"
     },
     {
       value:"любит детей"
+    },
+    {
+      value:"добрая"
     }
   ];
 
-  const healths=[
+  const vets=[
     {
-      value:"обработан от клещей и паразитов"
+      value:"Обработан(-а) от клещей и паразитов"
     },
     {
-      value:"обработан от клещей и паразитов"
+      value:"Вакцинирован(а)"
     },
     {
-      value:"обработан от клещей и паразитов"
+      value:"Стерилизован(а)"
+    }
+  ]
+
+  const cities=[
+    {
+      value: "Любой город"
+    },
+    {
+      value: "Минск"
+    },
+    {
+      value: "Брест"
+    },
+    {
+      value: "Витебстк"
+    },
+    {
+      value: "Гомель"
+    },
+    {
+      value: "Гродно"
+    },
+    {
+      value: "Могилев"
     },
   ]
 
@@ -77,9 +110,9 @@ html(lang='en')
                     .border-img-container-sqr
                       img.bordered-img(src='img/about_1.jpg' alt='')
                     .icon-text.mt-3
-                      img.icon-text-icon(src='img/icon/male.svg')
-                      .title-small Ксандр
-                    div поступил в приют
+                      img.icon-text-icon(src='img/icon/' + icon_path)
+                      .title-small #{name}
+                    div поступил(-а) в приют #{date_arrived}
                   .col-12.col-md-8
                     .row
                       .col-12.col-sm-6
@@ -95,19 +128,12 @@ html(lang='en')
                             label.dropdown__options-filter(for='filter-switch_1' style='margin-bottom: 0; margin-left: 0;')
                               ul.dropdown__filter(role='listbox' tabindex='-1' style='margin-bottom: 0;')
                                 li.dropdown__filter-selected(aria-selected='true')
-                                  | Default option
+                                  | #{cities[0].value}
                                 li
                                   ul.dropdown__select
-                                    li.dropdown__select-option(role='option')
-                                      | Option 1
-                                    li.dropdown__select-option(role='option')
-                                      | Option 2
-                                    li.dropdown__select-option(role='option')
-                                      | Option 3
-                                    li.dropdown__select-option(role='option')
-                                      | Option 4
-                                    li.dropdown__select-option(role='option')
-                                      | Option 5
+                                    each city in cities
+                                      li.dropdown__select-option(role='option')
+                                        | #{city.value}
                       .col-12.col-sm-6
                         .label-input
                           label(for='') Ваша почта
@@ -148,10 +174,10 @@ html(lang='en')
           div
               .icon-text.mt-3
                 img.icon-text-icon(src='img/icon/male.svg')
-                .titled Ксандр
-              .mb-4.text-l поступил в приют 06.03.2023
+                .titled #{name}
+              .mb-4.text-l поступил(-а) в приют #{date_arrived}
           div
-            | Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.  Товарищи! новая модель организационной деятельности позволяет оценить значение направлений прогрессивного развития.
+            | #{about}
           .row
             .d-none.d-md-block.col-4.col-xl-6
             .col-12.col-md-8.col-xl-6
@@ -162,11 +188,11 @@ html(lang='en')
         .col-12.col-lg-4
           .rounded-card
             .icon-text.mb-3
-              img.icon-text-icon(src='img/icon/med.svg')
-              .icon-text-text.text-l Вет-особенности
+              img.icon-text-icon(src='img/icon/health.svg')
+              .icon-text-text.text-l Здоровье
             .tags-wrapper
-               each vet in vets
-                .tag-clr-2 #{vet.value}
+               each health in healths
+                .tag-clr-2 #{health.value}
         .col-12.col-lg-8.mt-3.mt-lg-0
           .rounded-card
             .icon-text.mb-3
@@ -176,14 +202,14 @@ html(lang='en')
                 each pattern in patterns
                   .tag-clr-1 #{pattern.value}
             .icon-text.mb-3
-              img.icon-text-icon(src='img/icon/med.svg')
-              .icon-text-text.text-l Здоровье
+              img.icon-text-icon(src='img/icon/cat.svg')
+              .icon-text-text.text-l Вет-особенности
             .tags-wrapper
-              each health in healths
-                .tag-clr-1 #{health.value}
+              each vet in vets
+                .tag-clr-1 #{vet.value}
       .row
         .col-12.mt-5
-            .title-small.text-center Ксандр рекомендует вам познакомиться с его друзьями
+            .title-small.text-center #{name} рекомендует вам познакомиться со своими друзьями
 
         .col
           #test-slider.slider.carousel.d-none.d-lg-block.mt-3(data-ride='carousel')
