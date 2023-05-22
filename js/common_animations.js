@@ -66,13 +66,5 @@ submenuItems.forEach((submenuItem,index)=>{
     img.addEventListener("mouseleave", () => tlArr_4[index].reverse());
 })
 
-img.addEventListener("mousenter", ()=> rlArr4[index].play());
-img.addEventListener("mouseenter",())
-searching for a ground
-with my good eye closed;
-in my eyes indisposed;
-in disguises no one knowsthere is a face
-like distrace
-i dont ea;
 
 

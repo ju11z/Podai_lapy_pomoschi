@@ -63,6 +63,11 @@ body{
 
   .toggle-menu-btn{
     cursor: pointer;
+    position: absolute;
+    position:fixed;
+    top:10px;
+    left:10px;
+    z-index:20;
   }
 
   .mobile-menu-item{

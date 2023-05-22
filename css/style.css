@@ -120,7 +120,7 @@ body {
   /**/ }
   body .title {
     font-family: "Valisca";
-    font-size: 34px;
+    font-size: 30px;
     margin-bottom: 40px; }
   body .title-small {
     font-family: "Valisca";
@@ -155,7 +155,12 @@ body {
     border-radius: 999px;
     border: 1px solid #322821; }
   body .toggle-menu-btn {
-    cursor: pointer; }
+    cursor: pointer;
+    position: absolute;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20; }
   body .mobile-menu-item {
     padding: 10px;
     font-size: 20px;
@@ -265,7 +270,7 @@ body {
     body .icon-text label {
       margin-left: 0 !important; }
   body .titled {
-    font-size: 34px;
+    font-size: 30px;
     font-family: "Valisca"; }
   body footer {
     background-color: white; }
