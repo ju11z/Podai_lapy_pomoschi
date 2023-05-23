@@ -46,7 +46,7 @@ html(lang='en')
 head
 meta(charset='UTF-8')
 meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-title pageTitle
+title О нас
 link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
 link(href='css/style.css' rel='stylesheet')
 link(href='css/about.css' rel='stylesheet')
@@ -66,13 +66,13 @@ include header
             .my-shadow-clr-1
         .col-4
     .d-none.d-md-block.col-1
-    .col-12.col-md-6
+    .col-12.col-md-6.mb-3.mb-md-0
       .row
-        .col-12.col-sm-6.col-md-12.col-lg-6
+        .d-none.d-sm-block.d-md-none.d-lg-block.col-6
           .border-img-container.offset-bottom
             img.bordered-img(src='img/about_1.jpg' alt='')
             .my-border
-        .d-none.d-sm-block.d-md-none.d-lg-block.col-6
+        .col-12.col-sm-6.col-md-12.col-lg-6
           .border-img-container.offset-top
             img.bordered-img(src='img/about_2.jpg' alt='')
             .my-border
@@ -86,17 +86,17 @@ include header
                   img(src='img/icon/' + card.icon_path)
                 .text #{card.text}
     .d-none.d-md-block.col-1
-    .col-12.col-md-5.col-lg-4
+    .col-12.col-md-5.col-lg-4.mb-3.mb-md-0
       .title Почему лучше взять котика из приюта?
       div
         | Мы убеждены, что все котики одинаково хорошие. Но! Покупая животных, вы чаще всего косвенно поддерживаете деятельность разведенцев, т.е. тех, кто разводит породистых кошек исключительно ради прибыли.
   .row.mt-5
-    .col-12.col-md-5
+    .col-12.col-md-5.mb-3.mb-md-0
       .title.roll-right Отношение к животным в Беларуси
       div
         | В Беларуси не существует государственных программ гуманного сокращения численности бездомных животных. Только отлов.Большинство животных, которые попадут в отлов, умрут — их либо усыпят, либо они заразятся и умрут от болезней. В 99% случаев это будут молодые и (относительно) здоровые животные. Мы стараемся дать им шанс жить. Котики-инвалиды или травмированные коты требуют специального ухода, за который люди зачастую боятся браться.
     .d-none.d-md-block.col-1
-    .col-12.col-md-6
+    .col-12.mt-3.mt-md-0.col-md-6
       .row.d-flex.align-items-center
         .col-12.col-sm-6.col-md-12.col-lg-6
           .border-img-container-sqr
@@ -109,7 +109,7 @@ include header
           .border-img-container-sqr
             img.bordered-img(src='img/about_5.jpg' alt='')
             .my-border
-  .row
+  .row.mt-5
     .col-12
       .title.text-center Часто задаваемые вопросы
     .d-none.d-md-block.col-2

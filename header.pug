@@ -32,8 +32,8 @@ header
     .row.p-3
       #toggle-menu-btn.toggle-menu-btn
         img(src='img/logo_small.svg')
-  .container
-    #toggle-menu.toggle-menu
+  .container-fluid
+    #toggle-menu.mobile-menu
       .row
         each link in links
             .col-12.mobile-menu-item
@@ -43,8 +43,8 @@ header
     .row.pt-4.mb-5.mb-4
       .col-3
         img(src='img/logo.svg')
-      .d-block.d-md-none.d-lg-block.col-1
-      .col-9.col-lg-8
+      .d-block.d-md-none.d-xl-block.col-1
+      .col-9.col-xl-8
         .border-menu-container
           .menu-wrapper
             .menu-items

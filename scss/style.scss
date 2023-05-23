@@ -2,6 +2,68 @@
 @import "select";
 @import "checkbox";
 
+.mobile-menu{
+  padding-top: 200px;
+  top:0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+}
+
+.mobile-menu-item{
+  padding: 10px;
+  font-size: $fs-l;
+  width: 100%;
+  font-weight: bold;
+  border-radius: $b-r;
+  text-align: center;
+}
+
+.menu-shadow{
+  opacity: 1;
+  z-index: -1;
+  top: 10px;
+  left: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+
+}
+
+.menu-items{
+  display: flex;
+  justify-content: space-between;
+  .menu-item{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: $b-r;
+
+  }
+
+  .active{
+    background-color: $clr_2_t;
+  }
+}
+
+.toggle-menu{
+  width: 100%;
+  padding: 40px;
+  background-color: white;
+  border-radius: $b-r;
+
+  .active{
+    border: 1px solid $clr_3;
+  }
+}
+
 body{
   background-color: $clr_0;
   font-family: $ff_1;
@@ -12,6 +74,14 @@ body{
     font-family: $ff_2;
     font-size:$fs-xl;
     margin-bottom: 40px;
+
+  }
+
+  @media screen and (max-width: 720px) {
+    .title{
+      margin-bottom: 20px;
+    }
+
   }
   .title-small{
     font-family: $ff_2;
@@ -63,63 +133,13 @@ body{
 
   .toggle-menu-btn{
     cursor: pointer;
-    position: absolute;
     position:fixed;
     top:10px;
     left:10px;
-    z-index:20;
+    z-index:30;
   }
 
-  .mobile-menu-item{
-    padding: 10px;
-    font-size: $fs-l;
-    width: 100%;
-    font-weight: bold;
-    border-radius: $b-r;
-    text-align: center;
-  }
 
-  .menu-shadow{
-    opacity: 1;
-    z-index: -1;
-    top: 10px;
-    left: 10px;
-    border-radius: 999px;
-    display: inline-block;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-
-  }
-
-  .menu-items{
-    display: flex;
-    justify-content: space-between;
-    .menu-item{
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 30px;
-      padding-right: 30px;
-      border-radius: $b-r;
-
-    }
-
-    .active{
-      background-color: $clr_2_t;
-    }
-  }
-
-  .toggle-menu{
-    width: 100%;
-    padding: 40px;
-    background-color: white;
-    border-radius: $b-r;
-
-    .active{
-      border: 1px solid $clr_3;
-    }
-  }
 
   .card{
     width: 100%;
@@ -424,12 +444,13 @@ body{
       border-radius: $b-r;
       justify-content: center;
       align-items: center;
-      padding:20px 30px;
+      width: 180px;
+      height: 120px;
       cursor: pointer;
       margin-right: 20px;
 
       .icon{
-
+        height: 60px;
       }
       .text{
 

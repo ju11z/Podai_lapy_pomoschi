@@ -54,115 +54,115 @@
     {
       name:"Ксандр",
       age:"5 лет",
-      health:"кастрирован",
+      health:"стерилизован(-а)",
       icon_path:"male.svg",
       img_path:"cats_1.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
+      name:"Оливер",
+      age:"8 лет",
+      health:"стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_2.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
+      name:"Фантик",
+      age:"2 года",
+      health:"не стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_3.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
-      icon_path:"male.svg",
-      img_path:"cats_1.png"
+      name:"Иришка",
+      age:"1 год",
+      health:"стерилизован(-а)",
+      icon_path:"female.svg",
+      img_path:"cats_4.png"
     },
     {
-      name:"Ксандр",
+      name:"Оззи",
       age:"5 лет",
-      health:"кастрирован",
-      icon_path:"male.svg",
-      img_path:"cats_1.png"
+      health:"стерилизован(-а)",
+      icon_path:"female.svg",
+      img_path:"cats_5.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
+      name:"Сальвадор",
+      age:"6 месяцев",
+      health:"не стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_6.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
-      icon_path:"male.svg",
-      img_path:"cats_1.png"
+      name:"Анри",
+      age:"3 месяца",
+      health:"не стерилизован(-а)",
+      icon_path:"female.svg",
+      img_path:"cats_7.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
+      name:"Олли",
+      age:"7 лет",
+      health:"стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_8.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
-      icon_path:"male.svg",
-      img_path:"cats_1.png"
+      name:"Скарлетт",
+      age:"2 года",
+      health:"стерилизован(-а)",
+      icon_path:"female.svg",
+      img_path:"cat_1.png"
     },
     {
-      name:"Ксандр",
+      name:"Клауди",
       age:"5 лет",
-      health:"кастрирован",
+      health:"стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_10.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
-      icon_path:"male.svg",
-      img_path:"cats_1.png"
+      name:"Коллин",
+      age:"1 год",
+      health:"не стерилизован(-а)",
+      icon_path:"female.svg",
+      img_path:"cats_11.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
+      name:"Майк",
+      age:"2 года",
+      health:"стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_12.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
+      name:"Сонни",
+      age:"3 месяца",
+      health:"не стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_13.png"
     },
     {
-      name:"Ксандр",
+      name:"Леша",
       age:"5 лет",
-      health:"кастрирован",
+      health:"стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_14.png"
     },
     {
-      name:"Ксандр",
+      name:"Тофф",
       age:"5 лет",
-      health:"кастрирован",
+      health:"стерилизован(-а)",
       icon_path:"male.svg",
-      img_path:"cats_1.png"
+      img_path:"cats_15.png"
     },
     {
-      name:"Ксандр",
-      age:"5 лет",
-      health:"кастрирован",
-      icon_path:"male.svg",
-      img_path:"cats_1.png"
-    },
+      name:"Аска",
+      age:"3 года",
+      health:"стерилизован(-а)",
+      icon_path:"female.svg",
+      img_path:"cats_16.png"
+    }
     
   ];
 
@@ -171,7 +171,7 @@
             value:"Стерилизован(-а)"
         },
         {
-             value:"Обработан(-а) от клещей и паразитов"
+             value:"Обработан(-а) от клещей"
         },
         {
              value:"Вакцинирован(-а)"
@@ -183,7 +183,7 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-    title Title
+    title Ищут дом
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/bootstrap/bootstrap-grid.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
@@ -273,7 +273,7 @@ html(lang='en')
                     label.check-container
                       input(type='checkbox' )
                       span.checkmark
-                      span.label-text по кличке
+                      span.label-text #{health.value}
 
               .shadow-btn-container.mt-4
                 button.my-btn Взять друга сейчас!
@@ -287,7 +287,7 @@ html(lang='en')
               .col-8.col-sm-10
                 #paginated-list.row
                    each card in cards
-                      .col-12.col-lg-4
+                      .col-12..col-lg-4
                         a.card.mb-4.hover-bounce(href='cat.html')
                           .card-img-container
                             img.card-img(src='img/' + card.img_path)

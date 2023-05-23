@@ -21,15 +21,10 @@ body {
 
 .slider .carousel-inner {
   display: flex;
-  justify-content: center;
-  text-align: center; }
+  justify-content: center; }
 
 .slider .carousel-item.active:hover {
   cursor: pointer; }
-
-.slider .carousel-item.active.focused {
-  color: black;
-  font-weight: bold; }
 
 .slider .carousel-item span {
   padding-top: 5px;

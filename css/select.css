@@ -2,8 +2,7 @@ body {
   color: #322821; }
 
 .dropdown {
-  width: 100%;
-  font-family: "Lato", sans-serif; }
+  width: 100%; }
   .dropdown ul, .dropdown li {
     list-style-type: none; }
   .dropdown__switch:checked + .dropdown__options-filter .dropdown__select {

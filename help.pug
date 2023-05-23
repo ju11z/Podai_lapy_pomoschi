@@ -82,26 +82,50 @@
         icon_path:"med_big.svg"
         },
         {
-                title:"Перевозка",
-                icon_path:"car_big.svg"
-                },
+        title:"Перевозка",
+        icon_path:"car_big.svg"
+        },
         {
-                title:"Даром",
-                icon_path:"present_big.svg"
-                },
+        title:"Даром",
+        icon_path:"present_big.svg"
+        },
         {
-                title:"Передержка",
-                icon_path:"home_big.svg"
-                },
+         title:"Передержка",
+        icon_path:"home_big.svg"
+         },
 
     ]
+
+    const cities=[
+    {
+      value: "Любой город"
+    },
+    {
+      value: "Минск"
+    },
+    {
+      value: "Брест"
+    },
+    {
+      value: "Витебск"
+    },
+    {
+      value: "Гомель"
+    },
+    {
+      value: "Гродно"
+    },
+    {
+      value: "Могилев"
+    },
+  ]
 
 doctype html
 html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-    title Title
+    title Помощь
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
     link(href='css/modal.css' rel='stylesheet')
@@ -129,7 +153,7 @@ html(lang='en')
               .submenu-item
                 .icon
                   img(src='img/icon/' + item.icon_path)
-                .text #{item.title}
+                .text.mt-1 #{item.title}
 
     .container
       .row
@@ -160,19 +184,13 @@ html(lang='en')
                   label.dropdown__options-filter(for='filter-switch')
                     ul.dropdown__filter(role='listbox' tabindex='-1')
                       li.dropdown__filter-selected(aria-selected='true')
-                        | Default option
+                        | Любой город
                       li
                         ul.dropdown__select
-                          li.dropdown__select-option(role='option')
-                            | Option 1
-                          li.dropdown__select-option(role='option')
-                            | Option 2
-                          li.dropdown__select-option(role='option')
-                            | Option 3
-                          li.dropdown__select-option(role='option')
-                            | Option 4
-                          li.dropdown__select-option(role='option')
-                            | Option 5
+                          each city in cities
+                            li.dropdown__select-option(role='option')
+                              | #{city.value}
+                          
               .shadow-btn-container.mt-4
                 button.my-btn Искать обьявления
                 .my-shadow-clr-2
@@ -223,19 +241,13 @@ html(lang='en')
                             label.dropdown__options-filter(for='filter-switch_1' style='margin-bottom: 0; margin-left: 0;')
                               ul.dropdown__filter(role='listbox' tabindex='-1' style='margin-bottom: 0;')
                                 li.dropdown__filter-selected(aria-selected='true')
-                                  | Default option
+                                  | Любой город
                                 li
                                   ul.dropdown__select
-                                    li.dropdown__select-option(role='option')
-                                      | Option 1
-                                    li.dropdown__select-option(role='option')
-                                      | Option 2
-                                    li.dropdown__select-option(role='option')
-                                      | Option 3
-                                    li.dropdown__select-option(role='option')
-                                      | Option 4
-                                    li.dropdown__select-option(role='option')
-                                      | Option 5
+                                    each city in cities
+                                      li.dropdown__select-option(role='option')
+                                        | #{city.value}
+                                    
                         .label-input
                           label(for='') Ваш телефон
                           input#phone.input-high(type='text')
@@ -249,19 +261,13 @@ html(lang='en')
                         label.dropdown__options-filter(for='filter-switch_3' style='margin-bottom: 0; margin-left: 0;')
                           ul.dropdown__filter(role='listbox' tabindex='-1' style='margin-bottom: 0;')
                             li.dropdown__filter-selected(aria-selected='true')
-                              | Default option
+                              | Медикаменты
                             li
                               ul.dropdown__select
-                                li.dropdown__select-option(role='option')
-                                  | Option 1
-                                li.dropdown__select-option(role='option')
-                                  | Option 2
-                                li.dropdown__select-option(role='option')
-                                  | Option 3
-                                li.dropdown__select-option(role='option')
-                                  | Option 4
-                                li.dropdown__select-option(role='option')
-                                  | Option 5
+                                each item in submenu_items
+                                  li.dropdown__select-option(role='option')
+                                    | #{item.title}
+                                
                   .d-none.d-xl-block.col-4
                   .col-12.col-lg-8.col-xl-4
                     .shadow-btn-container.mt-3

@@ -6,7 +6,7 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-    title pageTitle
+    title Донат
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
     link(href='css/modal.css' rel='stylesheet')
@@ -29,12 +29,12 @@ html(lang='en')
     .container-fluid(style='background-color: white;')
       .container
         .row.pt-4.pb-4
-          .col-8
+          .col-12.col-md-8
             .title Спасибо за помощь!
             div
               | Благодаря вашим пожертвованиям наш приют продолжат существовать, котики находить свои дома, а люди своих друзей.
-          .col-1
-          .col-2
+          .d-none.d-md-block.col-2
+          .d-none.d-md-block.col-2
             img(src='img/paws.svg')
     .container
       .row
@@ -45,7 +45,7 @@ html(lang='en')
               img.form-image(src='img/donation_1.png')
             .col-12.col-lg-6
               .my-form
-                .title Форма доната
+                .title-small.text-center Форма доната
                 div
                   .label-input
                     .icon-text
@@ -91,8 +91,8 @@ html(lang='en')
                   .col-2
                   .col-8
                     .shadow-btn-container.mt-3
-                      button#donut-submit.my-btn(onclick='validateDonutForm()' style='z-index: 1;') Пожертвовать
-                      .my-shadow(style='z-index: 0;')
+                      button#donut-submit.my-btn(onclick='validateDonutForm()' style='z-index: 3;') Пожертвовать
+                      .my-shadow-clr-2(style='z-index: 2;')
                   .col-2
         .col-1
     include footer

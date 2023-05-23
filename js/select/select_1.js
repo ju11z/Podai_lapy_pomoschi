@@ -1,23 +1,4 @@
-const labels = document.querySelectorAll('.dropdown__filter-selected');
-
-labels.forEach((label)=>{
-    nextLi=label.nextSibling;
-    console.log(nextLi);
-
-    ul=nextLi.childNodes[0];
-    console.log(ul);
-    optionss=Array.from(ul.querySelectorAll('.dropdown__select-option'));
-    console.log(optionss);
-
-    optionss.forEach((option) => {
-        option.addEventListener('click', () => {
-            label.textContent = option.textContent
-        })
-    })
-})
-
-
-/*
+const label = document.querySelector('.dropdown__filter-selected')
 const options = Array.from(document.querySelectorAll('.dropdown__select-option'))
 
 options.forEach((option) => {
@@ -39,4 +20,3 @@ document.addEventListener('click', (e) => {
         toggle.checked = false
     }
 })
-*/

@@ -14,6 +14,7 @@ menuItems.forEach((menuItem,index)=>{
     menuItem.addEventListener("mouseleave", () => tlArr[index].reverse());
 })
 
+
 //кнопки
 var tlArr_2 = new Array();//TimelineMax({paused:true});
 
@@ -66,5 +67,19 @@ submenuItems.forEach((submenuItem,index)=>{
     img.addEventListener("mouseleave", () => tlArr_4[index].reverse());
 })
 
+//пункты мобильного меню
+
+let mobileMenuItems = gsap.utils.toArray(".mobile-menu-item");
+
+var tlArr_5 = new Array();//TimelineMax({paused:true});
+
+mobileMenuItems.forEach((mobileMenuItem,index)=>{
+    //let menuItemAnimation=gsap.to(menuItem,{backgroundColor: "green", duration: 1});
+    tlArr_5[index]=new TimelineMax({paused:true});
+    tlArr_5[index].to(mobileMenuItem,{backgroundColor: hoverColor, duration: 1});
+
+    mobileMenuItem.addEventListener("mouseenter", () => tlArr_5[index].play());
+    mobileMenuItem.addEventListener("mouseleave", () => tlArr_5[index].reverse());
+})
 
 

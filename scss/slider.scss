@@ -23,7 +23,6 @@
 .slider .carousel-inner {
     display: flex;
     justify-content: center;
-    text-align: center;
 }
 .slider .carousel-item {
 }
@@ -31,8 +30,6 @@
     cursor: pointer;
 }
 .slider .carousel-item.active.focused {
-    color: black;
-    font-weight: bold;
 }
 .slider .carousel-item span {
     padding-top: 5px;
