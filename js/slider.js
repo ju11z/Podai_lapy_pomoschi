@@ -194,6 +194,7 @@ var slider = (function() {
     }
 
     /* Setup a click listener for slider controls.*/
+
     function controlsListeners(sliderID) {
         $('#'+sliderID+' .carousel-control-prev').click(function(event) {
             /* Stop the click from doing the default action. */
@@ -212,91 +213,92 @@ var slider = (function() {
 
     /* Setup a click listener for each item so if a user clicks on it, it 
      * becomes the item in focus. */
-    function itemListener(sliderID) {
-        $('#'+sliderID+' .carousel-inner').on('click',itemClass,function(event) {
-            /* Stop the click from doing the default action. */
-            event.preventDefault();
-            event.stopPropagation();
 
-            var openLinkDelay = 600;
-            var openNewWindow = false;
-
-            /* Determine where in the list of items we are */
-            var index = $(this).index();
-
-            /* Determine the number of items and the number of items that are
-             * permanent. These may be different because temporary items are
-             * added to the list so the slider will appear continuous. */
-            var len = $(`#${sliderID} .carousel-inner ${itemClass}`).length;
-            var absLen = $(`#${sliderID} .carousel-inner ${itemClass}`).not('.start-temp').not('.end-temp').length;
-
-            /* If the absolute length is different than the current length (i.e.
-             * if there are temporary items right now) */
-            if(absLen < len) {
-                /* Get the number of items that were temporarily added to the end. We
-                 * need this to adjust the index. */
-                var numEndTemp = len - $(`#${sliderID} .carousel-inner ${itemClass}`).not('.start-temp').length;
-
-                /* Adjust the index location if there were extra items added to 
-                 * the end.*/
-                index = index - (numEndTemp);
-
-                /* Update the index to reflect the actual location of the item if a
-                 * temporary item was clicked on. */
-                if($(this).hasClass('start-temp')) {
-                    index = len - numEndTemp  + index;
-                }
-                else if($(this).hasClass('end-temp')) {
-                    index = index - absLen;
-                }
-            }
-
-            /* If the item has a link defined, set the url variable so it can be followed */
-            if($(this).attr('data-href') !== null) {
-                var url = $(this).attr('data-href');
-                if($(this).hasClass('focused')) {
-                    openLinkDelay = 0;
-                }
-                if($(this).attr("target") === "_blank") {
-                    openNewWindow = true;
-                }
-            }
-
-            /* Update the item in focus */
-            changeSlider(index,sliderID);
-
-            /* If the item has a link attached to it, follow it. If the item wasn't
-             * previously in focus, follow the link after a short delay to allow
-             * the item to come into focus. */
-            if(url) {
-                setTimeout(function(){
-                    /* If the user set target="_blank", open the link in a new window. */
-                    if(openNewWindow) {
-                        window.open(url);
-                    } else {
-                        window.location.href = url
-                    }
-                },openLinkDelay);
-            }
-        });
-    }
+    // function itemListener(sliderID) {
+    //     $('#'+sliderID+' .carousel-inner').on('click',itemClass,function(event) {
+    //         /* Stop the click from doing the default action. */
+    //         event.preventDefault();
+    //         event.stopPropagation();
+    //
+    //         var openLinkDelay = 600;
+    //         var openNewWindow = false;
+    //
+    //         /* Determine where in the list of items we are */
+    //         var index = $(this).index();
+    //
+    //         /* Determine the number of items and the number of items that are
+    //          * permanent. These may be different because temporary items are
+    //          * added to the list so the slider will appear continuous. */
+    //         var len = $(`#${sliderID} .carousel-inner ${itemClass}`).length;
+    //         var absLen = $(`#${sliderID} .carousel-inner ${itemClass}`).not('.start-temp').not('.end-temp').length;
+    //
+    //         /* If the absolute length is different than the current length (i.e.
+    //          * if there are temporary items right now) */
+    //         if(absLen < len) {
+    //             /* Get the number of items that were temporarily added to the end. We
+    //              * need this to adjust the index. */
+    //             var numEndTemp = len - $(`#${sliderID} .carousel-inner ${itemClass}`).not('.start-temp').length;
+    //
+    //             /* Adjust the index location if there were extra items added to
+    //              * the end.*/
+    //             index = index - (numEndTemp);
+    //
+    //             /* Update the index to reflect the actual location of the item if a
+    //              * temporary item was clicked on. */
+    //             if($(this).hasClass('start-temp')) {
+    //                 index = len - numEndTemp  + index;
+    //             }
+    //             else if($(this).hasClass('end-temp')) {
+    //                 index = index - absLen;
+    //             }
+    //         }
+    //
+    //         /* If the item has a link defined, set the url variable so it can be followed */
+    //         if($(this).attr('data-href') !== null) {
+    //             var url = $(this).attr('data-href');
+    //             if($(this).hasClass('focused')) {
+    //                 openLinkDelay = 0;
+    //             }
+    //             if($(this).attr("target") === "_blank") {
+    //                 openNewWindow = true;
+    //             }
+    //         }
+    //
+    //         /* Update the item in focus */
+    //         changeSlider(index,sliderID);
+    //
+    //         /* If the item has a link attached to it, follow it. If the item wasn't
+    //          * previously in focus, follow the link after a short delay to allow
+    //          * the item to come into focus. */
+    //         if(url) {
+    //             setTimeout(function(){
+    //                 /* If the user set target="_blank", open the link in a new window. */
+    //                 if(openNewWindow) {
+    //                     window.open(url);
+    //                 } else {
+    //                     window.location.href = url
+    //                 }
+    //             },openLinkDelay);
+    //         }
+    //     });
+    // }
 
     /* Add a click listener for indicators */
-    function addIndicatorListeners(id) {
-        if(id) {
-            var sliderID = id;
-        } else {
-            var sliderID = $($('.slider')[0]).attr('id');
-        }
-        $('#'+sliderID+' .carousel-indicators li').click(function(event) {
-            /* Stop the click from doing the default action. */
-            event.preventDefault();
-            event.stopPropagation();
-
-            /* Get the slider ID to use to change the item in focus */
-            changeSlider($(this).index(),sliderID);
-        });
-    }
+    // function addIndicatorListeners(id) {
+    //     if(id) {
+    //         var sliderID = id;
+    //     } else {
+    //         var sliderID = $($('.slider')[0]).attr('id');
+    //     }
+    //     $('#'+sliderID+' .carousel-indicators li').click(function(event) {
+    //         /* Stop the click from doing the default action. */
+    //         event.preventDefault();
+    //         event.stopPropagation();
+    //
+    //         /* Get the slider ID to use to change the item in focus */
+    //         changeSlider($(this).index(),sliderID);
+    //     });
+    // }
     /* Return 1 if the window size is larger than the transition size, 
      * 0 otherwise. */
     function windowSize() {

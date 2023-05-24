@@ -125,6 +125,7 @@ html(lang='en')
     title Кот
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
+    link(rel='shortcut icon' href='img/paw_small.svg' type='image/x-icon')
     link(href='css/modal.css' rel='stylesheet')
     link(rel='stylesheet' href='css/slider.css')
     style.
@@ -160,7 +161,7 @@ html(lang='en')
                     .border-img-container-sqr
                       img.bordered-img(src='img/' + img_1)
                     .icon-text.mt-3
-                      img.icon-text-icon(src='img/icon/' + icon_path)
+                      img.icon-text-icon(src='img/icon/' + icon_path).mr-2
                       .title-small #{name}
                     div поступил(-а) в приют #{date_arrived}
                   .col-12.col-md-8
@@ -223,7 +224,7 @@ html(lang='en')
         .col-12.col-lg-5.d-lg-flex.flex-column.justify-content-between.mb-5.mb-lg-0
           div
               .icon-text.mt-3
-                img(src='img/icon/' + icon_path)
+                img(src='img/icon/' + icon_path).mr-2
                 .titled #{name}
               .mb-4.text-l поступил(-а) в приют #{date_arrived}
           div

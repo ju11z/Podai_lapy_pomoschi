@@ -68,15 +68,39 @@
   background-color: $clr-3;
 }
 
-
-@media (max-width: 768px) {
+@media (min-width: 100px) {
+  .modal-small{
+    width: 100vw;
+  }
   .modal-popup{
+    width: 100vw;
+  }
+}
+
+
+@media (min-width: 500px) {
+  .modal-popup{
+    width: 90%;
+  }
+  .modal-small{
     width: 90%;
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 900px) {
   .modal-popup{
     width: 80%;
+  }
+  .modal-small{
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-popup{
+    width: 50%;
+  }
+  .modal-small{
+    width: 30%;
   }
 }

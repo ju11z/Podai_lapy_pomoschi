@@ -103,6 +103,7 @@ html(lang='en')
     link(href='css/style.css' rel='stylesheet')
     link(href='css/modal.css' rel='stylesheet')
     link(href='css/pagination.css' rel='stylesheet')
+    link(rel='shortcut icon' href='img/paw_small.svg' type='image/x-icon')
     style.
          body{
              background-image:url(img/help_bg.png);
@@ -277,6 +278,14 @@ html(lang='en')
         .col-12.col-md-8.d-flex.flex-row.justify-content-center.mt-3
            nav.pagination-container
              #pagination-numbers
+    .container.d-block.d-lg-none
+      .row
+        .col-12.col-md-6
+          img.bordered-img(src='img/happy_stories_1.jpg' alt='')
+        .col-12.col-md-6
+          .story-about
+            | "Работала волонотером в приюте. Одна кошечка, Ириска, запала в самое сердце! Пришлось забрать. С тех пор я ни разу не пожалела, а Ириска с 4 кг поправилась до 6, выглядит отлично, и лучшей кошки я не могу себе даже представить."
+
     include footer
     script(src='js/jquery.js')
     script(src='js/gsap/gsap.min.js')

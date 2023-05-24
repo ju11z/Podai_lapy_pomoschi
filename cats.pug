@@ -2,28 +2,29 @@
   const pageTitle='Cats'
 
   const breeds=[
-     {value:'Любая порода'},
-     {value:'Беспородная'},
-     {value:'Британская'},
-     {value:'Мейн-кун'},
-     {value:'Персидская'},
-     {value:'Турецкая ангора'},
-     {value:'Бирманская'},
-     {value:'Бенгальская'},
+     {value:'любая порода'},
+     {value:'беспородная'},
+     {value:'британская'},
+     {value:'мейн-кун'},
+     {value:'персидская'},
+     {value:'турецкая ангора'},
+     {value:'бирманская'},
+     {value:'бенгальская'},
   ];
 
   const genders=[
-    {value:'Самец'},
-    {value:'Самка'},
+    {value:'любой возраст'},
+    {value:'кот'},
+    {value:'кошка'},
   ];
 
   const ages=[
-    {value:'Любой возраст'},
-    {value:'От 1 до 6 месяцев'},
-    {value:'От 6 месяцев до 1 года'},
-    {value:'От 1 года до 3х лет'},
-    {value:'От 3х до 5 лет'},
-    {value:'Более 5 лет'},
+    {value:'любой возраст'},
+    {value:'от 1 до 6 месяцев'},
+    {value:'от 6 месяцев до 1 года'},
+    {value:'от 1 года до 3х лет'},
+    {value:'от 3х до 5 лет'},
+    {value:'более 5 лет'},
   ]
   
   const cities=[
@@ -168,13 +169,13 @@
 
     const healths=[
         {
-            value:"Стерилизован(-а)"
+            value:"стерилизован(-а)"
         },
         {
-             value:"Обработан(-а) от клещей"
+             value:"обработан(-а) от клещей"
         },
         {
-             value:"Вакцинирован(-а)"
+             value:"вакцинирован(-а)"
         }
     ]
 
@@ -187,6 +188,7 @@ html(lang='en')
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/bootstrap/bootstrap-grid.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
+    link(rel='shortcut icon' href='img/paw_small.svg' type='image/x-icon')
     link(href='css/pagination.css' rel='stylesheet')
     style.
        body{
@@ -226,7 +228,7 @@ html(lang='en')
                   label.dropdown__options-filter(for='filter-switch_1')
                     ul.dropdown__filter(role='listbox' tabindex='-1')
                       li.dropdown__filter-selected(aria-selected='true')
-                        | Любой возраст
+                        | любой возраст
                       li
                         ul.dropdown__select
                             each age in ages
@@ -241,7 +243,7 @@ html(lang='en')
                   label.dropdown__options-filter(for='filter-switch_2')
                     ul.dropdown__filter(role='listbox' tabindex='-1')
                       li.dropdown__filter-selected(aria-selected='true')
-                        | Любая порода
+                        | любая порода
                       li
                         ul.dropdown__select
                            each breed in breeds
@@ -257,13 +259,12 @@ html(lang='en')
                   label.dropdown__options-filter(for='filter-switch_3')
                     ul.dropdown__filter(role='listbox' tabindex='-1')
                       li.dropdown__filter-selected(aria-selected='true')
-                        | Любой пол
+                        | любой пол
                       li
                         ul.dropdown__select
-                          li.dropdown__select-option(role='option')
-                            | кот
-                          li.dropdown__select-option(role='option')
-                             | кошка
+                          each gender in genders
+                            li.dropdown__select-option(role='option')
+                              | #{gender.value}
 
               div
                 .icon-text
@@ -287,7 +288,7 @@ html(lang='en')
               .col-8.col-sm-10
                 #paginated-list.row
                    each card in cards
-                      .col-12..col-lg-4
+                      .col-12.col-md-6.col-lg-4
                         a.card.mb-4.hover-bounce(href='cat.html')
                           .card-img-container
                             img.card-img(src='img/' + card.img_path)

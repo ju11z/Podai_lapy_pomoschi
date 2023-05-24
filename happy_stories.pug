@@ -9,6 +9,7 @@ html(lang='en')
     title Счастливые истории
     link(href='css/bootstrap/bootstrap.css' rel='stylesheet')
     link(href='css/style.css' rel='stylesheet')
+    link(rel='shortcut icon' href='img/paw_small.svg' type='image/x-icon')
     link(href='css/happy_stories.css' rel='stylesheet')
     style.
       body{
@@ -22,11 +23,11 @@ html(lang='en')
           .col-12.col-md-8
             .title У всех историй должен быть счастливый финал!
             div
-              | Благодаря вашим пожертвованиям наш приют продолжат существовать, котики находить свои дома, а люди своих друзей.
+              | Почитайте отзывы людей, взявишх котика из приюта!
           .d-none.d-md-block.col-2
           .d-none.d-md-block.col-2
             img(src='img/paws.svg')
-    .container
+    .container.d-none.d-lg-block
       .row.expand-row.mb-4.mt-5
         .col-6.col-lg-4
           .border-img-container-sqr.expand-right
@@ -36,15 +37,15 @@ html(lang='en')
                 .title-small Ириска
                 div
                   | "Работала волонотером в приюте. Одна кошечка, Ириска, запала в самое сердце! Пришлось забрать. С тех пор я ни разу не пожалела, а Ириска с 4 кг поправилась до 6, выглядит отлично, и лучшей кошки я не могу себе даже представить."
-        .d-none.d-lg-block.col-4
+        .col-6.col-lg-4
           .border-img-container-sqr.expand-center
             img.bordered-img(src='img/happy_stories_2.jpg' alt='')
             .img-descr
               .descr-wrapper
                 .title-small Гоша
                 div
-                  | Забрали Гошу из приюта еще котенком. Я обожаю этого кота, не представляю, как раньше наша семья без него жила! Ни одно застолье без Гоши не обходится, обжора всегда рядом просит колбаски))) .
-        .d-none.d-lg-block.col-lg-4
+                  | "Забрали Гошу из приюта еще котенком. Я обожаю этого кота, не представляю, как раньше наша семья без него жила! Ни одно застолье без Гоши не обходится, обжора всегда рядом просит колбаски)))"
+        .col-6.col-lg-4
           .border-img-container-sqr.expand-left
             img.bordered-img(src='img/happy_stories_3.jpg' alt='')
             .img-descr
@@ -61,7 +62,7 @@ html(lang='en')
                 .title-small Вискас
                 div
                   | "Вискас всегда со мной когда я делаю уборку или готовку. Очень интересуется шкафами и полками, даже умеет открывать лапой нижние полки."
-        .d-none.d-lg-block.col-4
+        .col-6.col-lg-4
           .border-img-container-sqr.expand-center
             img.bordered-img(src='img/happy_stories_5.png' alt='')
             .img-descr
@@ -69,7 +70,7 @@ html(lang='en')
                 .title-small Маркиз
                 div
                   | "Взяли 3-х летнего котика Маркиза в этом приюте, наше пушистое счастье! И почему мы не сделали этого раньше?"
-        .d-none.d-lg-block.col-lg-4
+        .col-6.col-lg-4
           .border-img-container-sqr.expand-left
             img.bordered-img(src='img/happy_stories_6.jpg' alt='')
             .img-descr
@@ -86,7 +87,7 @@ html(lang='en')
                 .title-small Боня
                 div
                   | "Наша Боня теперь радует нас каждый день. Мы очень ее любим. И она отвечает взаимностью. Не понимаю, как могла оказаться на улице такая красотка! Каждое утро встречает, мурлыкает, даже лижет, игривая и разговорчивая Бонита!"
-        .d-none.d-lg-block.col-4
+        .col-6.col-lg-4
           .border-img-container-sqr.expand-center
             img.bordered-img(src='img/happy_stories_8.png' alt='')
             .img-descr
@@ -94,7 +95,7 @@ html(lang='en')
                 .title-small Мейсон
                 div
                   |  "Года 4 назад взяли кота Мейсона. Очень рады! Вспоминаем приют и помогаем периодически. Там хорошо ухаживают за кошками и котами. Высококачественные корма, животных прививают, лечат. Спасибо Вам за счастье!"
-        .d-none.d-lg-block.col-lg-4
+        .col-6.col-lg-4
           .border-img-container-sqr.expand-left
             img.bordered-img(src='img/happy_stories_9.png' alt='')
             .img-descr
@@ -102,7 +103,43 @@ html(lang='en')
                 .title-small Персик
                 div
                   | "В выходные стали счастливыми хозяевами замечтательного котейка - Персика 1.5 года! Котик очень классный, умный и активный! Сам нас выбрал , лапой зацепил и не отпускал!"
+    .container.d-block.d-lg-none
+      .row.mt-5
+        .col-12.col-md-6
+          .border-img-container-sqr.hover-bounce
+            img.bordered-img(src='img/happy_stories_1.jpg' alt='')
+        .col-12.col-md-6.mt-3.mt-md-0
+          .title-small Ириска
+          .story-about
+            | "Работала волонотером в приюте. Одна кошечка, Ириска, запала в самое сердце! Пришлось забрать. С тех пор я ни разу не пожалела, а Ириска с 4 кг поправилась до 6, выглядит отлично, и лучшей кошки я не могу себе даже представить."
+      .row.mt-5
+        .col-12.col-md-6
+          .border-img-container-sqr.hover-bounce
+            img.bordered-img(src='img/happy_stories_2.jpg' alt='')
+        .col-12.col-md-6.mt-3.mt-md-0
+          .title-small Гоша
+          .story-about
+            | "Забрали Гошу из приюта еще котенком. Я обожаю этого кота, не представляю, как раньше наша семья без него жила! Ни одно застолье без Гоши не обходится, обжора всегда рядом просит колбаски)))"
+      .row.mt-5
+        .col-12.col-md-6
+          .border-img-container-sqr.hover-bounce
+            img.bordered-img(src='img/happy_stories_3.jpg' alt='')
+        .col-12.col-md-6.mt-3.mt-md-0
+          .title-small Анфиса
+          .story-about
+            | "Это наша кошечка, Анфиса. Очень радует нас каждый день, игривая, ласковая, играет с игрушками и любит прятаться в коробках."
+      .row.mt-5
+        .col-12.col-md-6
+          .border-img-container-sqr.hover-bounce
+            img.bordered-img(src='img/happy_stories_4.jpg' alt='')
+        .col-12.col-md-6.mt-3.mt-md-0
+          .title-small Вискас
+          .story-about
+            | "Вискас всегда со мной когда я делаю уборку или готовку. Очень интересуется шкафами и полками, даже умеет открывать лапой нижние полки."
+      
+
     include footer
+    script(src='js/common_animations.js')
     script(src='js/toggle_menu.js')
     script(src='js/gsap/gsap.min.js')
     script(src='js/card_animation.js')
